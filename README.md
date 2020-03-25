@@ -1,7 +1,6 @@
 # Project of Data Visualization (COM-480)
 
 | Student's name | SCIPER |
-| --- | --- |
 | Yann Yanis Bouquet | 273827 |
 | Emma Lanctuit | 274894 |
 | Gonxhe Idrizi | 275001 |
