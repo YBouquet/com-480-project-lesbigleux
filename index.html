@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>What can we learn from Cinema?</title>
+	<meta name="description" content="Oscar Visualization">
+	<meta name="author" content="Gonxhe Idrizi, Yann Bouquet, Emma Lanctuit">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+	<ul class="width-limited">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="description.html">Description</a></li>
+		<li><a href="data.html">Data</a></li>
+		<li><a href="team.html">Team</a></li>
+	</ul>
+</nav>
+
+<header class="title-row">
+	<h1> What can we learn from Cinema? </h1>
+</header>
+
+<main class="width-limited">
+	<h4>Introduction</h4>
+	<p>
+	When the Oscar ceremony become questionnable, what can we learn from Cinema?
+	This work is an attempt to illustrate and ask multiple question about cinema,
+	culture, tendance in general.
+	From a serie of datasets, we manage to ask collected data about tacit rules
+	that are often kept deeply into our mind.
+
+	</p>
+	<p>
+	Let show how Oscar title can be predictible. Let show how actor will be reduced
+	to certain role by their social condition or even more their birth.
+
+	Our datasets have been collected from the platform Kaggle.
+
+	Read more <a href="https://www.kaggle.com/iwooloowi/film-awards-imdb">about our IMDB award datasets</a>
+	or the <a href="data.html">sources of our data</a>.
+
+	Both datasets have been updated less than 2 months ago.
+	</p>
+
+	<h4>How to use</h4>
+	<p>
+	Here we would tell you how to interact with the plot below.
+	Sadly, it is not interactive at this stage of the project.
+	Please imagine that the plot is interactive and that clicking on it
+	activates captivating animations.
+	</p>
+</main>
+
+<div class="width-limited">
+	<h3>Color cycle -EXAMPLE</h3>
+	<p>This plot will demonstrate your <code>colorCycle</code> function.</p>
+	<code>
+const my_cc = colorCycle(['purple', 'rgb(20, 230, 220)', 'rgb(10, 230, 20)']);
+showColorCycle(my_cc);
+</code>
+	<p></p>
+</div>
+<figure class="viz-row">
+	<svg viewBox="-10 -10 220 50" width="220" height="50" class="width-limited">
+		<g id="plot-color-cycle" fill="rgb(120, 120, 120)">
+			<rect x="0" y="0" width="10" height="10" />
+			<rect x="20" y="0" width="10" height="10" />
+			<rect x="40" y="0" width="10" height="10" />
+			<rect x="60" y="0" width="10" height="10" />
+			<rect x="80" y="0" width="10" height="10" />
+			<rect x="100" y="0" width="10" height="10" />
+			<rect x="120" y="0" width="10" height="10" />
+			<rect x="140" y="0" width="10" height="10" />
+			<rect x="160" y="0" width="10" height="10" />
+			<rect x="180" y="0" width="10" height="10" />
+
+			<rect x="0" y="20" width="10" height="10" />
+			<rect x="20" y="20" width="10" height="10" />
+			<rect x="40" y="20" width="10" height="10" />
+			<rect x="60" y="20" width="10" height="10" />
+			<rect x="80" y="20" width="10" height="10" />
+			<rect x="100" y="20" width="10" height="10" />
+			<rect x="120" y="20" width="10" height="10" />
+			<rect x="140" y="20" width="10" height="10" />
+			<rect x="160" y="20" width="10" height="10" />
+			<rect x="180" y="20" width="10" height="10" />
+		</g>
+	</svg>
+</figure>
+
+<div class="width-limited">
+	<h3>Counting characters in text -EXAMPLE</h3>
+	<p>Implement <code>countOccurrencesNormalized</code> and execute:</p>
+	<code>
+setCharacterCountingFunction(countOccurrencesNormalized, my_color_cycle);
+	</code>
+	<p>to count the characters in the text below.</p>
+	<!--
+	JRR Tolkien "The Fellowship of the Ring"
+	http://ae-lib.org.ua/texts-c/tolkien__the_lord_of_the_rings_1__en.htm#1-01
+	-->
+	<textarea id='input-count-text'>
+
+
+Twelve more years passed. Each year the Bagginses had given very lively combined birthday-parties at Bag End; but now it was understood that something quite exceptional was being planned for that autumn. Bilbo was going to be eleventy-one, 111, a rather curious number and a very respectable age for a hobbit (the Old Took himself had only reached 130); and Frodo was going to be thirty-three, 33) an important number: the date of his ‘coming of age’.
+
+Tongues began to wag in Hobbiton and Bywater; and rumour of the coming event travelled all over the Shire. The history and character of Mr. Bilbo Baggins became once again the chief topic of conversation; and the older folk suddenly found their reminiscences in welcome demand.
+	</textarea>
+	<button id="btn-count-text"> Count characters </button>
+</div>
+<figure class="viz-row">
+	<div id="plot-occurrences" class="width-limited">
+		<div>
+			setCharacterCountingFunction has not been called yet
+		</div>
+	</div>
+</figure>
+
+<div class="width-limited">
+	<h3>Ball simulation</h3>
+
+	<p> Use <code>plotBall(points)</code> to draw trajectories here. </p>
+</div>
+
+<figure class="viz-row">
+	<svg viewBox="-10 -10 220 120" width="220" height="120" class="width-limited">
+		<style>
+			#plot-ball path {
+				stroke-width: 1px;
+				fill: none;
+			}
+			line {
+				stroke: rgb(200, 200, 200);
+				stroke-width: 1px;
+			}
+		</style>
+		<g id="plot-ball" transform="scale(1, -1) translate(0, -100)">
+			<line class="axis" x1="0" y1="0" x2="200" y2="0"  />
+			<line class="axis" x1="0" y1="0" x2="0" y2="100"/>
+		</g>
+	</svg>
+</figure>
+
+<footer></footer>
+
+<script src="provided.js"></script>
+<script src="exercise.js"></script>
+</body>
+</html>
