@@ -1,6 +1,5 @@
 # Project of Data Visualization (COM-480)
 
-| Student's name | SCIPER |
 | Yann Yanis Bouquet | 273827 |
 | Emma Lanctuit | 274894 |
 | Gonxhe Idrizi | 275001 |
@@ -9,7 +8,7 @@
 
 ## Milestone 1 (Friday 3rd April, 5pm)
 **10% of the final grade**
-### 1.1. Dataset
+### 1.1 Dataset
 
 A first dataset we will explore is the film Award from IMDB which contains awards from 1886 to 2020. As our project will focus on an evolution through time, having such a range of data will be useful but we have to consider disparity due to event existence. What is the existence period of each event pre-selected to these days?
 
@@ -20,7 +19,9 @@ This dataset also contains distinction between primary and secondary prices. For
 To join awards information with movies country production we are using the dataset of IMDB Movies that contains around 80 000 films. Since our study period extends over a century, we have to manually change the names of countries that no longer exist as Soviet Union for Russia, West Germany for Germany… We hope that the majority of the films/persons nominated in the most popular ceremonies of the last 100 years will be present in this dataset. In this purpose, as we are distinguishing nominations from their country-production aspect it can be interesting to know : How many movies are represented by country in the IMDB dataset? A country not present in this dataset will most likely not be represented in our visualization.
 
 Link to datasets:
+
 [IMDB Awards](https://www.kaggle.com/iwooloowi/film-awards-imdb)
+
 [IMDB Movies](https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset)
 
 ### 1.2 Problematic
@@ -42,11 +43,13 @@ Moreover, it can be a simple curiosity for a cinema-lover or anybody looking for
 ### 1.3 Exploratory Data Analysis
 
 During our dataset analysis, multiple questions were raised that we tried to answer through some visualisations of our data. There is two main endpoints in our visualisation : Film-producing countries and Events/Awards.
+
 We have to decide whether to consider the event or its awards as it changes the access to our visualization. We need a name that speaks to the largest number of people and at the same time makes sense from the point of view of our cinematic study. Considering the event rather than the award leads to a difference in the selected ceremonies and therefore in the total distribution of our countries. This is a major decision in the relevance of our final visualization.
 How many awards are there per event?
 ![image info](./Preprocess/figures/awards_by_event.jpeg)
 
 Our next analysis concern the feasibility of our visualisation considering one century of evolution over Cinema Awards.
+
 What is the existence period of each event pre-selected to these days?
 ![image info](./Preprocess/figures/activity_periods_by_awards.jpeg)
 ![image info](./Preprocess/figures/activity_periods_by_event.jpeg)
@@ -92,26 +95,24 @@ In creating this visualization, our first thought was of course to use a planisp
 So we thought we would abstract the location of its events and focus on the links between countries and popular ceremonies. We can also consider grouping its countries by continent by giving them the same color. All the details of the visualization remain to be decided but here below are some sources of our inspiration.
 
 We can distinguish them in two classes:
-- Our general visualization consisting of the distribution of the films awarded at the ceremonies by country of production over a century.  
-
-Main visualisation animated over a century
-- Animated version of film-producing country map to ceremonies [here](https://66.media.tumblr.com/tumblr_m54xq7uZ6u1rudy45o1_1280.jpg)
-- Creation of layers : 1 by country you have the proportion by film categories and then the proportion by ceremonies. Flow by country captured in the color [here](https://twitter.com/cesifoti/status/600649485312761856/photo/1)
-- Country on the left, categories, flow to commun cinema space and then redistribution over ceremonies (yellow here) [here](https://www.behance.net/gallery/21476567/Data-Visualisation-Art-Direction-(Oscar-Huerta))
+- Our general visualization consisting of the distribution of the films awarded at the ceremonies by country of production over a century. The main visualisation animated over a century
+  - Animated version of film-producing country map to ceremonies [here](https://66.media.tumblr.com/tumblr_m54xq7uZ6u1rudy45o1_1280.jpg)
+  - Creation of layers : 1 by country you have the proportion by film categories and then the proportion by ceremonies. Flow by country captured in the color [here](https://twitter.com/cesifoti/status/600649485312761856/photo/1)
+  - Country on the left, categories, flow to commun cinema space and then redistribution over ceremonies (yellow here) [here](https://www.behance.net/gallery/21476567/Data-Visualisation-Art-Direction-(Oscar-Huerta))
 
 - Our study on the evolution of the prize-winning categories by ceremony or country of production over time. The analysis by country aims to visualize potential changes within a country as a result of the tourism spin-offs of a film nomination. Ceremonial analysis focuses more on capturing general trends in the appeal of a particular film genre to the general public.
-
-Visualisation of film categories changes over a century by country:
-- Animated visualisation over time, the interest of the visualisation is that the countries order is changing depending on the detected cases evolution [here](https://www.instagram.com/p/B-Z2WEVoS7Y/)
-Visualisation of film categories change throughout time by ceremonies:
-- Simple animated diagram focusing on global film categories name or a one letting us add some secondary informations for a proportion of nomination for exemple [here](https://www.pinterest.fr/pin/281263939211265519/?d=t&mjt=login)
+  - Animated visualisation over time, the interest of the visualisation is that the countries order is changing depending on the detected cases evolution [here](https://www.instagram.com/p/B-Z2WEVoS7Y/)
+  - Simple animated diagram focusing on global film categories name or a one letting us add some secondary informations for a proportion of nomination for exemple [here](https://www.pinterest.fr/pin/281263939211265519/?d=t&mjt=login)
 
 We haven’t used any of these datasets before.
 
 ### 1.5 Sources
 [Article on touristic place from films/series](https://www.cafedeclic.com/article/13-endroits-devenus-tres-touristiques-grace-a-un-film-ou-une-serie/)
+
 [Article on Game of thrones statistics](https://geeko.lesoir.be/2019/04/06/10-chiffres-fous-sur-game-of-thrones/)
+
 [Data visualisation on Oscar prediction](https://towardsdatascience.com/predicting-the-oscars-with-data-viz-e5bb0fd01766)
+
 [Data visualisation on how to win an Oscar](http://blog.dasheroo.com/data-visualization-how-to-win-an-oscar/)
 
 ## Milestone 2 (Friday 1st May, 5pm)
