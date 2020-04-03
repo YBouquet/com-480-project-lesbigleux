@@ -89,7 +89,6 @@ Our original approach is that we are not focusing on a particular ceremony but o
 
 We thought we would abstract the location of these events and focus on the links between countries and popular ceremonies. We can also consider grouping the countries by continent by giving them the same color. All the details of the visualization remain to be decided but here below are some sources of our inspiration.
 
-We can distinguish them in two classes:
 - Animated version of film-producing country map to ceremonies [here](https://66.media.tumblr.com/tumblr_m54xq7uZ6u1rudy45o1_1280.jpg)
 - Creation of layers : 1 by country you have the proportion by film categories and then the proportion by ceremonies. Flow by country captured in the color [here](https://twitter.com/cesifoti/status/600649485312761856/photo/1)
 - Country on the left, categories, flow to commun cinema space and then redistribution over ceremonies (yellow here) [here](https://www.behance.net/gallery/21476567/Data-Visualisation-Art-Direction-(Oscar-Huerta))
