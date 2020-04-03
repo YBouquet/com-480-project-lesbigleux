@@ -10,13 +10,13 @@
 **10% of the final grade**
 ### 1.1 Dataset
 
-A first dataset we will explore is the film Award from IMDB which contains awards from 1886 to 2020. As our project will focus on an evolution through time, having such a range of data will be useful but we have to consider disparity due to event existence. What is the existence period of each event pre-selected to these days?
+A first dataset we will explore is the film Award from IMDB which contains awards from 1886 to 2020. As our project will focus on an evolution through time, having such a range of data will be useful but we have to consider disparity due to event existence. [What is the existence period of each event pre-selected to these days?](#13-exploratory-data-analysis)
 
-Most frequent and relevant events in the dataset are, by preprocessing: Emmy Awards, BAFTA Awards, Academy Awards (USA), News & Documentary Emmy Awards, Online Film & Television Association, Grammy Awards, Cannes Film Festival, Gold Derby Awards, Berlin International Film Festival, Gemini Awards, Leo Awards, Adult Video News Awards, Young Artist Awards. We notice a distinction between the Event and Award names as some awards names might be more meaningful than their associated events. If we take the Oscar for exemple, theses are awards delivered during the Academy Awards. This is a nuance that we will have to investigate in order to make our visualization as relevant as possible. How many awards are there per event?
+Most frequent and relevant events in the dataset are, by preprocessing: Emmy Awards, BAFTA Awards, Academy Awards (USA), News & Documentary Emmy Awards, Online Film & Television Association, Grammy Awards, Cannes Film Festival, Gold Derby Awards, Berlin International Film Festival, Gemini Awards, Leo Awards, Adult Video News Awards, Young Artist Awards. We notice a distinction between the Event and Award names as some awards names might be more meaningful than their associated events. If we take the Oscar for exemple, theses are awards delivered during the Academy Awards. This is a nuance that we will have to investigate in order to make our visualization as relevant as possible. [How many awards are there per event?](#13-exploratory-data-analysis)
 
-This dataset also contains distinction between primary and secondary prices. For the scope of our visualisation we retain only primary prizes awarded to film or people. In order to have an unbiased result, we are also interested in the proportion of nominees or winners for each of the ceremonies selected for our study (i.e. most frequent/popular). How much information we lose if we reduce our study to the winners?
+This dataset also contains distinction between primary and secondary prices. For the scope of our visualisation we retain only primary prizes awarded to film or people. In order to have an unbiased result, we are also interested in the proportion of nominees or winners for each of the ceremonies selected for our study (i.e. most frequent/popular). [How much information we lose if we reduce our study to the winners?](#13-exploratory-data-analysis)
 
-To join awards information with movies country production we are using the dataset of IMDB Movies that contains around 80 000 films. Since our study period extends over a century, we have to manually change the names of countries that no longer exist as Soviet Union for Russia, West Germany for Germany… We hope that the majority of the films/persons nominated in the most popular ceremonies of the last 100 years will be present in this dataset. In this purpose, as we are distinguishing nominations from their country-production aspect it can be interesting to know : How many movies are represented by country in the IMDB dataset? A country not present in this dataset will most likely not be represented in our visualization.
+To join awards information with movies country production we are using the dataset of IMDB Movies that contains around 80 000 films. Since our study period extends over a century, we have to manually change the names of countries that no longer exist as Soviet Union for Russia, West Germany for Germany… We hope that the majority of the films/persons nominated in the most popular ceremonies of the last 100 years will be present in this dataset. In this purpose, as we are distinguishing nominations from their country-production aspect it can be interesting to know : [How many movies are represented by country in the IMDB dataset?](#13-exploratory-data-analysis) A country not present in this dataset will most likely not be represented in our visualization.
 
 Link to datasets:
 
@@ -41,6 +41,8 @@ Our goal is to make a visualisation where all theses questions can be answered. 
 Moreover, it can be a simple curiosity for a cinema-lover or anybody looking for new visualisation of the world of film awards.
 
 ### 1.3 Exploratory Data Analysis
+
+The following analysis comes from the pre-process done in the notebook accessible [here](./Preprocess/Data_Analysis_M1.ipynb).
 
 During our dataset analysis, multiple questions were raised that we tried to answer through some visualisations of our data. There is two main endpoints in our visualisation : Film-producing countries and Events/Awards.
 
