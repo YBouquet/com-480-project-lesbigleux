@@ -1,0 +1,2282 @@
+name,parent,value
+origin,,
+Afghanistan,origin,
+Albania,origin,
+Algeria,origin,
+Andorra,origin,
+Angola,origin,
+Argentina,origin,
+Armenia,origin,
+Aruba,origin,
+Australia,origin,
+Austria,origin,
+Azerbaijan,origin,
+Bahamas,origin,
+Bahrain,origin,
+Bangladesh,origin,
+Belarus,origin,
+Belgium,origin,
+Belize,origin,
+Bermuda,origin,
+Bhutan,origin,
+Bolivia,origin,
+Bosnia and Herzegovina,origin,
+Botswana,origin,
+Brazil,origin,
+British Virgin Islands,origin,
+Brunei,origin,
+Bulgaria,origin,
+Burkina Faso,origin,
+Burma,origin,
+Cambodia,origin,
+Cameroon,origin,
+Canada,origin,
+Cape Verde,origin,
+Cayman Islands,origin,
+Chad,origin,
+Chile,origin,
+China,origin,
+Colombia,origin,
+Costa Rica,origin,
+Croatia,origin,
+Cuba,origin,
+Cyprus,origin,
+Czech Republic,origin,
+Czechoslovakia,origin,
+Côte d'Ivoire,origin,
+Denmark,origin,
+Djibouti,origin,
+Dominican Republic,origin,
+East Germany,origin,
+Ecuador,origin,
+Egypt,origin,
+El Salvador,origin,
+Estonia,origin,
+Ethiopia,origin,
+Faroe Islands,origin,
+Federal Republic of Yugoslavia,origin,
+Fiji,origin,
+Finland,origin,
+France,origin,
+Georgia,origin,
+Germany,origin,
+Ghana,origin,
+Gibraltar,origin,
+Greece,origin,
+Greenland,origin,
+Guadeloupe,origin,
+Guatemala,origin,
+Guinea,origin,
+Guinea-Bissau,origin,
+Haiti,origin,
+Holy See (Vatican City State),origin,
+Honduras,origin,
+Hong Kong,origin,
+Hungary,origin,
+Iceland,origin,
+India,origin,
+Indonesia,origin,
+Iran,origin,
+Iraq,origin,
+Ireland,origin,
+Isle Of Man,origin,
+Israel,origin,
+Italy,origin,
+Jamaica,origin,
+Japan,origin,
+Jordan,origin,
+Kazakhstan,origin,
+Kenya,origin,
+Korea,origin,
+Kosovo,origin,
+Kuwait,origin,
+Kyrgyzstan,origin,
+Laos,origin,
+Latvia,origin,
+Lebanon,origin,
+Lesotho,origin,
+Liberia,origin,
+Libya,origin,
+Liechtenstein,origin,
+Lithuania,origin,
+Luxembourg,origin,
+Macao,origin,
+Malawi,origin,
+Malaysia,origin,
+Maldives,origin,
+Mali,origin,
+Malta,origin,
+Martinique,origin,
+Mauritania,origin,
+Mexico,origin,
+Moldova,origin,
+Monaco,origin,
+Mongolia,origin,
+Montenegro,origin,
+Morocco,origin,
+Mozambique,origin,
+Myanmar,origin,
+Namibia,origin,
+Nepal,origin,
+Netherlands,origin,
+Netherlands Antilles,origin,
+New Caledonia,origin,
+New Zealand,origin,
+Nicaragua,origin,
+Niger,origin,
+Nigeria,origin,
+North Korea,origin,
+North Vietnam,origin,
+Norway,origin,
+Oman,origin,
+Pakistan,origin,
+Palestine,origin,
+Panama,origin,
+Papua New Guinea,origin,
+Paraguay,origin,
+Peru,origin,
+Philippines,origin,
+Poland,origin,
+Portugal,origin,
+Puerto Rico,origin,
+Qatar,origin,
+Republic of Macedonia,origin,
+Reunion,origin,
+Romania,origin,
+Russia,origin,
+Rwanda,origin,
+Samoa,origin,
+Saudi Arabia,origin,
+Senegal,origin,
+Serbia,origin,
+Serbia and Montenegro,origin,
+Singapore,origin,
+Slovakia,origin,
+Slovenia,origin,
+Somalia,origin,
+South Africa,origin,
+South Korea,origin,
+Spain,origin,
+Sri Lanka,origin,
+Sudan,origin,
+Suriname,origin,
+Svalbard And Jan Mayen,origin,
+Swaziland,origin,
+Sweden,origin,
+Switzerland,origin,
+Syria,origin,
+Taiwan,origin,
+Tajikistan,origin,
+Tanzania,origin,
+Thailand,origin,
+The Democratic Republic Of Congo,origin,
+Trinidad and Tobago,origin,
+Tunisia,origin,
+Turkey,origin,
+Uganda,origin,
+Ukraine,origin,
+United Arab Emirates,origin,
+United Kingdom,origin,
+United States of America,origin,
+Uruguay,origin,
+Uzbekistan,origin,
+Vanuatu,origin,
+Venezuela,origin,
+Vietnam,origin,
+Yemen,origin,
+Yugoslavia,origin,
+Zaire,origin,
+Zambia,origin,
+Zimbabwe,origin,
+Adventure,Afghanistan,5
+Biography,Afghanistan,5
+Drama,Afghanistan,38
+History,Afghanistan,3
+Romance,Afghanistan,4
+War,Afghanistan,7
+Action,Albania,3
+Comedy,Albania,25
+Crime,Albania,2
+Drama,Albania,83
+Family,Albania,5
+History,Albania,4
+Horror,Albania,2
+Romance,Albania,12
+Thriller,Albania,6
+War,Albania,9
+Action,Algeria,3
+Adventure,Algeria,2
+Biography,Algeria,6
+Comedy,Algeria,16
+Crime,Algeria,9
+Drama,Algeria,95
+Fantasy,Algeria,2
+History,Algeria,13
+Musical,Algeria,3
+Mystery,Algeria,3
+Romance,Algeria,2
+Thriller,Algeria,2
+War,Algeria,18
+Comedy,Andorra,2
+Drama,Andorra,2
+Horror,Andorra,3
+Thriller,Andorra,2
+Comedy,Angola,12
+Crime,Angola,6
+Drama,Angola,10
+Fantasy,Angola,3
+Horror,Angola,3
+War,Angola,3
+Action,Argentina,86
+Adventure,Argentina,137
+Animation,Argentina,49
+Biography,Argentina,60
+Comedy,Argentina,463
+Crime,Argentina,191
+Drama,Argentina,1245
+Family,Argentina,40
+Fantasy,Argentina,45
+History,Argentina,31
+Horror,Argentina,82
+Music,Argentina,36
+Musical,Argentina,37
+Mystery,Argentina,94
+Romance,Argentina,232
+Sci-Fi,Argentina,30
+Sport,Argentina,8
+Thriller,Argentina,208
+War,Argentina,24
+Western,Argentina,25
+Action,Armenia,5
+Adventure,Armenia,5
+Animation,Armenia,1
+Comedy,Armenia,19
+Crime,Armenia,6
+Drama,Armenia,27
+Family,Armenia,3
+History,Armenia,1
+Musical,Armenia,1
+Romance,Armenia,9
+Thriller,Armenia,3
+War,Armenia,1
+Action,Aruba,14
+Adventure,Aruba,4
+Comedy,Aruba,2
+Crime,Aruba,10
+Drama,Aruba,2
+Sci-Fi,Aruba,2
+Thriller,Aruba,12
+Action,Australia,317
+Adventure,Australia,296
+Animation,Australia,65
+Biography,Australia,120
+Comedy,Australia,478
+Crime,Australia,173
+Drama,Australia,949
+Family,Australia,113
+Fantasy,Australia,120
+History,Australia,47
+Horror,Australia,254
+Music,Australia,40
+Musical,Australia,21
+Mystery,Australia,145
+Reality-TV,Australia,1
+Romance,Australia,236
+Sci-Fi,Australia,131
+Sport,Australia,45
+Thriller,Australia,312
+War,Australia,42
+Western,Australia,10
+Action,Austria,41
+Adventure,Austria,73
+Animation,Austria,22
+Biography,Austria,86
+Comedy,Austria,316
+Crime,Austria,64
+Drama,Austria,752
+Family,Austria,36
+Fantasy,Austria,32
+History,Austria,74
+Horror,Austria,64
+Music,Austria,32
+Musical,Austria,23
+Mystery,Austria,55
+Romance,Austria,156
+Sci-Fi,Austria,22
+Sport,Austria,11
+Thriller,Austria,115
+War,Austria,60
+Western,Austria,4
+Comedy,Azerbaijan,13
+Drama,Azerbaijan,18
+Horror,Azerbaijan,2
+Mystery,Azerbaijan,2
+Romance,Azerbaijan,6
+War,Azerbaijan,5
+Action,Bahamas,11
+Adventure,Bahamas,5
+Comedy,Bahamas,6
+Crime,Bahamas,2
+Drama,Bahamas,16
+Family,Bahamas,2
+Horror,Bahamas,2
+Mystery,Bahamas,1
+Romance,Bahamas,4
+Sci-Fi,Bahamas,9
+Sport,Bahamas,2
+Thriller,Bahamas,9
+Action,Bahrain,3
+Adventure,Bahrain,6
+Comedy,Bahrain,2
+Drama,Bahrain,6
+Fantasy,Bahrain,4
+Thriller,Bahrain,3
+Action,Bangladesh,29
+Adventure,Bangladesh,4
+Biography,Bangladesh,4
+Comedy,Bangladesh,22
+Crime,Bangladesh,15
+Drama,Bangladesh,90
+Family,Bangladesh,14
+Fantasy,Bangladesh,2
+History,Bangladesh,9
+Musical,Bangladesh,4
+Mystery,Bangladesh,3
+Romance,Bangladesh,31
+Sci-Fi,Bangladesh,1
+Sport,Bangladesh,1
+Thriller,Bangladesh,12
+War,Bangladesh,9
+Action,Belarus,8
+Crime,Belarus,2
+Drama,Belarus,32
+History,Belarus,11
+Mystery,Belarus,2
+Thriller,Belarus,4
+War,Belarus,5
+Action,Belgium,195
+Adventure,Belgium,302
+Animation,Belgium,262
+Biography,Belgium,179
+Comedy,Belgium,1045
+Crime,Belgium,321
+Drama,Belgium,2227
+Family,Belgium,173
+Fantasy,Belgium,173
+History,Belgium,127
+Horror,Belgium,145
+Music,Belgium,71
+Musical,Belgium,34
+Mystery,Belgium,154
+Romance,Belgium,471
+Sci-Fi,Belgium,49
+Sport,Belgium,23
+Thriller,Belgium,341
+War,Belgium,138
+Western,Belgium,10
+Drama,Belize,2
+Crime,Bermuda,2
+Drama,Bermuda,5
+Mystery,Bermuda,2
+Action,Bhutan,1
+Adventure,Bhutan,4
+Biography,Bhutan,1
+Comedy,Bhutan,2
+Drama,Bhutan,5
+Mystery,Bhutan,3
+Sport,Bhutan,2
+Action,Bolivia,4
+Adventure,Bolivia,8
+Comedy,Bolivia,5
+Crime,Bolivia,30
+Drama,Bolivia,54
+History,Bolivia,2
+Horror,Bolivia,1
+Mystery,Bolivia,27
+Romance,Bolivia,5
+Thriller,Bolivia,7
+War,Bolivia,1
+Western,Bolivia,4
+Action,Bosnia and Herzegovina,5
+Adventure,Bosnia and Herzegovina,12
+Animation,Bosnia and Herzegovina,11
+Biography,Bosnia and Herzegovina,5
+Comedy,Bosnia and Herzegovina,70
+Crime,Bosnia and Herzegovina,23
+Drama,Bosnia and Herzegovina,245
+Family,Bosnia and Herzegovina,10
+Fantasy,Bosnia and Herzegovina,7
+History,Bosnia and Herzegovina,6
+Horror,Bosnia and Herzegovina,6
+Music,Bosnia and Herzegovina,4
+Mystery,Bosnia and Herzegovina,20
+Romance,Bosnia and Herzegovina,23
+Thriller,Bosnia and Herzegovina,14
+War,Bosnia and Herzegovina,32
+Biography,Botswana,5
+Comedy,Botswana,4
+Drama,Botswana,5
+Romance,Botswana,5
+Action,Brazil,72
+Adventure,Brazil,129
+Animation,Brazil,66
+Biography,Brazil,86
+Comedy,Brazil,372
+Crime,Brazil,155
+Drama,Brazil,966
+Family,Brazil,81
+Fantasy,Brazil,68
+History,Brazil,39
+Horror,Brazil,63
+Music,Brazil,33
+Musical,Brazil,24
+Mystery,Brazil,72
+Romance,Brazil,157
+Sci-Fi,Brazil,33
+Sport,Brazil,7
+Thriller,Brazil,116
+War,Brazil,13
+Western,Brazil,18
+Action,British Virgin Islands,6
+Drama,British Virgin Islands,6
+History,British Virgin Islands,3
+Thriller,British Virgin Islands,3
+Action,Brunei,1
+Adventure,Brunei,4
+Animation,Brunei,4
+Comedy,Brunei,7
+Drama,Brunei,4
+Romance,Brunei,3
+Action,Bulgaria,99
+Adventure,Bulgaria,70
+Animation,Bulgaria,13
+Biography,Bulgaria,14
+Comedy,Bulgaria,130
+Crime,Bulgaria,68
+Drama,Bulgaria,392
+Family,Bulgaria,16
+Fantasy,Bulgaria,27
+History,Bulgaria,38
+Horror,Bulgaria,19
+Music,Bulgaria,5
+Musical,Bulgaria,10
+Mystery,Bulgaria,44
+Romance,Bulgaria,45
+Sci-Fi,Bulgaria,12
+Thriller,Bulgaria,71
+War,Bulgaria,36
+Western,Bulgaria,7
+Comedy,Burkina Faso,3
+Drama,Burkina Faso,50
+Family,Burkina Faso,5
+Fantasy,Burkina Faso,10
+History,Burkina Faso,3
+Romance,Burkina Faso,5
+War,Burkina Faso,3
+Drama,Burma,2
+Action,Cambodia,6
+Adventure,Cambodia,3
+Animation,Cambodia,6
+Biography,Cambodia,10
+Comedy,Cambodia,7
+Crime,Cambodia,8
+Drama,Cambodia,35
+Family,Cambodia,2
+Fantasy,Cambodia,4
+History,Cambodia,4
+Sci-Fi,Cambodia,2
+Thriller,Cambodia,4
+War,Cambodia,4
+Adventure,Cameroon,4
+Drama,Cameroon,11
+Sci-Fi,Cameroon,4
+War,Cameroon,2
+Action,Canada,1094
+Adventure,Canada,764
+Animation,Canada,290
+Biography,Canada,218
+Comedy,Canada,1551
+Crime,Canada,818
+Drama,Canada,3329
+Family,Canada,333
+Fantasy,Canada,418
+History,Canada,140
+Horror,Canada,1046
+Music,Canada,88
+Musical,Canada,36
+Mystery,Canada,560
+Romance,Canada,727
+Sci-Fi,Canada,497
+Sport,Canada,108
+Thriller,Canada,1303
+War,Canada,88
+Western,Canada,36
+Drama,Cape Verde,8
+Action,Cayman Islands,2
+Adventure,Cayman Islands,7
+Animation,Cayman Islands,10
+Biography,Cayman Islands,2
+Comedy,Cayman Islands,10
+Crime,Cayman Islands,2
+Drama,Cayman Islands,13
+Family,Cayman Islands,3
+Mystery,Cayman Islands,9
+Romance,Cayman Islands,7
+War,Cayman Islands,10
+Drama,Chad,13
+Action,Chile,22
+Adventure,Chile,27
+Animation,Chile,9
+Biography,Chile,40
+Comedy,Chile,103
+Crime,Chile,35
+Drama,Chile,341
+Family,Chile,3
+Fantasy,Chile,20
+History,Chile,18
+Horror,Chile,35
+Music,Chile,10
+Mystery,Chile,4
+Reality-TV,Chile,1
+Romance,Chile,45
+Sci-Fi,Chile,13
+Sport,Chile,7
+Thriller,Chile,31
+War,Chile,5
+Western,Chile,2
+Action,China,746
+Adventure,China,389
+Animation,China,174
+Biography,China,86
+Comedy,China,495
+Crime,China,262
+Drama,China,1089
+Family,China,52
+Fantasy,China,188
+History,China,152
+Horror,China,60
+Music,China,28
+Musical,China,9
+Mystery,China,103
+Romance,China,378
+Sci-Fi,China,82
+Sport,China,23
+Thriller,China,184
+War,China,59
+Western,China,3
+Action,Colombia,17
+Adventure,Colombia,8
+Animation,Colombia,9
+Biography,Colombia,12
+Comedy,Colombia,60
+Crime,Colombia,60
+Drama,Colombia,316
+Family,Colombia,3
+Fantasy,Colombia,9
+History,Colombia,7
+Horror,Colombia,19
+Music,Colombia,9
+Musical,Colombia,2
+Mystery,Colombia,41
+Romance,Colombia,37
+Sci-Fi,Colombia,2
+Sport,Colombia,3
+Thriller,Colombia,69
+War,Colombia,10
+Western,Colombia,5
+Adventure,Costa Rica,1
+Biography,Costa Rica,1
+Comedy,Costa Rica,6
+Crime,Costa Rica,1
+Drama,Costa Rica,25
+Fantasy,Costa Rica,2
+Horror,Costa Rica,3
+Mystery,Costa Rica,1
+Romance,Costa Rica,6
+Sport,Costa Rica,1
+Thriller,Costa Rica,6
+War,Costa Rica,4
+Action,Croatia,26
+Adventure,Croatia,28
+Animation,Croatia,5
+Biography,Croatia,26
+Comedy,Croatia,133
+Crime,Croatia,27
+Drama,Croatia,379
+Family,Croatia,22
+Fantasy,Croatia,4
+History,Croatia,21
+Horror,Croatia,9
+Music,Croatia,3
+Musical,Croatia,6
+Mystery,Croatia,18
+Romance,Croatia,49
+Sci-Fi,Croatia,3
+Sport,Croatia,5
+Thriller,Croatia,26
+War,Croatia,32
+Action,Cuba,9
+Adventure,Cuba,2
+Animation,Cuba,5
+Biography,Cuba,4
+Comedy,Cuba,60
+Crime,Cuba,14
+Drama,Cuba,124
+Fantasy,Cuba,8
+Film-Noir,Cuba,2
+History,Cuba,2
+Horror,Cuba,9
+Music,Cuba,7
+Musical,Cuba,2
+Romance,Cuba,24
+Sci-Fi,Cuba,3
+Thriller,Cuba,8
+War,Cuba,10
+Western,Cuba,5
+Action,Cyprus,6
+Adventure,Cyprus,3
+Comedy,Cyprus,42
+Crime,Cyprus,13
+Drama,Cyprus,74
+Fantasy,Cyprus,3
+Music,Cyprus,2
+Mystery,Cyprus,6
+Romance,Cyprus,6
+Thriller,Cyprus,14
+War,Cyprus,2
+Action,Czech Republic,113
+Adventure,Czech Republic,115
+Animation,Czech Republic,30
+Biography,Czech Republic,68
+Comedy,Czech Republic,340
+Crime,Czech Republic,90
+Drama,Czech Republic,577
+Family,Czech Republic,78
+Fantasy,Czech Republic,87
+History,Czech Republic,79
+Horror,Czech Republic,57
+Music,Czech Republic,17
+Musical,Czech Republic,9
+Mystery,Czech Republic,48
+Romance,Czech Republic,129
+Sci-Fi,Czech Republic,18
+Sport,Czech Republic,3
+Thriller,Czech Republic,66
+War,Czech Republic,66
+Action,Czechoslovakia,1
+Adventure,Czechoslovakia,39
+Animation,Czechoslovakia,31
+Biography,Czechoslovakia,9
+Comedy,Czechoslovakia,199
+Crime,Czechoslovakia,22
+Drama,Czechoslovakia,165
+Family,Czechoslovakia,70
+Fantasy,Czechoslovakia,75
+History,Czechoslovakia,28
+Horror,Czechoslovakia,27
+Music,Czechoslovakia,2
+Musical,Czechoslovakia,16
+Mystery,Czechoslovakia,12
+Romance,Czechoslovakia,39
+Sci-Fi,Czechoslovakia,21
+Sport,Czechoslovakia,2
+Thriller,Czechoslovakia,11
+War,Czechoslovakia,38
+Western,Czechoslovakia,2
+Comedy,Côte d'Ivoire,4
+Drama,Côte d'Ivoire,17
+Thriller,Côte d'Ivoire,4
+War,Côte d'Ivoire,4
+Action,Denmark,163
+Adult,Denmark,1
+Adventure,Denmark,178
+Animation,Denmark,165
+Biography,Denmark,98
+Comedy,Denmark,622
+Crime,Denmark,255
+Drama,Denmark,1371
+Family,Denmark,258
+Fantasy,Denmark,85
+History,Denmark,91
+Horror,Denmark,82
+Music,Denmark,37
+Musical,Denmark,30
+Mystery,Denmark,99
+Romance,Denmark,243
+Sci-Fi,Denmark,57
+Sport,Denmark,6
+Thriller,Denmark,206
+War,Denmark,60
+Western,Denmark,16
+Adventure,Djibouti,4
+Animation,Djibouti,4
+Comedy,Djibouti,4
+Action,Dominican Republic,7
+Adventure,Dominican Republic,2
+Comedy,Dominican Republic,25
+Crime,Dominican Republic,10
+Drama,Dominican Republic,55
+History,Dominican Republic,2
+Horror,Dominican Republic,1
+Musical,Dominican Republic,1
+Mystery,Dominican Republic,2
+Romance,Dominican Republic,13
+Sci-Fi,Dominican Republic,2
+Sport,Dominican Republic,4
+Thriller,Dominican Republic,3
+Adventure,East Germany,11
+Biography,East Germany,3
+Comedy,East Germany,14
+Crime,East Germany,3
+Drama,East Germany,87
+Family,East Germany,19
+Fantasy,East Germany,17
+History,East Germany,16
+Music,East Germany,1
+Musical,East Germany,7
+Romance,East Germany,38
+Sci-Fi,East Germany,8
+Thriller,East Germany,1
+War,East Germany,34
+Western,East Germany,19
+Action,Ecuador,1
+Animation,Ecuador,2
+Biography,Ecuador,2
+Comedy,Ecuador,3
+Crime,Ecuador,6
+Drama,Ecuador,23
+Family,Ecuador,3
+Horror,Ecuador,2
+Thriller,Ecuador,5
+Action,Egypt,57
+Adventure,Egypt,22
+Biography,Egypt,23
+Comedy,Egypt,222
+Crime,Egypt,40
+Drama,Egypt,343
+Family,Egypt,18
+Fantasy,Egypt,22
+History,Egypt,20
+Horror,Egypt,14
+Music,Egypt,4
+Musical,Egypt,27
+Mystery,Egypt,25
+Romance,Egypt,104
+Sport,Egypt,2
+Thriller,Egypt,48
+War,Egypt,16
+Thriller,El Salvador,2
+Action,Estonia,20
+Adventure,Estonia,30
+Animation,Estonia,37
+Biography,Estonia,10
+Comedy,Estonia,97
+Crime,Estonia,17
+Drama,Estonia,169
+Family,Estonia,24
+Fantasy,Estonia,9
+History,Estonia,23
+Horror,Estonia,11
+Music,Estonia,5
+Mystery,Estonia,13
+Romance,Estonia,13
+Sci-Fi,Estonia,5
+Thriller,Estonia,26
+War,Estonia,6
+Action,Ethiopia,5
+Adventure,Ethiopia,3
+Biography,Ethiopia,5
+Comedy,Ethiopia,5
+Crime,Ethiopia,2
+Drama,Ethiopia,17
+Family,Ethiopia,5
+Fantasy,Ethiopia,3
+Mystery,Ethiopia,3
+Romance,Ethiopia,3
+Sci-Fi,Ethiopia,5
+Comedy,Faroe Islands,2
+Drama,Faroe Islands,2
+Action,Federal Republic of Yugoslavia,8
+Adventure,Federal Republic of Yugoslavia,1
+Comedy,Federal Republic of Yugoslavia,56
+Crime,Federal Republic of Yugoslavia,16
+Drama,Federal Republic of Yugoslavia,83
+Family,Federal Republic of Yugoslavia,1
+Fantasy,Federal Republic of Yugoslavia,5
+History,Federal Republic of Yugoslavia,1
+Horror,Federal Republic of Yugoslavia,2
+Music,Federal Republic of Yugoslavia,1
+Musical,Federal Republic of Yugoslavia,1
+Mystery,Federal Republic of Yugoslavia,1
+Romance,Federal Republic of Yugoslavia,22
+Thriller,Federal Republic of Yugoslavia,5
+War,Federal Republic of Yugoslavia,26
+Action,Fiji,2
+Adventure,Fiji,2
+Comedy,Fiji,2
+Drama,Fiji,4
+History,Fiji,2
+War,Fiji,2
+Action,Finland,85
+Adventure,Finland,94
+Animation,Finland,32
+Biography,Finland,92
+Comedy,Finland,409
+Crime,Finland,127
+Drama,Finland,771
+Family,Finland,78
+Fantasy,Finland,47
+History,Finland,82
+Horror,Finland,33
+Music,Finland,35
+Musical,Finland,34
+Mystery,Finland,39
+Romance,Finland,186
+Sci-Fi,Finland,13
+Sport,Finland,14
+Thriller,Finland,106
+War,Finland,54
+Western,Finland,5
+Action,France,1202
+Adventure,France,1446
+Animation,France,527
+Biography,France,804
+Comedy,France,5007
+Crime,France,2150
+Documentary,France,2
+Drama,France,12038
+Family,France,404
+Fantasy,France,773
+Film-Noir,France,3
+History,France,840
+Horror,France,725
+Music,France,371
+Musical,France,184
+Mystery,France,963
+Romance,France,2745
+Sci-Fi,France,377
+Sport,France,81
+Thriller,France,1706
+War,France,646
+Western,France,160
+Action,Georgia,5
+Adventure,Georgia,2
+Biography,Georgia,3
+Comedy,Georgia,26
+Crime,Georgia,6
+Drama,Georgia,108
+History,Georgia,4
+Horror,Georgia,5
+Mystery,Georgia,7
+Romance,Georgia,19
+Thriller,Georgia,3
+War,Georgia,18
+Action,Germany,1141
+Adventure,Germany,1170
+Animation,Germany,366
+Biography,Germany,620
+Comedy,Germany,2794
+Crime,Germany,1395
+Drama,Germany,7255
+Family,Germany,510
+Fantasy,Germany,595
+History,Germany,513
+Horror,Germany,714
+Music,Germany,271
+Musical,Germany,126
+Mystery,Germany,727
+Romance,Germany,1623
+Sci-Fi,Germany,370
+Sport,Germany,95
+Thriller,Germany,1288
+War,Germany,487
+Western,Germany,177
+Action,Ghana,2
+Adventure,Ghana,2
+Drama,Ghana,16
+History,Ghana,3
+Romance,Ghana,3
+Thriller,Ghana,4
+Action,Gibraltar,1
+Drama,Gibraltar,1
+Action,Greece,27
+Adventure,Greece,30
+Animation,Greece,6
+Biography,Greece,24
+Comedy,Greece,467
+Crime,Greece,99
+Drama,Greece,727
+Family,Greece,21
+Fantasy,Greece,25
+History,Greece,33
+Horror,Greece,21
+Music,Greece,13
+Musical,Greece,41
+Mystery,Greece,54
+Romance,Greece,204
+Sci-Fi,Greece,17
+Sport,Greece,1
+Thriller,Greece,70
+War,Greece,31
+Western,Greece,2
+Adventure,Greenland,2
+Drama,Greenland,10
+Romance,Greenland,1
+Adventure,Guadeloupe,3
+Animation,Guadeloupe,3
+Comedy,Guadeloupe,3
+Adventure,Guatemala,6
+Animation,Guatemala,3
+Comedy,Guatemala,1
+Drama,Guatemala,24
+Family,Guatemala,3
+Horror,Guatemala,2
+Romance,Guatemala,3
+Thriller,Guatemala,2
+Comedy,Guinea,2
+Drama,Guinea,4
+Family,Guinea,2
+Drama,Guinea-Bissau,5
+Action,Haiti,6
+Biography,Haiti,4
+Drama,Haiti,19
+History,Haiti,8
+Horror,Haiti,2
+Mystery,Haiti,2
+Romance,Haiti,3
+Thriller,Haiti,2
+War,Haiti,4
+Biography,Holy See (Vatican City State),2
+Drama,Holy See (Vatican City State),2
+Comedy,Honduras,1
+Drama,Honduras,3
+Romance,Honduras,2
+Sci-Fi,Honduras,1
+Action,Hong Kong,1469
+Adventure,Hong Kong,311
+Animation,Hong Kong,58
+Biography,Hong Kong,59
+Comedy,Hong Kong,819
+Crime,Hong Kong,515
+Drama,Hong Kong,1252
+Family,Hong Kong,35
+Fantasy,Hong Kong,196
+History,Hong Kong,94
+Horror,Hong Kong,198
+Music,Hong Kong,19
+Musical,Hong Kong,14
+Mystery,Hong Kong,82
+Romance,Hong Kong,402
+Sci-Fi,Hong Kong,73
+Sport,Hong Kong,25
+Thriller,Hong Kong,287
+War,Hong Kong,41
+Western,Hong Kong,10
+Action,Hungary,99
+Adventure,Hungary,140
+Animation,Hungary,125
+Biography,Hungary,66
+Comedy,Hungary,368
+Crime,Hungary,89
+Drama,Hungary,794
+Family,Hungary,83
+Fantasy,Hungary,91
+History,Hungary,88
+Horror,Hungary,74
+Music,Hungary,22
+Musical,Hungary,14
+Mystery,Hungary,75
+Romance,Hungary,148
+Sci-Fi,Hungary,52
+Sport,Hungary,5
+Thriller,Hungary,110
+War,Hungary,79
+Western,Hungary,4
+Action,Iceland,35
+Adventure,Iceland,52
+Animation,Iceland,7
+Biography,Iceland,40
+Comedy,Iceland,138
+Crime,Iceland,44
+Drama,Iceland,303
+Family,Iceland,15
+Fantasy,Iceland,22
+History,Iceland,13
+Horror,Iceland,32
+Musical,Iceland,15
+Mystery,Iceland,25
+Romance,Iceland,43
+Sci-Fi,Iceland,7
+Sport,Iceland,2
+Thriller,Iceland,36
+War,Iceland,7
+Action,India,1950
+Adventure,India,337
+Animation,India,112
+Biography,India,130
+Comedy,India,2015
+Crime,India,778
+Drama,India,3956
+Family,India,399
+Fantasy,India,157
+History,India,134
+Horror,India,201
+Music,India,44
+Musical,India,392
+Mystery,India,340
+Romance,India,1589
+Sci-Fi,India,69
+Sport,India,68
+Thriller,India,1001
+War,India,40
+Western,India,1
+Action,Indonesia,68
+Adventure,Indonesia,27
+Animation,Indonesia,1
+Biography,Indonesia,14
+Comedy,Indonesia,56
+Crime,Indonesia,42
+Drama,Indonesia,212
+Family,Indonesia,8
+Fantasy,Indonesia,14
+History,Indonesia,3
+Horror,Indonesia,63
+Musical,Indonesia,6
+Mystery,Indonesia,36
+Romance,Indonesia,34
+Sci-Fi,Indonesia,9
+Sport,Indonesia,2
+Thriller,Indonesia,51
+War,Indonesia,8
+Action,Iran,46
+Adventure,Iran,37
+Animation,Iran,7
+Biography,Iran,12
+Comedy,Iran,179
+Crime,Iran,88
+Drama,Iran,757
+Family,Iran,51
+Fantasy,Iran,23
+History,Iran,20
+Horror,Iran,15
+Music,Iran,11
+Musical,Iran,5
+Mystery,Iran,76
+Romance,Iran,124
+Sci-Fi,Iran,1
+Sport,Iran,4
+Thriller,Iran,67
+War,Iran,51
+Comedy,Iraq,9
+Drama,Iraq,62
+History,Iraq,8
+Horror,Iraq,2
+Music,Iraq,4
+Romance,Iraq,8
+Thriller,Iraq,10
+War,Iraq,15
+Action,Ireland,112
+Adventure,Ireland,120
+Animation,Ireland,119
+Biography,Ireland,81
+Comedy,Ireland,358
+Crime,Ireland,121
+Drama,Ireland,742
+Family,Ireland,69
+Fantasy,Ireland,65
+History,Ireland,53
+Horror,Ireland,115
+Music,Ireland,27
+Mystery,Ireland,71
+Romance,Ireland,194
+Sci-Fi,Ireland,25
+Sport,Ireland,6
+Thriller,Ireland,180
+War,Ireland,51
+Western,Ireland,6
+Biography,Isle Of Man,3
+Comedy,Isle Of Man,13
+Crime,Isle Of Man,10
+Drama,Isle Of Man,31
+Horror,Isle Of Man,4
+Mystery,Isle Of Man,7
+Romance,Isle Of Man,9
+Thriller,Isle Of Man,4
+Action,Israel,54
+Adventure,Israel,33
+Animation,Israel,12
+Biography,Israel,22
+Comedy,Israel,157
+Crime,Israel,28
+Drama,Israel,515
+Family,Israel,12
+Fantasy,Israel,16
+History,Israel,32
+Horror,Israel,19
+Music,Israel,7
+Musical,Israel,8
+Mystery,Israel,12
+Romance,Israel,102
+Sci-Fi,Israel,19
+Sport,Israel,4
+Thriller,Israel,71
+War,Israel,50
+Western,Israel,10
+Action,Italy,917
+Adult,Italy,1
+Adventure,Italy,1020
+Animation,Italy,93
+Biography,Italy,364
+Comedy,Italy,2759
+Crime,Italy,1223
+Drama,Italy,4913
+Family,Italy,129
+Fantasy,Italy,411
+Film-Noir,Italy,1
+History,Italy,507
+Horror,Italy,692
+Music,Italy,112
+Musical,Italy,85
+Mystery,Italy,621
+Romance,Italy,1141
+Sci-Fi,Italy,237
+Sport,Italy,34
+Thriller,Italy,975
+War,Italy,426
+Western,Italy,443
+Action,Jamaica,6
+Comedy,Jamaica,5
+Crime,Jamaica,6
+Drama,Jamaica,16
+Music,Jamaica,5
+Romance,Jamaica,3
+Sport,Jamaica,2
+Thriller,Jamaica,1
+Action,Japan,1305
+Adventure,Japan,735
+Animation,Japan,829
+Biography,Japan,139
+Comedy,Japan,926
+Crime,Japan,520
+Drama,Japan,2505
+Family,Japan,192
+Fantasy,Japan,396
+Film-Noir,Japan,1
+History,Japan,154
+Horror,Japan,531
+Music,Japan,87
+Musical,Japan,28
+Mystery,Japan,230
+Romance,Japan,523
+Sci-Fi,Japan,351
+Sport,Japan,50
+Thriller,Japan,354
+War,Japan,87
+Western,Japan,8
+Action,Jordan,3
+Adventure,Jordan,19
+Comedy,Jordan,24
+Crime,Jordan,4
+Drama,Jordan,76
+Family,Jordan,2
+History,Jordan,8
+Horror,Jordan,6
+Mystery,Jordan,6
+Romance,Jordan,4
+Sci-Fi,Jordan,1
+Thriller,Jordan,15
+Action,Kazakhstan,16
+Adventure,Kazakhstan,6
+Biography,Kazakhstan,4
+Comedy,Kazakhstan,15
+Crime,Kazakhstan,12
+Drama,Kazakhstan,95
+Family,Kazakhstan,2
+Fantasy,Kazakhstan,5
+History,Kazakhstan,4
+Horror,Kazakhstan,3
+Mystery,Kazakhstan,1
+Romance,Kazakhstan,7
+Sci-Fi,Kazakhstan,4
+Thriller,Kazakhstan,12
+War,Kazakhstan,10
+Action,Kenya,2
+Adventure,Kenya,5
+Biography,Kenya,19
+Comedy,Kenya,2
+Crime,Kenya,30
+Drama,Kenya,74
+Mystery,Kenya,32
+Romance,Kenya,18
+Thriller,Kenya,3
+Drama,Korea,1
+Comedy,Kosovo,4
+Drama,Kosovo,30
+Family,Kosovo,1
+Romance,Kosovo,2
+Thriller,Kosovo,2
+War,Kosovo,2
+Biography,Kuwait,6
+Comedy,Kuwait,3
+Drama,Kuwait,15
+History,Kuwait,6
+Action,Kyrgyzstan,1
+Biography,Kyrgyzstan,1
+Comedy,Kyrgyzstan,1
+Drama,Kyrgyzstan,25
+Family,Kyrgyzstan,3
+Fantasy,Kyrgyzstan,3
+Romance,Kyrgyzstan,4
+Drama,Laos,10
+Horror,Laos,3
+Action,Latvia,12
+Adventure,Latvia,22
+Animation,Latvia,38
+Biography,Latvia,6
+Comedy,Latvia,98
+Crime,Latvia,14
+Drama,Latvia,156
+Family,Latvia,15
+Fantasy,Latvia,2
+History,Latvia,26
+Horror,Latvia,5
+Music,Latvia,2
+Mystery,Latvia,10
+Romance,Latvia,21
+Sci-Fi,Latvia,8
+Thriller,Latvia,9
+War,Latvia,7
+Action,Lebanon,4
+Adventure,Lebanon,12
+Animation,Lebanon,9
+Biography,Lebanon,6
+Comedy,Lebanon,29
+Crime,Lebanon,14
+Drama,Lebanon,160
+Family,Lebanon,4
+Fantasy,Lebanon,6
+History,Lebanon,6
+Music,Lebanon,5
+Musical,Lebanon,3
+Mystery,Lebanon,4
+Romance,Lebanon,37
+Thriller,Lebanon,12
+War,Lebanon,15
+Drama,Lesotho,3
+Drama,Liberia,5
+War,Liberia,3
+Biography,Libya,12
+Drama,Libya,12
+History,Libya,12
+Action,Liechtenstein,6
+Adventure,Liechtenstein,16
+Biography,Liechtenstein,4
+Comedy,Liechtenstein,8
+Crime,Liechtenstein,14
+Drama,Liechtenstein,41
+Fantasy,Liechtenstein,3
+History,Liechtenstein,4
+Horror,Liechtenstein,27
+Romance,Liechtenstein,12
+Sport,Liechtenstein,3
+Thriller,Liechtenstein,8
+War,Liechtenstein,8
+Action,Lithuania,11
+Adventure,Lithuania,11
+Animation,Lithuania,1
+Biography,Lithuania,6
+Comedy,Lithuania,57
+Crime,Lithuania,15
+Drama,Lithuania,171
+Family,Lithuania,5
+Fantasy,Lithuania,2
+History,Lithuania,26
+Horror,Lithuania,6
+Music,Lithuania,2
+Musical,Lithuania,1
+Mystery,Lithuania,22
+Romance,Lithuania,25
+Sci-Fi,Lithuania,3
+Thriller,Lithuania,20
+War,Lithuania,22
+Action,Luxembourg,88
+Adventure,Luxembourg,136
+Animation,Luxembourg,114
+Biography,Luxembourg,57
+Comedy,Luxembourg,218
+Crime,Luxembourg,76
+Drama,Luxembourg,485
+Family,Luxembourg,52
+Fantasy,Luxembourg,52
+History,Luxembourg,41
+Horror,Luxembourg,59
+Music,Luxembourg,6
+Musical,Luxembourg,8
+Mystery,Luxembourg,39
+Romance,Luxembourg,115
+Sci-Fi,Luxembourg,25
+Sport,Luxembourg,3
+Thriller,Luxembourg,118
+War,Luxembourg,20
+Western,Luxembourg,5
+Action,Macao,2
+Crime,Macao,5
+Drama,Macao,6
+Musical,Macao,3
+Thriller,Macao,2
+Drama,Malawi,2
+Action,Malaysia,37
+Adventure,Malaysia,27
+Animation,Malaysia,24
+Biography,Malaysia,1
+Comedy,Malaysia,54
+Crime,Malaysia,38
+Drama,Malaysia,107
+Family,Malaysia,6
+Fantasy,Malaysia,16
+History,Malaysia,2
+Horror,Malaysia,19
+Musical,Malaysia,4
+Mystery,Malaysia,26
+Romance,Malaysia,22
+Sci-Fi,Malaysia,12
+Sport,Malaysia,1
+Thriller,Malaysia,19
+Adventure,Maldives,4
+Animation,Maldives,4
+Comedy,Maldives,4
+Adventure,Mali,3
+Comedy,Mali,6
+Drama,Mali,21
+Fantasy,Mali,8
+Action,Malta,29
+Adventure,Malta,20
+Biography,Malta,3
+Comedy,Malta,32
+Crime,Malta,13
+Drama,Malta,64
+Fantasy,Malta,1
+History,Malta,10
+Horror,Malta,3
+Mystery,Malta,14
+Romance,Malta,11
+Sci-Fi,Malta,14
+Thriller,Malta,12
+Drama,Martinique,4
+History,Martinique,4
+Comedy,Mauritania,3
+Drama,Mauritania,12
+History,Mauritania,3
+Music,Mauritania,2
+War,Mauritania,5
+Action,Mexico,276
+Adventure,Mexico,271
+Animation,Mexico,53
+Biography,Mexico,57
+Comedy,Mexico,529
+Crime,Mexico,245
+Drama,Mexico,1088
+Family,Mexico,73
+Fantasy,Mexico,104
+History,Mexico,51
+Horror,Mexico,213
+Music,Mexico,9
+Musical,Mexico,23
+Mystery,Mexico,114
+Romance,Mexico,249
+Sci-Fi,Mexico,77
+Sport,Mexico,16
+Thriller,Mexico,257
+War,Mexico,44
+Western,Mexico,67
+Comedy,Moldova,8
+Drama,Moldova,9
+Romance,Moldova,1
+Thriller,Moldova,1
+Action,Monaco,22
+Adventure,Monaco,16
+Biography,Monaco,7
+Comedy,Monaco,17
+Crime,Monaco,9
+Drama,Monaco,42
+History,Monaco,11
+Horror,Monaco,3
+Mystery,Monaco,16
+Romance,Monaco,4
+Sci-Fi,Monaco,4
+Thriller,Monaco,13
+War,Monaco,6
+Western,Monaco,3
+Action,Mongolia,5
+Adventure,Mongolia,1
+Biography,Mongolia,3
+Comedy,Mongolia,1
+Crime,Mongolia,1
+Drama,Mongolia,9
+Family,Mongolia,7
+History,Mongolia,6
+Romance,Mongolia,3
+War,Mongolia,3
+Western,Mongolia,2
+Action,Montenegro,4
+Comedy,Montenegro,18
+Crime,Montenegro,2
+Drama,Montenegro,33
+Family,Montenegro,2
+Fantasy,Montenegro,2
+Horror,Montenegro,2
+Romance,Montenegro,5
+Action,Morocco,56
+Adventure,Morocco,16
+Biography,Morocco,31
+Comedy,Morocco,12
+Crime,Morocco,20
+Drama,Morocco,195
+Fantasy,Morocco,1
+History,Morocco,19
+Horror,Morocco,7
+Music,Morocco,4
+Mystery,Morocco,7
+Romance,Morocco,28
+Sci-Fi,Morocco,2
+Thriller,Morocco,27
+War,Morocco,19
+Drama,Mozambique,2
+Adventure,Myanmar,1
+Biography,Myanmar,2
+Comedy,Myanmar,2
+Drama,Myanmar,10
+Romance,Myanmar,1
+Thriller,Myanmar,1
+Action,Namibia,3
+Adventure,Namibia,5
+Drama,Namibia,2
+Romance,Namibia,2
+Action,Nepal,16
+Adventure,Nepal,11
+Comedy,Nepal,15
+Crime,Nepal,2
+Drama,Nepal,40
+Family,Nepal,1
+History,Nepal,5
+Horror,Nepal,1
+Musical,Nepal,1
+Mystery,Nepal,2
+Romance,Nepal,9
+Thriller,Nepal,3
+Action,Netherlands,105
+Adventure,Netherlands,189
+Animation,Netherlands,73
+Biography,Netherlands,150
+Comedy,Netherlands,495
+Crime,Netherlands,193
+Drama,Netherlands,1690
+Family,Netherlands,173
+Fantasy,Netherlands,107
+History,Netherlands,88
+Horror,Netherlands,68
+Music,Netherlands,46
+Musical,Netherlands,31
+Mystery,Netherlands,110
+Romance,Netherlands,295
+Sci-Fi,Netherlands,37
+Sport,Netherlands,6
+Thriller,Netherlands,237
+War,Netherlands,96
+Western,Netherlands,15
+Action,Netherlands Antilles,2
+Comedy,Netherlands Antilles,2
+Crime,Netherlands Antilles,4
+Drama,Netherlands Antilles,6
+History,Netherlands Antilles,2
+Mystery,Netherlands Antilles,2
+War,Netherlands Antilles,2
+Action,New Caledonia,2
+Drama,New Caledonia,2
+History,New Caledonia,2
+Action,New Zealand,98
+Adventure,New Zealand,98
+Animation,New Zealand,7
+Biography,New Zealand,16
+Comedy,New Zealand,98
+Crime,New Zealand,29
+Drama,New Zealand,211
+Family,New Zealand,30
+Fantasy,New Zealand,53
+History,New Zealand,8
+Horror,New Zealand,67
+Music,New Zealand,8
+Musical,New Zealand,3
+Mystery,New Zealand,42
+Romance,New Zealand,39
+Sci-Fi,New Zealand,29
+Sport,New Zealand,5
+Thriller,New Zealand,73
+War,New Zealand,12
+Western,New Zealand,5
+Action,Nicaragua,4
+Drama,Nicaragua,8
+War,Nicaragua,4
+Comedy,Niger,4
+Action,Nigeria,2
+Biography,Nigeria,3
+Comedy,Nigeria,19
+Crime,Nigeria,5
+Drama,Nigeria,34
+History,Nigeria,2
+Horror,Nigeria,7
+Romance,Nigeria,13
+Thriller,Nigeria,8
+Action,North Korea,3
+Adventure,North Korea,1
+Comedy,North Korea,4
+Drama,North Korea,5
+Fantasy,North Korea,3
+Musical,North Korea,1
+Romance,North Korea,3
+War,North Korea,1
+Drama,North Vietnam,1
+War,North Vietnam,1
+Action,Norway,106
+Adventure,Norway,132
+Animation,Norway,64
+Biography,Norway,73
+Comedy,Norway,294
+Crime,Norway,179
+Drama,Norway,946
+Family,Norway,164
+Fantasy,Norway,62
+History,Norway,77
+Horror,Norway,67
+Music,Norway,42
+Musical,Norway,26
+Mystery,Norway,89
+Romance,Norway,141
+Sci-Fi,Norway,18
+Sport,Norway,6
+Thriller,Norway,149
+War,Norway,33
+Drama,Oman,2
+Action,Pakistan,25
+Adventure,Pakistan,11
+Animation,Pakistan,4
+Biography,Pakistan,10
+Comedy,Pakistan,24
+Crime,Pakistan,19
+Drama,Pakistan,78
+Family,Pakistan,8
+Fantasy,Pakistan,4
+History,Pakistan,6
+Horror,Pakistan,6
+Music,Pakistan,2
+Musical,Pakistan,11
+Mystery,Pakistan,3
+Romance,Pakistan,26
+Sci-Fi,Pakistan,1
+Sport,Pakistan,2
+Thriller,Pakistan,20
+War,Pakistan,4
+Adventure,Palestine,2
+Biography,Palestine,6
+Comedy,Palestine,15
+Crime,Palestine,10
+Drama,Palestine,97
+History,Palestine,6
+Mystery,Palestine,4
+Romance,Palestine,16
+Thriller,Palestine,7
+War,Palestine,8
+Action,Panama,7
+Adventure,Panama,6
+Biography,Panama,2
+Comedy,Panama,3
+Crime,Panama,7
+Drama,Panama,32
+History,Panama,6
+Horror,Panama,3
+Sci-Fi,Panama,3
+Sport,Panama,2
+Thriller,Panama,8
+War,Panama,4
+Drama,Papua New Guinea,3
+War,Papua New Guinea,3
+Action,Paraguay,6
+Adventure,Paraguay,3
+Comedy,Paraguay,1
+Crime,Paraguay,8
+Drama,Paraguay,20
+Fantasy,Paraguay,2
+Thriller,Paraguay,4
+Action,Peru,19
+Adventure,Peru,36
+Animation,Peru,11
+Biography,Peru,12
+Comedy,Peru,20
+Crime,Peru,9
+Drama,Peru,98
+Family,Peru,6
+Fantasy,Peru,11
+History,Peru,2
+Horror,Peru,9
+Music,Peru,2
+Musical,Peru,1
+Mystery,Peru,6
+Romance,Peru,14
+Sci-Fi,Peru,5
+Thriller,Peru,10
+War,Peru,2
+Action,Philippines,161
+Adventure,Philippines,68
+Animation,Philippines,17
+Biography,Philippines,12
+Comedy,Philippines,89
+Crime,Philippines,94
+Drama,Philippines,303
+Family,Philippines,8
+Fantasy,Philippines,21
+History,Philippines,4
+Horror,Philippines,78
+Music,Philippines,2
+Musical,Philippines,6
+Mystery,Philippines,34
+Romance,Philippines,97
+Sci-Fi,Philippines,35
+Sport,Philippines,5
+Thriller,Philippines,60
+War,Philippines,33
+Western,Philippines,6
+Action,Poland,109
+Adventure,Poland,94
+Animation,Poland,82
+Biography,Poland,87
+Comedy,Poland,381
+Crime,Poland,130
+Drama,Poland,1029
+Family,Poland,50
+Fantasy,Poland,69
+History,Poland,128
+Horror,Poland,40
+Music,Poland,42
+Musical,Poland,9
+Mystery,Poland,79
+Romance,Poland,216
+Sci-Fi,Poland,30
+Sport,Poland,9
+Thriller,Poland,139
+War,Poland,134
+Western,Poland,3
+Action,Portugal,35
+Adventure,Portugal,36
+Animation,Portugal,4
+Biography,Portugal,44
+Comedy,Portugal,209
+Crime,Portugal,102
+Drama,Portugal,723
+Family,Portugal,2
+Fantasy,Portugal,46
+History,Portugal,55
+Horror,Portugal,41
+Music,Portugal,15
+Musical,Portugal,23
+Mystery,Portugal,76
+Romance,Portugal,111
+Sci-Fi,Portugal,18
+Sport,Portugal,3
+Thriller,Portugal,42
+War,Portugal,24
+Western,Portugal,2
+Action,Puerto Rico,14
+Adventure,Puerto Rico,8
+Biography,Puerto Rico,9
+Comedy,Puerto Rico,16
+Crime,Puerto Rico,11
+Drama,Puerto Rico,48
+Horror,Puerto Rico,3
+Music,Puerto Rico,7
+Musical,Puerto Rico,2
+Mystery,Puerto Rico,5
+Romance,Puerto Rico,15
+Sci-Fi,Puerto Rico,6
+Sport,Puerto Rico,1
+Thriller,Puerto Rico,19
+War,Puerto Rico,3
+Action,Qatar,6
+Adventure,Qatar,24
+Animation,Qatar,15
+Biography,Qatar,9
+Comedy,Qatar,28
+Crime,Qatar,14
+Drama,Qatar,229
+Family,Qatar,5
+Fantasy,Qatar,14
+History,Qatar,4
+Horror,Qatar,4
+Mystery,Qatar,13
+Sci-Fi,Qatar,5
+Thriller,Qatar,35
+War,Qatar,4
+Action,Republic of Macedonia,13
+Adventure,Republic of Macedonia,10
+Animation,Republic of Macedonia,2
+Biography,Republic of Macedonia,8
+Comedy,Republic of Macedonia,69
+Crime,Republic of Macedonia,18
+Drama,Republic of Macedonia,209
+Family,Republic of Macedonia,9
+Fantasy,Republic of Macedonia,1
+History,Republic of Macedonia,7
+Horror,Republic of Macedonia,5
+Music,Republic of Macedonia,4
+Mystery,Republic of Macedonia,8
+Romance,Republic of Macedonia,26
+Thriller,Republic of Macedonia,9
+War,Republic of Macedonia,12
+Western,Republic of Macedonia,4
+Adventure,Reunion,2
+Drama,Reunion,2
+Fantasy,Reunion,2
+Action,Romania,102
+Adventure,Romania,80
+Animation,Romania,10
+Biography,Romania,50
+Comedy,Romania,283
+Crime,Romania,83
+Drama,Romania,607
+Family,Romania,44
+Fantasy,Romania,53
+History,Romania,75
+Horror,Romania,76
+Music,Romania,34
+Musical,Romania,11
+Mystery,Romania,54
+Romance,Romania,73
+Sci-Fi,Romania,28
+Sport,Romania,4
+Thriller,Romania,75
+War,Romania,44
+Western,Romania,10
+Action,Russia,274
+Adventure,Russia,324
+Animation,Russia,76
+Biography,Russia,104
+Comedy,Russia,715
+Crime,Russia,194
+Drama,Russia,1478
+Family,Russia,127
+Fantasy,Russia,169
+History,Russia,235
+Horror,Russia,82
+Music,Russia,24
+Musical,Russia,66
+Mystery,Russia,94
+Romance,Russia,409
+Sci-Fi,Russia,116
+Sport,Russia,24
+Thriller,Russia,175
+War,Russia,200
+Western,Russia,19
+Adventure,Rwanda,3
+Comedy,Rwanda,3
+Drama,Rwanda,8
+War,Rwanda,3
+Comedy,Samoa,2
+Drama,Samoa,2
+Romance,Samoa,2
+Action,Saudi Arabia,5
+Adventure,Saudi Arabia,4
+Biography,Saudi Arabia,10
+Comedy,Saudi Arabia,13
+Crime,Saudi Arabia,5
+Drama,Saudi Arabia,31
+History,Saudi Arabia,10
+Horror,Saudi Arabia,6
+Mystery,Saudi Arabia,8
+Romance,Saudi Arabia,4
+Sci-Fi,Saudi Arabia,6
+Thriller,Saudi Arabia,8
+Adventure,Senegal,1
+Comedy,Senegal,19
+Crime,Senegal,2
+Drama,Senegal,61
+Family,Senegal,4
+Music,Senegal,5
+Musical,Senegal,3
+Romance,Senegal,11
+War,Senegal,3
+Action,Serbia,37
+Adventure,Serbia,22
+Animation,Serbia,5
+Biography,Serbia,25
+Comedy,Serbia,174
+Crime,Serbia,44
+Drama,Serbia,361
+Family,Serbia,12
+Fantasy,Serbia,10
+History,Serbia,14
+Horror,Serbia,21
+Music,Serbia,7
+Musical,Serbia,8
+Mystery,Serbia,20
+Romance,Serbia,69
+Sci-Fi,Serbia,10
+Sport,Serbia,1
+Thriller,Serbia,40
+War,Serbia,29
+Animation,Serbia and Montenegro,6
+Comedy,Serbia and Montenegro,6
+Drama,Serbia and Montenegro,21
+Mystery,Serbia and Montenegro,3
+Romance,Serbia and Montenegro,6
+Thriller,Serbia and Montenegro,2
+War,Serbia and Montenegro,3
+Action,Singapore,52
+Adventure,Singapore,38
+Animation,Singapore,7
+Biography,Singapore,3
+Comedy,Singapore,47
+Crime,Singapore,47
+Drama,Singapore,180
+Family,Singapore,9
+Fantasy,Singapore,15
+History,Singapore,13
+Horror,Singapore,55
+Music,Singapore,4
+Musical,Singapore,3
+Mystery,Singapore,44
+Romance,Singapore,32
+Sci-Fi,Singapore,17
+Thriller,Singapore,48
+Action,Slovakia,8
+Adventure,Slovakia,20
+Animation,Slovakia,12
+Biography,Slovakia,21
+Comedy,Slovakia,102
+Crime,Slovakia,23
+Drama,Slovakia,200
+Family,Slovakia,26
+Fantasy,Slovakia,29
+History,Slovakia,24
+Horror,Slovakia,12
+Music,Slovakia,3
+Musical,Slovakia,1
+Mystery,Slovakia,14
+Romance,Slovakia,33
+Sci-Fi,Slovakia,2
+Sport,Slovakia,3
+Thriller,Slovakia,20
+War,Slovakia,19
+Western,Slovakia,2
+Action,Slovenia,16
+Adventure,Slovenia,14
+Biography,Slovenia,10
+Comedy,Slovenia,126
+Crime,Slovenia,20
+Drama,Slovenia,275
+Family,Slovenia,22
+History,Slovenia,7
+Horror,Slovenia,8
+Music,Slovenia,4
+Mystery,Slovenia,8
+Romance,Slovenia,40
+Sci-Fi,Slovenia,3
+Thriller,Slovenia,12
+War,Slovenia,15
+Western,Slovenia,1
+Biography,Somalia,5
+Drama,Somalia,5
+Thriller,Somalia,3
+Action,South Africa,175
+Adventure,South Africa,110
+Animation,South Africa,4
+Biography,South Africa,56
+Comedy,South Africa,94
+Crime,South Africa,69
+Drama,South Africa,371
+Family,South Africa,31
+Fantasy,South Africa,10
+History,South Africa,36
+Horror,South Africa,64
+Music,South Africa,1
+Musical,South Africa,6
+Mystery,South Africa,53
+Romance,South Africa,54
+Sci-Fi,South Africa,55
+Sport,South Africa,9
+Thriller,South Africa,111
+War,South Africa,9
+Western,South Africa,9
+Action,South Korea,388
+Adventure,South Korea,133
+Animation,South Korea,123
+Biography,South Korea,19
+Comedy,South Korea,437
+Crime,South Korea,205
+Drama,South Korea,870
+Family,South Korea,28
+Fantasy,South Korea,89
+History,South Korea,57
+Horror,South Korea,145
+Music,South Korea,23
+Musical,South Korea,9
+Mystery,South Korea,97
+Romance,South Korea,302
+Sci-Fi,South Korea,29
+Sport,South Korea,29
+Thriller,South Korea,208
+War,South Korea,29
+Western,South Korea,3
+Action,Spain,501
+Adventure,Spain,665
+Animation,Spain,184
+Biography,Spain,205
+Comedy,Spain,1490
+Crime,Spain,577
+Documentary,Spain,3
+Drama,Spain,2986
+Family,Spain,122
+Fantasy,Spain,298
+Film-Noir,Spain,3
+History,Spain,199
+Horror,Spain,576
+Music,Spain,70
+Musical,Spain,57
+Mystery,Spain,423
+Romance,Spain,651
+Sci-Fi,Spain,188
+Sport,Spain,26
+Thriller,Spain,801
+War,Spain,129
+Western,Spain,275
+Action,Sri Lanka,7
+Adventure,Sri Lanka,3
+Biography,Sri Lanka,6
+Comedy,Sri Lanka,5
+Crime,Sri Lanka,9
+Drama,Sri Lanka,40
+Family,Sri Lanka,6
+Fantasy,Sri Lanka,1
+History,Sri Lanka,5
+Horror,Sri Lanka,1
+Musical,Sri Lanka,2
+Mystery,Sri Lanka,2
+Romance,Sri Lanka,3
+Thriller,Sri Lanka,9
+War,Sri Lanka,1
+Biography,Sudan,5
+Crime,Sudan,25
+Drama,Sudan,36
+Mystery,Sudan,25
+Drama,Suriname,2
+Adventure,Svalbard And Jan Mayen,5
+Drama,Svalbard And Jan Mayen,5
+Romance,Svalbard And Jan Mayen,5
+Action,Swaziland,6
+Adventure,Swaziland,6
+Comedy,Swaziland,6
+Action,Sweden,146
+Adventure,Sweden,160
+Animation,Sweden,60
+Biography,Sweden,127
+Comedy,Sweden,580
+Crime,Sweden,311
+Drama,Sweden,1779
+Family,Sweden,205
+Fantasy,Sweden,89
+History,Sweden,104
+Horror,Sweden,136
+Music,Sweden,55
+Musical,Sweden,32
+Mystery,Sweden,154
+Romance,Sweden,318
+Sci-Fi,Sweden,74
+Sport,Sweden,16
+Thriller,Sweden,309
+War,Sweden,47
+Western,Sweden,6
+Action,Switzerland,128
+Adventure,Switzerland,100
+Animation,Switzerland,40
+Biography,Switzerland,56
+Comedy,Switzerland,405
+Crime,Switzerland,144
+Drama,Switzerland,1317
+Family,Switzerland,34
+Fantasy,Switzerland,48
+Film-Noir,Switzerland,3
+History,Switzerland,60
+Horror,Switzerland,56
+Music,Switzerland,36
+Musical,Switzerland,18
+Mystery,Switzerland,111
+Romance,Switzerland,285
+Sci-Fi,Switzerland,52
+Sport,Switzerland,10
+Thriller,Switzerland,163
+War,Switzerland,66
+Action,Syria,4
+Biography,Syria,1
+Comedy,Syria,3
+Drama,Syria,8
+Family,Syria,2
+History,Syria,3
+Musical,Syria,2
+Sci-Fi,Syria,4
+Action,Taiwan,265
+Adventure,Taiwan,98
+Animation,Taiwan,39
+Biography,Taiwan,14
+Comedy,Taiwan,165
+Crime,Taiwan,73
+Drama,Taiwan,447
+Family,Taiwan,18
+Fantasy,Taiwan,54
+History,Taiwan,44
+Horror,Taiwan,27
+Music,Taiwan,12
+Musical,Taiwan,23
+Mystery,Taiwan,15
+Romance,Taiwan,126
+Sci-Fi,Taiwan,34
+Sport,Taiwan,4
+Thriller,Taiwan,34
+War,Taiwan,15
+Comedy,Tajikistan,12
+Crime,Tajikistan,4
+Drama,Tajikistan,27
+Fantasy,Tajikistan,4
+Music,Tajikistan,3
+Romance,Tajikistan,3
+War,Tajikistan,5
+Drama,Tanzania,3
+Action,Thailand,139
+Adventure,Thailand,60
+Animation,Thailand,38
+Biography,Thailand,17
+Comedy,Thailand,100
+Crime,Thailand,70
+Drama,Thailand,244
+Family,Thailand,9
+Fantasy,Thailand,58
+History,Thailand,9
+Horror,Thailand,115
+Music,Thailand,5
+Musical,Thailand,4
+Mystery,Thailand,25
+Romance,Thailand,85
+Sci-Fi,Thailand,3
+Sport,Thailand,5
+Thriller,Thailand,99
+War,Thailand,4
+Comedy,The Democratic Republic Of Congo,3
+Crime,The Democratic Republic Of Congo,3
+Drama,The Democratic Republic Of Congo,3
+Thriller,The Democratic Republic Of Congo,3
+Action,Trinidad and Tobago,2
+Comedy,Trinidad and Tobago,5
+Crime,Trinidad and Tobago,1
+Drama,Trinidad and Tobago,13
+Musical,Trinidad and Tobago,2
+Romance,Trinidad and Tobago,2
+Thriller,Trinidad and Tobago,3
+Action,Tunisia,10
+Adventure,Tunisia,14
+Biography,Tunisia,4
+Comedy,Tunisia,12
+Crime,Tunisia,25
+Drama,Tunisia,140
+Family,Tunisia,7
+Fantasy,Tunisia,9
+History,Tunisia,4
+Horror,Tunisia,7
+Music,Tunisia,5
+Musical,Tunisia,2
+Mystery,Tunisia,11
+Romance,Tunisia,16
+Sci-Fi,Tunisia,6
+Thriller,Tunisia,7
+War,Tunisia,21
+Action,Turkey,123
+Adventure,Turkey,145
+Animation,Turkey,11
+Biography,Turkey,24
+Comedy,Turkey,628
+Crime,Turkey,134
+Drama,Turkey,1117
+Family,Turkey,62
+Fantasy,Turkey,60
+History,Turkey,77
+Horror,Turkey,82
+Music,Turkey,22
+Musical,Turkey,11
+Mystery,Turkey,36
+Romance,Turkey,290
+Sci-Fi,Turkey,22
+Sport,Turkey,6
+Thriller,Turkey,96
+War,Turkey,38
+Western,Turkey,6
+Action,Uganda,2
+Crime,Uganda,1
+Mystery,Uganda,1
+Action,Ukraine,33
+Adventure,Ukraine,28
+Animation,Ukraine,2
+Biography,Ukraine,8
+Comedy,Ukraine,75
+Crime,Ukraine,12
+Drama,Ukraine,170
+Family,Ukraine,1
+Fantasy,Ukraine,14
+History,Ukraine,32
+Horror,Ukraine,4
+Musical,Ukraine,1
+Mystery,Ukraine,21
+Romance,Ukraine,27
+Sci-Fi,Ukraine,10
+Thriller,Ukraine,30
+War,Ukraine,18
+Action,United Arab Emirates,77
+Adventure,United Arab Emirates,64
+Animation,United Arab Emirates,3
+Biography,United Arab Emirates,19
+Comedy,United Arab Emirates,56
+Crime,United Arab Emirates,50
+Drama,United Arab Emirates,225
+Family,United Arab Emirates,15
+Fantasy,United Arab Emirates,23
+History,United Arab Emirates,13
+Horror,United Arab Emirates,16
+Music,United Arab Emirates,12
+Mystery,United Arab Emirates,36
+Romance,United Arab Emirates,16
+Sci-Fi,United Arab Emirates,22
+Thriller,United Arab Emirates,69
+War,United Arab Emirates,8
+Action,United Kingdom,1814
+Adventure,United Kingdom,1782
+Animation,United Kingdom,391
+Biography,United Kingdom,980
+Comedy,United Kingdom,3463
+Crime,United Kingdom,1849
+Drama,United Kingdom,7850
+Family,United Kingdom,512
+Fantasy,United Kingdom,761
+Film-Noir,United Kingdom,16
+History,United Kingdom,639
+Horror,United Kingdom,1535
+Music,United Kingdom,340
+Musical,United Kingdom,202
+Mystery,United Kingdom,1080
+Romance,United Kingdom,2073
+Sci-Fi,United Kingdom,648
+Sport,United Kingdom,118
+Thriller,United Kingdom,2215
+War,United Kingdom,540
+Western,United Kingdom,100
+Action,United States of America,7404
+Adventure,United States of America,5267
+Animation,United States of America,1170
+Biography,United States of America,1530
+Comedy,United States of America,13327
+Crime,United States of America,6302
+Drama,United States of America,20830
+Family,United States of America,1991
+Fantasy,United States of America,2166
+Film-Noir,United States of America,658
+Game-Show,United States of America,1
+History,United States of America,1021
+Horror,United States of America,6103
+Music,United States of America,986
+Musical,United States of America,1054
+Mystery,United States of America,3090
+News,United States of America,1
+Romance,United States of America,6854
+Sci-Fi,United States of America,2715
+Sport,United States of America,668
+Thriller,United States of America,6838
+War,United States of America,1021
+Western,United States of America,1312
+Action,Uruguay,13
+Adventure,Uruguay,13
+Animation,Uruguay,7
+Biography,Uruguay,7
+Comedy,Uruguay,67
+Crime,Uruguay,28
+Drama,Uruguay,154
+Family,Uruguay,5
+Horror,Uruguay,4
+Music,Uruguay,2
+Musical,Uruguay,6
+Mystery,Uruguay,8
+Romance,Uruguay,17
+Sci-Fi,Uruguay,9
+Thriller,Uruguay,28
+Western,Uruguay,2
+Comedy,Uzbekistan,10
+Drama,Uzbekistan,11
+Sci-Fi,Uzbekistan,2
+Adventure,Vanuatu,2
+Drama,Vanuatu,2
+Romance,Vanuatu,2
+Action,Venezuela,13
+Adventure,Venezuela,7
+Biography,Venezuela,9
+Comedy,Venezuela,18
+Crime,Venezuela,13
+Drama,Venezuela,92
+Family,Venezuela,3
+Fantasy,Venezuela,1
+History,Venezuela,11
+Horror,Venezuela,6
+Music,Venezuela,2
+Mystery,Venezuela,3
+Romance,Venezuela,20
+Sport,Venezuela,1
+Thriller,Venezuela,14
+Action,Vietnam,8
+Adventure,Vietnam,1
+Biography,Vietnam,5
+Comedy,Vietnam,12
+Crime,Vietnam,7
+Drama,Vietnam,64
+Fantasy,Vietnam,3
+History,Vietnam,7
+Horror,Vietnam,10
+Music,Vietnam,4
+Mystery,Vietnam,4
+Romance,Vietnam,25
+Thriller,Vietnam,13
+War,Vietnam,5
+Comedy,Yemen,1
+Drama,Yemen,7
+Fantasy,Yemen,3
+Musical,Yemen,1
+Romance,Yemen,2
+Action,Yugoslavia,48
+Adventure,Yugoslavia,147
+Animation,Yugoslavia,3
+Biography,Yugoslavia,18
+Comedy,Yugoslavia,133
+Crime,Yugoslavia,21
+Drama,Yugoslavia,334
+Family,Yugoslavia,18
+Fantasy,Yugoslavia,21
+History,Yugoslavia,69
+Horror,Yugoslavia,32
+Music,Yugoslavia,4
+Musical,Yugoslavia,11
+Mystery,Yugoslavia,16
+Romance,Yugoslavia,88
+Sci-Fi,Yugoslavia,13
+Sport,Yugoslavia,1
+Thriller,Yugoslavia,9
+War,Yugoslavia,113
+Western,Yugoslavia,57
+Comedy,Zaire,3
+Drama,Zaire,3
+Musical,Zaire,3
+Action,Zambia,4
+Drama,Zambia,6
+Sci-Fi,Zambia,4
+Thriller,Zambia,4
+Drama,Zimbabwe,2
