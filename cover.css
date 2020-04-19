@@ -51,23 +51,29 @@ body {
   vertical-align: top;
 }
 .cover-container {
+  margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
 }
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 10px;
+}
+
+.visu{
+  text-align: center;
 }
 
 
 /*
  * Header
  */
+
+
 .masthead-brand {
-  margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: lighter;
 }
 
@@ -80,7 +86,7 @@ body {
 .masthead-nav > li > a {
   padding-right: 4;
   padding-left: 0;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: lighter;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
@@ -113,7 +119,7 @@ body {
  */
 
 .cover {
-  padding: 0 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 .cover .btn-lg {
@@ -121,7 +127,27 @@ body {
   font-weight: lighter;
 }
 
+/*
+* Card
+*/
 
+
+.card-body{
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #a9a9a9;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.card-deck{
+  display: flex;
+  align-items: center;
+}
+.card-title{
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
 /*
  * Footer
  */
@@ -141,6 +167,7 @@ body {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
+    background-color: #333;
     top: 0;
   }
   .mastfoot {

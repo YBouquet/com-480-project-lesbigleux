@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>What can we learn from Cinema?</title>
+	<meta name="description" content="Oscar Visualization">
+	<meta name="author" content="Gonxhe Idrizi, Yann Bouquet, Emma Lanctuit">
+
+	<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="cover.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container">
+				<div class="masthead clearfix">
+					<div class="inner">
+						<h3 class="masthead-brand">Between Countries and Cinema</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li><a href="index1.html">Home</a></li>
+								<li><a href="description1.html">Description</a></li>
+								<li class='active'><a href="data1.html">Data</a></li>
+								<li><a href="team1.html">Team</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="inner">
+					<h2 class="cover-heading">Dataset</h2>
+					<p> A first dataset we will explore is the film Award from IMDB which contains awards from 1886 to
+						2020.
+						As our project will focus on an evolution through time, having such a range of data will be
+						useful
+						but we have to consider disparity due to event existence. <br /><i>What is the existence period
+							of
+							each
+							event
+							pre-selected to these days?</i>
+					</p>
+					<p>
+
+						Most frequent and relevant events in the dataset are, by preprocessing: Emmy Awards, BAFTA
+						Awards,
+						Academy Awards (USA), News & Documentary Emmy Awards, Online Film & Television Association,
+						Grammy
+						Awards, Cannes Film Festival, Gold Derby Awards, Berlin International Film Festival, Gemini
+						Awards,
+						Leo Awards, Adult Video News Awards, Young Artist Awards. We notice a distinction between the
+						Event
+						and Award names as some awards names might be more meaningful than their associated events. If
+						we
+						take the Oscar for exemple, theses are awards delivered during the Academy Awards. This is a
+						nuance
+						that we will have to investigate in order to make our visualization as relevant as possible.
+						<br /><i>How
+							many awards are there per event?</i>
+					</p>
+					<p>
+
+						This dataset also contains distinction between primary and secondary prices. For the scope of
+						our
+						visualisation we retain only primary prizes awarded to film or people. In order to have an
+						unbiased
+						result, we are also interested in the proportion of nominees or winners for each of the
+						ceremonies
+						selected for our study (i.e. most frequent/popular).
+						<br /><i>How much information we lose if we reduce
+							our
+							study to the winners?</i>
+					</p>
+					<p>
+
+						To join awards information with movies country production we are using the dataset of IMDB
+						Movies
+						that contains around 80 000 films. Since our study period extends over a century, we have to
+						manually change the names of countries that no longer exist as Soviet Union for Russia, West
+						Germany
+						for Germany… We hope that the majority of the films/persons nominated in the most popular
+						ceremonies
+						of the last 100 years will be present in this dataset. In this purpose, as we are distinguishing
+						nominations from their country-production aspect it can be interesting to know : How many movies
+						are
+						represented by country in the IMDB dataset? A country not present in this dataset will most
+						likely
+						not be represented in our visualization.
+					</p>
+					<p>
+						You can find here the <a href="https://www.kaggle.com/iwooloowi/film-awards-imdb">IMDB Awards
+							dataset</a> and the
+						<a href=https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset>IMDB Movies </a>
+					</p>
+				</div>
+				<div class='inner'>
+					<h2 class="cover-heading">Exploratory Data Analysis</h2>
+				</div>
+
+
+				<div class="mastfoot">
+					<div class="inner">
+						<p>Data Visualisation project </p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="https://d3js.org/d3.v4.js"></script>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
