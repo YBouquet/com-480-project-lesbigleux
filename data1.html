@@ -104,15 +104,101 @@
 					<h2 class="cover-heading">Exploratory Data Analysis</h2>
 				</div>
 
+				<div>
+					<p>
+						During our dataset analysis, multiple questions were raised that we tried to answer through some
+						visualisations of our data. There is two main endpoints in our visualisation : Film-producing
+						countries and Events/Awards.<br />
+						We have to decide whether to consider the event or its awards as it changes the access to our
+						visualization. We need a name that speaks to the largest number of people and at the same time
+						makes sense from the point of view of our cinematic study. Considering the event rather than the
+						award leads to a difference in the selected ceremonies and therefore in the total distribution
+						of our countries. This is a major decision in the relevance of our final visualization.
+						<br /><i>How many awards are there per event?</i>
 
-				<div class="mastfoot">
-					<div class="inner">
-						<p>Data Visualisation project </p>
-					</div>
+					</p>
 				</div>
+				<div class="container">
+					<img width=500px height=auto src="./Preprocess/figures/awards_by_event.jpeg">
+				</div>
+				<p>
+
+					Our next analysis concern the feasibility of our visualisation considering one century of
+					evolution over Cinema Awards.
+					<br /><i>What is the existence period of each event pre-selected to these days?</i>
+
+				</p>
+				<div class="container">
+					<row>
+						<img width=450px height=auto src="./Preprocess/figures/activity_periods_by_awards.jpeg">
+						<img width=450px height=auto src="./Preprocess/figures/activity_periods_by_event.jpeg">
+					</row>
+				</div>
+				<p>
+
+
+					We observe that we should have enough data to cover all the century in a representative way.
+					Note that awards followed the repartition of event as expected. Moreover some name coincides and
+					taking the awards instead of event name doesn’t seems to include any biais here.<br />
+
+					Having relevant visualisation imply to use relevant data. Is it pertinent to consider winners
+					and nominees, can we reduce our sample to winners as there are the most impacted by an award?
+					<br /><i>How much information we lose if we reduce our study to the winners?</i>
+
+				</p>
+				<div class="container">
+					<row>
+						<img width=450px height=auto src="./Preprocess/figures/total_primary_by_award.jpeg">
+						<img width=450px height=auto src="./Preprocess/figures/total_primary_by_event.jpeg">
+					</row>
+				</div>
+				<p>
+
+					Here again the distinction between events and awards doesn’t seem to have a notable impact on
+					our data repartition. However we saw that we are losing a huge part of data by only selecting
+					winners. Keeping both remains appropriate to our goal since a nominated film will still have
+					more visibility than one without a price.<br />
+
+					An overview of the biases that could be included by considering only nominated films and not
+					people was also an important subject. This would make it easier for us to match the actor's
+					nomination with the country of production of the film in which he or she was nominated.
+
+				</p>
+				<div class="container">
+					<row>
+						<img width=450px height=auto
+							src="./Preprocess/figures/titles_persons_distributions_by_award.jpeg">
+						<img width=450px height=auto
+							src="./Preprocess/figures/titles_persons_distributions_by_event.jpeg">
+
+					</row>
+				</div>
+				<p>
+
+
+					From this visualisation, we get that one more time the distinction between awards or event
+					doesn’t change the global repartition. This confirm us in the fact that most popular awards are
+					linked to most popular events. However is show us that by deleting people from our study we risk
+					considerably influencing the total distribution of awards and thus our countries of production.
+					<br />
+
+					As we link our award dataset to our film dataset in purpose to match award to film-producing
+					country, we have to make sure that we have enough countries represented in our IMDB dataset to
+					conduct an interesting study.
+					<br />
+
+					<i>How many movies are represented by country in the IMDB dataset? </i>
+					<img width=500px height=auto src="./Preprocess/figures/imdb_movies_by_country.jpeg">
+				</p>
 			</div>
 
+			<div class="mastfoot">
+				<p>Data Visualisation project </p>
+
+			</div>
 		</div>
+
+	</div>
 
 	</div>
 

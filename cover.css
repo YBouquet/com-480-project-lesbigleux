@@ -13,7 +13,7 @@ a:hover {
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #333;
+  color:rgb(46, 46, 77);
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: 1px solid #fff;
@@ -27,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color:rgb(46, 46, 77);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 100;
 }
@@ -95,7 +95,7 @@ body {
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
-  background-color: #333;
+  background-color:rgb(46, 46, 77);
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
@@ -159,15 +159,9 @@ body {
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
-  text-align: center;
+  text-align: end;
 }
 
-.fleche {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:10%
-}
 
 .parties{
   text-align: center;
@@ -182,8 +176,6 @@ body {
 }
 
 
-
-
 /*
  * Affix and center
  */
@@ -192,7 +184,7 @@ body {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
-    background-color: #333;
+    background-color:rgb(46, 46, 77);
     top: 0;
   }
   .mastfoot {
