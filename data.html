@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>What can we learn from Cinema?</title>
+	<meta name="description" content="Oscar Visualization">
+	<meta name="author" content="Gonxhe Idrizi, Yann Bouquet, Emma Lanctuit">
+
+	<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="cover.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container">
+				<div class="masthead clearfix">
+					<div class="inner">
+						<h3 class="masthead-brand">Between Countries and Cinema</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="description.html">Description</a></li>
+								<li class='active'><a href="data.html">Data</a></li>
+								<li><a href="team.html">Team</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="inner">
+					<h2 class="cover-heading">Dataset</h2>
+					<p> A first dataset we will explore is the film Award from IMDB which contains awards from 1886 to
+						2020.
+						As our project will focus on an evolution through time, having such a range of data will be
+						useful
+						but we have to consider disparity due to event existence. <br /><i>What is the existence period
+							of
+							each
+							event
+							pre-selected to these days?</i>
+					</p>
+					<p>
+
+						Most frequent and relevant events in the dataset are, by preprocessing: Emmy Awards, BAFTA
+						Awards,
+						Academy Awards (USA), News & Documentary Emmy Awards, Online Film & Television Association,
+						Grammy
+						Awards, Cannes Film Festival, Gold Derby Awards, Berlin International Film Festival, Gemini
+						Awards,
+						Leo Awards, Adult Video News Awards, Young Artist Awards. We notice a distinction between the
+						Event
+						and Award names as some awards names might be more meaningful than their associated events. If
+						we
+						take the Oscar for exemple, theses are awards delivered during the Academy Awards. This is a
+						nuance
+						that we will have to investigate in order to make our visualization as relevant as possible.
+						<br /><i>How
+							many awards are there per event?</i>
+					</p>
+					<p>
+
+						This dataset also contains distinction between primary and secondary prices. For the scope of
+						our
+						visualisation we retain only primary prizes awarded to film or people. In order to have an
+						unbiased
+						result, we are also interested in the proportion of nominees or winners for each of the
+						ceremonies
+						selected for our study (i.e. most frequent/popular).
+						<br /><i>How much information we lose if we reduce
+							our
+							study to the winners?</i>
+					</p>
+					<p>
+
+						To join awards information with movies country production we are using the dataset of IMDB
+						Movies
+						that contains around 80 000 films. Since our study period extends over a century, we have to
+						manually change the names of countries that no longer exist as Soviet Union for Russia, West
+						Germany
+						for Germany… We hope that the majority of the films/persons nominated in the most popular
+						ceremonies
+						of the last 100 years will be present in this dataset. In this purpose, as we are distinguishing
+						nominations from their country-production aspect it can be interesting to know : How many movies
+						are
+						represented by country in the IMDB dataset? A country not present in this dataset will most
+						likely
+						not be represented in our visualization.
+					</p>
+					<p>
+						You can find here the <a href="https://www.kaggle.com/iwooloowi/film-awards-imdb">IMDB Awards
+							dataset</a> and the
+						<a href=https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset>IMDB Movies </a>
+					</p>
+				</div>
+				<div class='inner'>
+					<h2 class="cover-heading">Exploratory Data Analysis</h2>
+				</div>
+
+				<div>
+					<p>
+						During our dataset analysis, multiple questions were raised that we tried to answer through some
+						visualisations of our data. There is two main endpoints in our visualisation : Film-producing
+						countries and Events/Awards.<br />
+						We have to decide whether to consider the event or its awards as it changes the access to our
+						visualization. We need a name that speaks to the largest number of people and at the same time
+						makes sense from the point of view of our cinematic study. Considering the event rather than the
+						award leads to a difference in the selected ceremonies and therefore in the total distribution
+						of our countries. This is a major decision in the relevance of our final visualization.
+						<br /><i>How many awards are there per event?</i>
+
+					</p>
+				</div>
+				<div class="container">
+					<img width=500px height=auto src="./Preprocess/figures/awards_by_event.jpeg">
+				</div>
+				<p>
+
+					Our next analysis concern the feasibility of our visualisation considering one century of
+					evolution over Cinema Awards.
+					<br /><i>What is the existence period of each event pre-selected to these days?</i>
+
+				</p>
+				<div class="container">
+					<row>
+						<img width=450px height=auto src="./Preprocess/figures/activity_periods_by_awards.jpeg">
+						<img width=450px height=auto src="./Preprocess/figures/activity_periods_by_event.jpeg">
+					</row>
+				</div>
+				<p>
+
+
+					We observe that we should have enough data to cover all the century in a representative way.
+					Note that awards followed the repartition of event as expected. Moreover some name coincides and
+					taking the awards instead of event name doesn’t seems to include any biais here.<br />
+
+					Having relevant visualisation imply to use relevant data. Is it pertinent to consider winners
+					and nominees, can we reduce our sample to winners as there are the most impacted by an award?
+					<br /><i>How much information we lose if we reduce our study to the winners?</i>
+
+				</p>
+				<div class="container">
+					<row>
+						<img width=450px height=auto src="./Preprocess/figures/total_primary_by_award.jpeg">
+						<img width=450px height=auto src="./Preprocess/figures/total_primary_by_event.jpeg">
+					</row>
+				</div>
+				<p>
+
+					Here again the distinction between events and awards doesn’t seem to have a notable impact on
+					our data repartition. However we saw that we are losing a huge part of data by only selecting
+					winners. Keeping both remains appropriate to our goal since a nominated film will still have
+					more visibility than one without a price.<br />
+
+					An overview of the biases that could be included by considering only nominated films and not
+					people was also an important subject. This would make it easier for us to match the actor's
+					nomination with the country of production of the film in which he or she was nominated.
+
+				</p>
+				<div class="container">
+					<row>
+						<img width=450px height=auto
+							src="./Preprocess/figures/titles_persons_distributions_by_award.jpeg">
+						<img width=450px height=auto
+							src="./Preprocess/figures/titles_persons_distributions_by_event.jpeg">
+
+					</row>
+				</div>
+				<p>
+
+
+					From this visualisation, we get that one more time the distinction between awards or event
+					doesn’t change the global repartition. This confirm us in the fact that most popular awards are
+					linked to most popular events. However is show us that by deleting people from our study we risk
+					considerably influencing the total distribution of awards and thus our countries of production.
+					<br />
+
+					As we link our award dataset to our film dataset in purpose to match award to film-producing
+					country, we have to make sure that we have enough countries represented in our IMDB dataset to
+					conduct an interesting study.
+					<br />
+
+					<i>How many movies are represented by country in the IMDB dataset? </i>
+					<img width=500px height=auto src="./Preprocess/figures/imdb_movies_by_country.jpeg">
+				</p>
+			</div>
+
+			<div class="mastfoot">
+				<p>Data Visualisation project </p>
+
+			</div>
+		</div>
+
+	</div>
+
+	</div>
+
+	<script src="https://d3js.org/d3.v4.js"></script>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
