@@ -1,0 +1,289 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color:rgb(46, 46, 77);
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color:rgb(46, 46, 77);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+}
+body {
+  color: #fff;
+  font-weight: 100;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+ width: 80%;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 20px 20px 20px 20px;
+}
+.site-wrapper-inner {
+  text-align: left;
+  padding: 0;
+}
+.cover-container {
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 10px;
+}
+
+.visu{
+  text-align: center;
+  max-width: fit-content;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*
+ * Header
+ */
+
+
+.masthead-brand {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 4;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color:rgb(46, 46, 77);
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 80px 20px;
+  text-align: center;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: lighter;
+}
+
+/*
+* Card
+*/
+
+
+.card-body{
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #a9a9a9;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 150px;
+  height: 150px;
+}
+.card-deck{
+  display: flex;
+  align-items: center;
+}
+.card-title{
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+  text-align: end;
+}
+
+
+.parties{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top-style: solid;
+  border-top-color: rgb(71, 99, 255);
+  border-bottom-width: 1px;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    background-color:rgb(46, 46, 77);
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 70%;
+  }
+}
+
+/*
+* Scroll
+*/
+
+.scroll-indicator-controller {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 20px;
+  z-index: 2;
+}
+.scroll-indicator-controller.indi-mobile > div span {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .scroll-indicator-controller {
+    right: 10px;
+  }
+}
+.scroll-indicator-controller > div {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid rgb(71, 99, 255);
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  will-change: transition;
+}
+.scroll-indicator-controller > div span {
+  color: rgb(71, 99, 255);
+  position: absolute;
+  right: calc(100% + 8px);
+  white-space: nowrap;
+  top: -1px;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  line-height: 17px;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.4s ease;
+  will-change: transition;
+}
+@media (hover: none) {
+  .scroll-indicator-controller > div span {
+    display: none;
+  }
+}
+.scroll-indicator-controller > div span:after {
+  content: "-----";
+  padding-left: 5px;
+  letter-spacing: -2px;
+  font-family: arial, sans-serif;
+  vertical-align: text-top;
+}
+@media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .scroll-indicator-controller > div:hover span {
+    width: auto;
+    opacity: 1;
+    overflow: visible;
+    transform: translateX(0px);
+  }
+}
+.scroll-indicator-controller > div.active {
+  background: rgb(71, 99, 255);
+  border-color: rgba(0, 0, 0, 0.25);
+}
+@supports (-ms-ime-align:auto) {
+  .scroll-indicator-controller > div span {
+    transition: opacity 0.4s ease;
+  }
+}
