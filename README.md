@@ -80,6 +80,9 @@ In all our visualisations, we get that the distinction between awards or event d
 
 As we link our award dataset to our film dataset in purpose to match award to film-producing country, we have to make sure that we have enough countries represented in our IMDB dataset to conduct an interesting study.
 
+How many movies are represented by country in the IMDB dataset?
+![image info](./Preprocess/figures/imdb_movies_by_country.jpeg)
+
 ### 1.4 Related work
 Most data visualizations concerning Film ceremonies are focused on discrimination between sexual genre and often focus on a single ceremony (Grammy Awards or Oscar) and try to show existing discrimination (female/mald, racial...).
 Some others focus on predictive tasks : who will win depending on their previous nomination in the same ceremonie, what is the value of an Award (financial gain),...
@@ -110,8 +113,9 @@ We haven’t used any of these datasets before.
 
 **10% of the final grade**
 
+[Two A4 pages describing the project goal](./Milestones/Milestone2.pdf)
 
-
+Functional project prototype review
 
 ## Milestone 3 (Thursday 28th May, 5pm)
 
