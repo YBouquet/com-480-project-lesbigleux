@@ -115,7 +115,7 @@ We haven’t used any of these datasets before.
 
 [Two A4 pages describing the project goal](./Milestones/Milestone2.pdf)
 
-Functional project prototype review
+[Functional project prototype review](https://com-480-data-visualization.github.io/com-480-project-lesbigleux/)
 
 ## Milestone 3 (Thursday 28th May, 5pm)
 
