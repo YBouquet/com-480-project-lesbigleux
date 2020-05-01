@@ -29,10 +29,10 @@
 						<h3 class="masthead-brand">What can we learn from Cinema?</h3>
 						<nav>
 							<ul class="nav masthead-nav">
-								<li class='active'><a href="index1.html">Home</a></li>
-								<li><a href="description1.html">Description</a></li>
-								<li><a href="data1.html">Data</a></li>
-								<li><a href="team1.html">Team</a></li>
+								<li class='active'><a href="index.html">Home</a></li>
+								<li><a href="description.html">Description</a></li>
+								<li><a href="data.html">Data</a></li>
+								<li><a href="team.html">Team</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -51,34 +51,139 @@
 					From a serie of datasets, we manage to ask collected data about tacit rules
 					that are often kept deeply into our mind.
 				</div>
-
-				<div class="visu">
-					<!-- EXEMPLE SVG 
-					<svg id="countries_cat_viz" width="600" height="500"></svg>
-					-->
-					<img width=700px height=auto src="./Preprocess/figures/context.PNG">
-
-				</div>
-
 				<div class="jumbotron jumbotron-fluid">
 					<div class="container">
-						<h4>How to use</h4>
+						<h4>What are the core visualization presented here</h4>
+						<h5>The Network</h5>
 						<p>
-							Here we would tell you how to interact with the plot below.
-							Sadly, it is not interactive at this stage of the project.
-							Please imagine that the plot is interactive and that clicking on it
-							activates captivating animations.
+							The network implemented here represents the country involved in the main film award events
+							in 2019. The blue nodes
+							represent the events, the orange one represent the countries. A contry is involved in an
+							event if at least one
+							film produced in this country is nominated in the event.
+						</p>
+						<h6>Interaction</h6>
+						<p>
+							You can drag any node you want. You can isolate the node of group (countries or event) next
+							to the other group to
+							ease the readibility of connections. For example, take a blue node, if you place it to the
+							right of the orange nodes,
+							it will keep its place, otherwise it will return to its original x-coordinate. The same idea
+							goes with an orange node.
+							A force exists between the nodes, so that they won't cover each other up.
+						</p>
+						<h6>Further Ideas</h6>
+						<p>
+							We want to bring text and legends in the visualization so that those explanation won't be
+							necessary anymore.
+							Also we aim to bring a timeline so that this example of 2019 can be extended to any year
+							that offers data in our datasets.
+							Also, we want the user to be able to click on an event to display a sequence sunburst
+							detailing what that event was in the
+							considered year.
+						</p>
+						<h5>The Sequence Sunburst</h5>
+						<p>
+							It represents the awards repartition (Oscar), the winners and nominees repartition, the
+							films/people repartition, and give
+							all the awards category repartition for the Academy Awards in 2019.
+						</p>
+						<h6>Interaction</h6>
+						<p>
+							You can put your mouse on any partition of the sequence and the latter would appear in
+							detail above the rings.
+						</p>
+						<h6>Further Ideas</h6>
+						<p>
+							The sunburst would appear and be updated according to the interaction the user woudl have
+							with the network as explained above :
+							clicking on a node representing an event. It would also be linked to the timeline of the
+							network so that an update of the
+							partitions would be triggered according to the new targeted year.
 						</p>
 					</div>
 				</div>
+				<div class="visu">
+					<div id="graph-div" , style="diplay:inline-block;">
+						<svg id="undirected_graph" viewBox='0 -10 900 920'></svg>
+					</div>
 
+					<div id="sunburst" , style="display:inline-block;">
+						<div id="sequence"></div>
+						<div id="chart">
+							<div id="explanation" style="visibility: hidden;">
+								<span id="percentage"></span><br />
+								of visits begin with this sequence of pages
+							</div>
+						</div>
+					</div>
+					<div id="sidebar">
+						<input type="checkbox" id="togglelegend"> Legend<br />
+						<div id="legend" style="visibility: hidden;"></div>
+					</div>
+
+					<!-- EXEMPLE SVG
+					<svg id="countries_cat_viz" width="600" height="500"></svg>
+					<img width=700px height=auto src="./Preprocess/figures/context.PNG">-->
+
+				</div>
+
+				<!--Essai
+				<table>
+					<tr>
+						<td>
+							Network
+						</td>
+						<td>
+							Sunburst
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Intro
+						</td>
+						<td>
+							Intro
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Interaction
+						</td>
+						<td>
+							Interaction
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Visualisation
+							<div id="graph-div">
+								<svg id="undirected_graph" viewBox='0 -10 900 920'></svg>
+							</div>
+						</td>
+						<td>
+							VISU
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Further ideas
+						</td>
+						<td>
+							Further ideas
+						</td>
+					</tr>
+
+				</table>
+
+-->
 				<!--Anchor point (scroll indicator-->
 				<div>
 					<div class="scroll-indicator" id="exploratory" data-scroll-indicator-title="Exploratory"></div>
 				</div>
 				<h3 class='parties'>Exploratory -Evolution of genres and awards in a specific country</h3>
 				<div class="visu">
-					<!-- EXEMPLE SVG 
+					<!-- EXEMPLE SVG
 					<svg id="countries_cat_viz" width="600" height="500"></svg>
 					-->
 					<img width=700px height=auto src="./Preprocess/figures/exploration.PNG">
@@ -98,7 +203,7 @@
 					</p>
 				</div>
 				<div class="visu">
-					<!-- EXEMPLE SVG 
+					<!-- EXEMPLE SVG
 					<svg id="countries_cat_viz" width="600" height="500"></svg>
 					-->
 					<img width=700px height=auto src="./Preprocess/figures/resume.PNG">
@@ -117,11 +222,13 @@
 
 	</div>
 
-	<script src="map_visu.js"></script>
+	<!--<script src="map_visu.js"></script>-->
 	<script type="text/javascript" src="easyScrollDots.min.js"></script>
-	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://d3js.org/d3.v5.js"></script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="undirected_graph.js"></script>
+	<script src="seq_sunburst.js"></script>
 	<!--Easy Scroll Dots js-->
 	<script>function dotsThrottle(a, b, c) { var d, e, f, g = null, h = 0; c || (c = {}); var i = function () { h = !1 === c.leading ? 0 : Date.now(), g = null, f = a.apply(d, e), g || (d = e = null) }; return function () { var j = Date.now(); h || !1 !== c.leading || (h = j); var k = b - (j - h); return d = this, e = arguments, 0 >= k || k > b ? (g && (clearTimeout(g), g = null), h = j, f = a.apply(d, e), !g && (d = e = null)) : !g && !1 !== c.trailing && (g = setTimeout(i, k)), f } } let dotFixedNavPresent = !1, dotFixedNavId = "", dotFixedNavUp = !1; function easyScrollDots(a) { let b = document.querySelectorAll(".scroll-indicator"); if (!0 === a.fixedNav ? dotFixedNavPresent = !0 : dotFixedNavPresent, dotFixedNavId = "" !== a.fixedNavId && a.fixedNavId, !0 === a.fixedNavUpward ? dotFixedNavUp = !0 : dotFixedNavUp, b.length) { document.querySelector("body").lastElementChild.insertAdjacentHTML("afterend", "<div class=\"scroll-indicator-controller\"><span></span></div>"); const a = document.querySelector(".scroll-indicator-controller"); ("undefined" != typeof window.orientation || -1 !== navigator.userAgent.indexOf("IEMobile")) && a.classList.add("indi-mobile"); const d = Array.prototype.slice.call(b); d.forEach(function (b, c) { const d = b.getAttribute("id"), e = b.getAttribute("data-scroll-indicator-title"); let f = ""; 0 == c && (f = "active"), a.lastElementChild.insertAdjacentHTML("afterend", "<div class=\"" + f + "\" data-indi-controller-id=\"" + d + "\" onclick=\"scrollIndiClicked('" + d + "');\"><span>" + e + "</span><div></div></div>") }); const f = a.querySelectorAll("[data-indi-controller-id]"); var c = dotsThrottle(function () { let b = {}; d.forEach(function (a) { const c = a.getAttribute("id"), d = a.getBoundingClientRect().top; b[c] = d }); const c = Object.keys(b).map(function (a) { return b[a] }), g = function () { const a = c.filter(function (a) { return -150 < a }); return Math.min.apply(null, a) }; Object.keys(b).forEach(function (c) { b[c] == g() && (Array.prototype.forEach.call(f, function (a) { a.classList.contains("active") && a.classList.remove("active") }), a.querySelector("[data-indi-controller-id=\"" + c + "\"]").classList.add("active")) }) }, 300); window.onscroll = function () { c() } } } function scrollIndiClicked(a) { if (window.jQuery) { if (!0 == dotFixedNavPresent && dotFixedNavId.length) { const b = document.getElementById(dotFixedNavId), c = b.clientHeight, d = $("html, body"), e = $("#" + a); if (!0 === dotFixedNavUp) { d.animate({ scrollTop: e.offset().top }, 700); const a = document.body.getBoundingClientRect().top; setTimeout(function () { document.body.getBoundingClientRect().top > a && d.animate({ scrollTop: e.offset().top - c }, 400) }, 400) } else d.animate({ scrollTop: e.offset().top - c }, 700) } else $("html, body").animate({ scrollTop: $("#" + a).offset().top }, 700); } else if (!0 == dotFixedNavPresent && dotFixedNavId.length) { const b = document.getElementById(dotFixedNavId), c = b.clientHeight, d = document.getElementById(a); if (!0 === dotFixedNavUp) { window.scrollTo({ top: d.offsetTop, left: 0, behavior: "smooth" }); const a = document.body.getBoundingClientRect().top; setTimeout(function () { document.body.getBoundingClientRect().top > a && window.scrollTo({ top: d.offsetTop - c, left: 0, behavior: "smooth" }) }, 400) } else window.scrollTo({ top: d.offsetTop - c, left: 0, behavior: "smooth" }) } else window.scrollTo({ top: document.getElementById(a).offsetTop, left: 0, behavior: "smooth" }) }</script>
 	<!--Easy Scroll Dots init-->
