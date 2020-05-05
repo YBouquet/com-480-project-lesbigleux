@@ -287,3 +287,13 @@ body {
     transition: opacity 0.4s ease;
   }
 }
+
+
+.mdb-select {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(71, 99, 255);
+  color: white;
+  }
+
