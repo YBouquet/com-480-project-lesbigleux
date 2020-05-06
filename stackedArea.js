@@ -265,8 +265,7 @@ function stackedArea(data) {
 
 function stackedAreaAwards(data) {
     console.log(data)
-    // List of genre
-
+    // List of award (Winner is either Primary or Secondary)
     var keys = ['Primary', 'Secondary', 'No_award'];
 
     //Data by year then genre with values

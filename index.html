@@ -104,8 +104,8 @@
 					</div>
 				</div>
 				<div class="visu">
-					<div id="graph-div" , style="diplay:inline-block;">
-						<svg id="undirected_graph" viewBox='0 -10 900 920'></svg>
+					<div id="graph-div>
+						<svg id=" undirected_graph" viewBox='0 -10 900 920'></svg>
 					</div>
 
 					<div id="sunburst" , style="display:inline-block;">
@@ -182,21 +182,21 @@
 					<div class="scroll-indicator" id="exploratory" data-scroll-indicator-title="Exploratory"></div>
 				</div>
 				<h3 class='parties'>Exploratory -Evolution of genres and awards in a specific country</h3>
-				<div class="visu">
-					<form class="need-validation" novalidate>
-						<label for='country_selection'>Choose a country </label>
-						<select id='country_selection' class="mdb-select validate md-form" searchable="Search here..."
-							onchange="stackedAreabyCountry(this.value)">
-							<option value="" selected> All</option>
 
-						</select>
-					</form>
+				<form class="need-validation" novalidate>
+					<label for='country_selection'>Choose a country </label>
+					<select id='country_selection' class="mdb-select validate md-form" searchable="Search here..."
+						onchange="stackedAreabyCountry(this.value)">
+						<option value="" selected> All</option>
 
-					<svg id="stackedArea" width="900" height="500"></svg>
-					<svg id="stackedAreaAwards" width="900" height="500"></svg>
-					<img width=700px height=auto src="./Preprocess/figures/exploration.PNG">
+					</select>
+				</form>
+				<svg id="stackedArea" class="visu1" width="500" height="500" viewBox='0 0 500 500'></svg>
+				<svg id="stackedAreaAwards" class="visu2" width="500" height="500" viewBox='0 0 500 500'></svg>
 
-				</div>
+				<img width=700px height=auto src="./Preprocess/figures/exploration.PNG">
+
+
 
 				<!--Anchor point (scroll indicator-->
 				<div>
