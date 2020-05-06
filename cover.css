@@ -67,10 +67,10 @@ body {
 }
 
 .visu1{
-  float: left;
+  align-self: flex-start;
 }
 .visu2{
-  float: right;
+  float: inline-end;
 }
 
 
