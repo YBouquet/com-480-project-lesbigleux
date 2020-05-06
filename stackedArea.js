@@ -267,7 +267,7 @@ function stackedAreaAwards(data) {
     console.log(data)
     // List of genre
 
-    var keys = ['Winner', 'Primary', 'Secondary', 'No award'];
+    var keys = ['Primary', 'Secondary', 'No_award'];
 
     //Data by year then genre with values
     groupbyYear = d3.group(data, d => d.year);
@@ -276,9 +276,6 @@ function stackedAreaAwards(data) {
     function mapToArray(map) {
         result = []
         map.forEach((v, i, a) => {
-            console.log('v')
-            console.log(v)
-            console.log(v.isWinner)
             o = {}
             //initialize
             o["year"] = i
@@ -286,22 +283,19 @@ function stackedAreaAwards(data) {
                 o[price] = 0;
             })
             v.forEach(s => {
-
-                if (s.isPrimary) {
-                    o['Primary'] += 1
-                }
-                else if (s.isSecondary) {
+                if (s.isSecondary == "True") {
                     o['Secondary'] += 1
                 }
-                else if (s.isWinner) {
-                    o['Winner'] += 1
+                else if (s.isPrimary == "True") {
+                    o['Primary'] += 1
                 }
                 else {
-                    o['No award'] += 1
+                    o['No_award'] += 1
                 }
             })
             result.push(o)
         });
+        console.log(result)
         return result.sort((a, b) => a.year - b.year)
     }
     console.log(result)
@@ -421,8 +415,7 @@ function stackedAreaAwards(data) {
         .append("path")
         .attr("class", function (d) { return "myArea " + d.key })
         .style("fill", function (d) { return color(d.key); })
-        .attr("d", area
-        )
+        .attr("d", area)
         .append("title")
         .text(({ key }) => key)
 
