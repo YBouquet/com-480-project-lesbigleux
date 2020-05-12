@@ -8,11 +8,15 @@ function whenDocumentLoaded(action) {
 }
 whenDocumentLoaded(() => {
     console.log('DOM loaded');
-    d3.csv("./data/stacked_movies_awards.csv").then(function (text) {
+    d3.csv("./data/stacked_movies.csv").then(function (text) {
         preprocessCountrySelection(text)
         stackedArea(text)
-        stackedAreaAwards(text)
+
     });
+    d3.csv("./data/stacked_movies_awards.csv").then(function (text) {
+        console.log("next")
+        stackedAreaAwards(text)
+    })
 
 });
 
@@ -20,7 +24,6 @@ function preprocessCountrySelection(data) {
     groupCountry = d3.group(data, d => d.country);
     var countries = Array.from(groupCountry.keys());
     countries = countries.sort()
-    console.log(countries)
     selector = document.getElementById('country_selection')
     countries.forEach(c => {
         newOption = document.createElement('option');
@@ -47,32 +50,42 @@ function getMaxValue(data) {
     return max;
 }
 
+// global variable
+var byPercent = false;
+var country = "";
+
 function stackedAreabyCountry(country) {
-    console.log("called with:")
-    console.log(country)
-    d3.csv("./data/stacked_movies_awards.csv").then(function (text) {
+    this.country = country
+    d3.csv("./data/stacked_movies.csv").then(function (text) {
 
         //filter the country here
-        if (country != "") {
-            text = text.filter(d => d.country == country)
+        if (this.country != "") {
+            text = text.filter(d => d.country == this.country)
         }
         //clear svg
         d3.select("#stackedArea > *").remove()
-        d3.select("#stackedAreaAwards > *").remove()
         stackedArea(text)
+
+    });
+    d3.csv("./data/stacked_movies_awards.csv").then(function (text) {
+        //filter the country here
+        if (this.country != "") {
+            text = text.filter(d => d.country == this.country)
+        }
+        //clear svg
+        d3.select("#stackedAreaAwards > *").remove()
         stackedAreaAwards(text)
     });
 }
 
 function stackedArea(data) {
-    console.log(data)
+    console.log("Stacked Area");
     // List of genre
     groupGenre = d3.group(data, d => d.genre);
     var keys = Array.from(groupGenre.keys());
 
     //Data by year then genre with values
     groupbyYearthenGenre = d3.rollup(data, v => v.length, d => d.year, d => d.genre);
-    console.log(groupbyYearthenGenre)
 
     result = mapToArray(groupbyYearthenGenre);
     function mapToArray(map) {
@@ -92,9 +105,15 @@ function stackedArea(data) {
         });
         return result.sort((a, b) => a.year - b.year)
     }
-    console.log(result)
     //stack the data
-    var stackedData = d3.stack().keys(keys)(result);
+    if (byPercent) {
+        console.log("stacked by percent");
+        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetExpand)(result);
+    }
+    else {
+        console.log("stacked by count");
+        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetDiverging)(result);
+    }
 
 
     // set the dimensions and margins of the graph
@@ -111,14 +130,13 @@ function stackedArea(data) {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-
     // Add X axis
     var x = d3.scaleLinear()
         .domain(d3.extent(data, function (d) { return d.year; }))
         .range([0, width]);
     var xAxis = svg.append("g")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).ticks(5));
+        .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
     svg.append("text")
         .attr("text-anchor", "end")
@@ -130,7 +148,7 @@ function stackedArea(data) {
 
     // Add Y axis + get the max value of the map
     var y = d3.scaleLinear()
-        .domain([0, d3.max(stackedData, d => d3.max(d, d => d[1]))]).nice()
+        .domain([0, parseInt(d3.max(stackedData, d => d3.max(d, d => d[1])))]).nice()
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(y));
@@ -196,7 +214,6 @@ function stackedArea(data) {
 
 
     // Show the areas
-
     var area = d3.area()
         .x(function (d, i) { return x(d.data.year); })
         .y0(function (d) { return y(d[0]) })
@@ -216,7 +233,6 @@ function stackedArea(data) {
 
 
     //Brush
-
     //everything around is not drawn
     svg.append("defs").append("svg:clipPath")
         .attr("id", "clip")
@@ -254,7 +270,7 @@ function stackedArea(data) {
         }
 
         // Update axis and area position
-        xAxis.transition().duration(1000).call(d3.axisBottom(x).ticks(5))
+        xAxis.transition().duration(1000).call(d3.axisBottom(x).tickFormat(d3.format("d")))
         areaChart
             .selectAll("path")
             .transition().duration(1000)
@@ -264,7 +280,8 @@ function stackedArea(data) {
 }
 
 function stackedAreaAwards(data) {
-    console.log(data)
+    console.log("Stacked Area Awards");
+
     // List of award (Winner is either Primary or Secondary)
     var keys = ['Primary', 'Secondary', 'No_award'];
 
@@ -294,13 +311,17 @@ function stackedAreaAwards(data) {
             })
             result.push(o)
         });
-        console.log(result)
         return result.sort((a, b) => a.year - b.year)
     }
-    console.log(result)
     //stack the data
-    var stackedData = d3.stack().keys(keys)(result);
-
+    if (byPercent) {
+        console.log("stacked by percent");
+        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetExpand)(result);
+    }
+    else {
+        console.log("stacked by count");
+        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetDiverging)(result);
+    }
 
     // set the dimensions and margins of the graph
     var margin = { top: 20, right: 90, bottom: 30, left: 55 },
@@ -323,7 +344,8 @@ function stackedAreaAwards(data) {
         .range([0, width]);
     var xAxis = svg.append("g")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).ticks(5));
+        .attr("class", 'x axis')
+        .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
     svg.append("text")
         .attr("text-anchor", "end")
@@ -333,11 +355,13 @@ function stackedAreaAwards(data) {
         .style('font-size', '10px')
         .text("Time (year)");
 
+
     // Add Y axis + get the max value of the map
     var y = d3.scaleLinear()
         .domain([0, d3.max(stackedData, d => d3.max(d, d => d[1]))]).nice()
         .range([height, 0]);
     svg.append("g")
+        .attr("class", 'y axis')
         .call(d3.axisLeft(y));
     svg.append("text")
         .attr("text-anchor", "start")
@@ -448,10 +472,8 @@ function stackedAreaAwards(data) {
         // If no selection, back to initial coordinate. Otherwise, update X axis domain
         if (!extent) {
             if (!idleTimeout) return idleTimeout = setTimeout(idled, 3000);
-            console.log('no extend')
             x.domain(d3.extent(data, function (d) { return d.year; }))
         } else {
-            console.log('extend')
             x.domain([x.invert(extent[0]), x.invert(extent[1])])
             areaChart.select(".brush").call(brush.move, null)
 
@@ -464,6 +486,14 @@ function stackedAreaAwards(data) {
             .transition().duration(1000)
             .attr("d", area)
     }
+
+    //Transition and choice Bypercent / Bycount
+    d3.select(".need-validation").selectAll("input").on("change", handleFormClick);
+    function handleFormClick() {
+        byPercent = (this.value === "bypercent")
+        stackedAreabyCountry(country);
+    }
+
 
 
 
