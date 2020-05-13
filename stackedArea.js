@@ -136,6 +136,7 @@ function stackedArea(data) {
         .range([0, width]);
     var xAxis = svg.append("g")
         .attr("transform", "translate(0," + height + ")")
+        .attr("class", 'axis')
         .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
     svg.append("text")
@@ -150,7 +151,8 @@ function stackedArea(data) {
     var y = d3.scaleLinear()
         .domain([0, parseInt(d3.max(stackedData, d => d3.max(d, d => d[1])))]).nice()
         .range([height, 0]);
-    svg.append("g")
+    var yAxis = svg.append("g")
+        .attr("class", 'axis')
         .call(d3.axisLeft(y));
     svg.append("text")
         .attr("text-anchor", "start")
@@ -158,7 +160,7 @@ function stackedArea(data) {
         .attr("y", -10)
         .style('fill', 'white')
         .style('font-size', '10px')
-        .text("Number of films produced");
+        .text("Number of duo films-genre produced");
 
     // color palette
     var color = d3.scaleOrdinal()
@@ -200,7 +202,7 @@ function stackedArea(data) {
         .append("text")
         .attr("x", width + 15 + size * 1.3)
         .attr("y", function (d, i) { return 10 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
-        .style("fill", function (d) { return color(d) })
+        .style("fill", 'white')
         .text(function (d) { return d })
         .attr("text-anchor", "left")
         .style("alignment-baseline", "middle")
@@ -280,8 +282,7 @@ function stackedArea(data) {
 }
 
 function stackedAreaAwards(data) {
-    console.log("Stacked Area Awards");
-
+    console.log("Area")
     // List of award (Winner is either Primary or Secondary)
     var keys = ['Primary', 'Secondary', 'No_award'];
 
@@ -314,12 +315,11 @@ function stackedAreaAwards(data) {
         return result.sort((a, b) => a.year - b.year)
     }
     //stack the data
+    console.log(byPercent)
     if (byPercent) {
-        console.log("stacked by percent");
         var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetExpand)(result);
     }
     else {
-        console.log("stacked by count");
         var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetDiverging)(result);
     }
 
@@ -344,7 +344,7 @@ function stackedAreaAwards(data) {
         .range([0, width]);
     var xAxis = svg.append("g")
         .attr("transform", "translate(0," + height + ")")
-        .attr("class", 'x axis')
+        .attr("class", 'axis')
         .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
     svg.append("text")
@@ -360,8 +360,8 @@ function stackedAreaAwards(data) {
     var y = d3.scaleLinear()
         .domain([0, d3.max(stackedData, d => d3.max(d, d => d[1]))]).nice()
         .range([height, 0]);
-    svg.append("g")
-        .attr("class", 'y axis')
+    var yAxis = svg.append("g")
+        .attr("class", 'axis')
         .call(d3.axisLeft(y));
     svg.append("text")
         .attr("text-anchor", "start")
@@ -411,7 +411,7 @@ function stackedAreaAwards(data) {
         .append("text")
         .attr("x", width + 15 + size * 1.3)
         .attr("y", function (d, i) { return 10 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
-        .style("fill", function (d) { return color(d) })
+        .style("fill", 'white')
         .text(function (d) { return d })
         .attr("text-anchor", "left")
         .style("alignment-baseline", "middle")
