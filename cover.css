@@ -6,8 +6,9 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color:  #6E0D25;
 }
+
 
 /* Custom default button */
 .btn-default,
@@ -27,18 +28,35 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color:rgb(236, 199, 96);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color:#F3EFE2;
+  font-family: 'Dosis', sans-serif;
+  font-size: 22px;
+  text-align: justify;
   font-weight: 100;
-}
-body {
+  width: 100%;
   color: #000;
-  font-weight: 100;
+  margin: 0;
+}
+
+h3 {
+  text-align:center;
+  font-size: 30px;
+}
+h4 {
+  font-size: 27px;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+h5,h6 {
+  font-size: 21px;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
- width: 90%;
+ width: 100%;
   overflow: hidden;
   margin: 0 auto 0 auto;
   padding: 20px 20px 20px 20px;
@@ -66,7 +84,7 @@ body {
 }
 
 .visu{
-  background-color: rgba(0, 38, 255, 0.5);
+  background-color: #F3EFE2;
 }
 
 .visu1{
@@ -87,11 +105,13 @@ body {
 
 
 .masthead-brand {
-  margin-bottom: 10px;
   font-size: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 0.4rem;
+  margin-top: 0,4rem;
   font-weight: lighter;
-  color: rgb(71, 99, 255);
+  font-family: 'Satisfy', cursive;
+  color: #F3EFE2;
+  margin-top: 15px;
 }
 
 .masthead-nav > li {
@@ -103,14 +123,14 @@ body {
 .masthead-nav > li > a {
   padding-right: 4;
   padding-left: 0;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: lighter;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
-  background-color:rgb(236, 199, 96);
+  background-color: #6E0D25;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
@@ -119,9 +139,10 @@ body {
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
+  font-size: 25px;
 }
 
-@media (min-width: 768px) {
+@media {
   .masthead-brand {
     float: left;
   }
@@ -182,9 +203,9 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  color: rgb(71, 99, 255);
+  color: #000000;
   margin-top: 50px;
-  padding-top: 10px;
+  padding-top: 50px;
   border-top-style: solid;
   border-top-color: white;
   border-bottom-width: 1px;
@@ -199,7 +220,8 @@ body {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
-    background-color:rgb(236, 199, 96);
+    background-color: #6E0D25;
+    width: 100%;
     top: 0;
   }
   .mastfoot {
@@ -250,15 +272,15 @@ body {
   height: 20px;
   position: relative;
   border-radius: 50%;
-  border: 1px solid rgb(71, 99, 255);
-  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid  #6E0D25;
+  background:#ffcccc;
   margin: 0 0 10px 0;
   cursor: pointer;
   transition: background 0.4s ease;
   will-change: transition;
 }
 .scroll-indicator-controller > div span {
-  color: rgb(71, 99, 255);
+  color:  #6E0D25;
   position: absolute;
   right: calc(100% + 8px);
   white-space: nowrap;
@@ -294,8 +316,8 @@ body {
   }
 }
 .scroll-indicator-controller > div.active {
-  background: rgb(71, 99, 255);
-  border-color: rgba(0, 0, 0, 0.25);
+  background:  #6E0D25;
+  border-color: #ffcccc;
 }
 @supports (-ms-ime-align:auto) {
   .scroll-indicator-controller > div span {
@@ -311,4 +333,3 @@ body {
   border-bottom: 1px solid rgb(71, 99, 255);
   color: white;
   }
-

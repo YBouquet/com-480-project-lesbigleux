@@ -143,7 +143,7 @@ function stackedArea(data) {
         .attr("text-anchor", "end")
         .attr("x", width)
         .attr("y", height + 25)
-        .style('fill', 'white')
+        .style('fill', 'black')
         .style('font-size', '10px')
         .text("Time (year)");
 
@@ -158,7 +158,7 @@ function stackedArea(data) {
         .attr("text-anchor", "start")
         .attr("x", 0)
         .attr("y", -10)
-        .style('fill', 'white')
+        .style('fill', 'black')
         .style('font-size', '10px')
         .text("Number of duo films-genre produced");
 
@@ -202,7 +202,7 @@ function stackedArea(data) {
         .append("text")
         .attr("x", width + 15 + size * 1.3)
         .attr("y", function (d, i) { return 10 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
-        .style("fill", 'white')
+        .style("fill", 'black')
         .text(function (d) { return d })
         .attr("text-anchor", "left")
         .style("alignment-baseline", "middle")
@@ -350,7 +350,7 @@ function stackedAreaAwards(data) {
         .attr("text-anchor", "end")
         .attr("x", width)
         .attr("y", height + 25)
-        .style('fill', 'white')
+        .style('fill', 'black')
         .style('font-size', '10px')
         .text("Time (year)");
 
@@ -366,7 +366,7 @@ function stackedAreaAwards(data) {
         .attr("text-anchor", "start")
         .attr("x", 0)
         .attr("y", -10)
-        .style('fill', 'white')
+        .style('fill', 'black')
         .style('font-size', '10px')
         .text("Number of awards received by film produced");
 
@@ -410,7 +410,7 @@ function stackedAreaAwards(data) {
         .append("text")
         .attr("x", width + 15 + size * 1.3)
         .attr("y", function (d, i) { return 10 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
-        .style("fill", 'white')
+        .style("fill", 'black')
         .text(function (d) { return d })
         .attr("text-anchor", "left")
         .style("alignment-baseline", "middle")
@@ -497,4 +497,3 @@ function stackedAreaAwards(data) {
 
 
 }
-

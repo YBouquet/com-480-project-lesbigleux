@@ -9,10 +9,13 @@
 	<meta name="description" content="Oscar Visualization">
 	<meta name="author" content="Gonxhe Idrizi, Yann Bouquet, Emma Lanctuit">
 
+	<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 	<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<link href="cover.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="easyScrollDots.min.css" />
+	<link rel="stylesheet" href="parsets.css">
 
 </head>
 
@@ -43,16 +46,14 @@
 				</div>
 				<h3 class="parties">Context- Which countries are represented in which
 					film ceremonies over time </h3>
-				<div class='inner'>
-					<h4>Introduction</h4>
-					When the Oscar ceremony become questionnable, what can we learn from Cinema?
-					This work is an attempt to illustrate and ask multiple question about cinema,
-					culture, tendance in general.
-					From a serie of datasets, we manage to ask collected data about tacit rules
-					that are often kept deeply into our mind.
-				</div>
 				<div class="jumbotron jumbotron-fluid">
 					<div class="container">
+						<h4>Introduction</h4>
+						<p>When the Oscar ceremony become questionnable, what can we learn from Cinema?
+						This work is an attempt to illustrate and ask multiple question about cinema,
+						culture, tendance in general.
+						From a serie of datasets, we manage to ask collected data about tacit rules
+						that are often kept deeply into our mind.</p>
 						<h4>What are the core visualization presented here</h4>
 						<h5>The Network</h5>
 						<p>
@@ -104,7 +105,7 @@
 					</div>
 				</div>
 				<div class="visu">
-					<div id="graph-div>
+					<div id="graph-div">
 						<svg id=" undirected_graph" viewBox='0 -10 900 920'></svg>
 					</div>
 
@@ -219,7 +220,24 @@
 					</p>
 				</div>
 				<div class="visu">
-					<img width=700px height=auto src="./Preprocess/figures/resume.PNG">
+					<div id="tab" class="tab">
+						<button class="rangeSets" onclick="change_range(1920)"> 1920-1930 </option>
+						<button class="rangeSets" onclick="change_range(1930)"> 1930-1940 </button>
+						<button class="rangeSets" onclick="change_range(1940)"> 1940-1950 </button>
+						<button class="rangeSets" onclick="change_range(1950)"> 1950-1960 </button>
+						<button class="rangeSets" onclick="change_range(1960)"> 1960-1970 </button>
+						<button class="rangeSets active" onclick="change_range(1970)"> 1970-1980 </button>
+						<button class="rangeSets" onclick="change_range(1980)"> 1980-1990 </button>
+						<button class="rangeSets" onclick="change_range(1990)"> 1990-2000 </button>
+						<button class="rangeSets" onclick="change_range(2000)"> 2000-2010 </button>
+						<button class="rangeSets" onclick="change_range(2010)"> 2010-2020 </button>
+					</div>
+
+					<div id="vis"></div>
+					<script src="parsets.js"></script>
+					<script src="https://mbostock.github.com/d3/d3.js?2.5.0"></script>
+					<script src="https://www.jasondavies.com/parallel-sets/d3.parsets.js"></script>
+					<script src="https://www.jasondavies.com/parallel-sets/highlight.min.js"></script>
 
 				</div>
 
