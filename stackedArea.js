@@ -82,7 +82,7 @@ function stackedArea(data) {
     console.log("Stacked Area");
     // List of genre
     groupGenre = d3.group(data, d => d.genre);
-    var keys = Array.from(groupGenre.keys());
+    var keys = Array.from(groupGenre.keys()).sort();
 
     //Data by year then genre with values
     groupbyYearthenGenre = d3.rollup(data, v => v.length, d => d.year, d => d.genre);
@@ -228,8 +228,7 @@ function stackedArea(data) {
         .append("path")
         .attr("class", function (d) { return "myArea " + d.key })
         .style("fill", function (d) { return color(d.key); })
-        .attr("d", area
-        )
+        .attr("d", area)
         .append("title")
         .text(({ key }) => key)
 
