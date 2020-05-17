@@ -299,10 +299,10 @@ function stackedAreaAwards(data) {
                 o[price] = 0;
             })
             v.forEach(s => {
-                if (s.isSecondary == "True") {
+                if (s.isSecondary == "TRUE") {
                     o['Secondary'] += 1
                 }
-                else if (s.isPrimary == "True") {
+                else if (s.isPrimary == "TRUE") {
                     o['Primary'] += 1
                 }
                 else {
