@@ -63,7 +63,6 @@ function call_data(range_val) {
 }
 
 function change_range(val) {
-  console.log(val);
   range_val = val;
   // Add active class to the current button (highlight it)
   var header = document.getElementById("tab");
@@ -71,7 +70,7 @@ function change_range(val) {
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
       var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
+      current[0] = current[0].classList.remove("active");
       this.className += " active";
     });
   }
@@ -79,7 +78,7 @@ function change_range(val) {
 }
 
 whenDocumentLoaded(() => {
-  console.log('DOM loaded');
+  console.log('Parallel Sets loaded');
   change_range(range_val);
   call_data(range_val);
 

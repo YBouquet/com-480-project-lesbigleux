@@ -198,8 +198,8 @@ h5,h6 {
  */
 
 .mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+  color: #F3EFE2; /* IE8 proofing */
+  color: #6E0D25;
   text-align: end;
 }
 
@@ -335,6 +335,6 @@ h5,h6 {
   background-color: transparent;
   border: none;
   margin-bottom: 20px;
-  border-bottom: 1px solid rgb(71, 99, 255);
+  border-bottom: 1px solid  #6E0D25;
   color: black;
   }
