@@ -9,7 +9,7 @@ function whenDocumentLoaded(action) {
 
 whenDocumentLoaded(() => {
   console.log('DOM loaded');
-  d3.json("data.json").then(generate_graph);
+  d3version5.json("data.json").then(generate_graph);
 });
 
 
@@ -23,7 +23,7 @@ function generate_graph(data) {
 
   //suppose that events appear first in the json file
   const bipartition = () => {
-    const scale = d3.scaleOrdinal([X_1,X_2]);
+    const scale = d3version5.scaleOrdinal([X_1, X_2]);
     return d => scale(d.group);
   };
 
@@ -32,37 +32,37 @@ function generate_graph(data) {
 
   const drag = (simulation, link) => {
     function dragstarted(d) {
-      if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+      if (!d3version5.event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x;
       d.fy = d.y;
       link
-        .attr('stroke', l => l.target == d || l.source == d ? "#ffcc66":"#999")
+        .attr('stroke', l => l.target == d || l.source == d ? "#ffcc66" : "#999")
         .attr('stroke-width', l => l.target == d || l.source == d ? Math.sqrt(5) : Math.sqrt(2));
     }
 
     function dragged(d) {
-      d.fx = d3.event.x;
-      d.fy = d3.event.y;
+      d.fx = d3version5.event.x;
+      d.fy = d3version5.event.y;
     }
 
     function dragended(d) {
-      if (!d3.event.active) simulation.alphaTarget(0);
-      if (x_force(d) == X_1){
+      if (!d3version5.event.active) simulation.alphaTarget(0);
+      if (x_force(d) == X_1) {
         d.fx = d.x > X_2 ? d.x : X_1;
-      }else{
+      } else {
         d.fx = d.x < X_1 ? d.x : X_2;
       }
       d.fy = null;
     }
 
-    return d3.drag()
+    return d3version5.drag()
       .on("start", dragstarted)
       .on("drag", dragged)
       .on("end", dragended);
   }
 
   const color = () => {
-    const scale = d3.scaleOrdinal(d3.schemeCategory10);
+    const scale = d3version5.scaleOrdinal(d3version5.schemeCategory10);
     return d => scale(d.group)
   }
 
@@ -70,48 +70,48 @@ function generate_graph(data) {
   const links = data.links.map(d => Object.create(d));
 
 
-  const simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).strength(0).id(d=>d.id))
-    .force("charge", d3.forceCollide(RADIUS))
+  const simulation = d3version5.forceSimulation(nodes)
+    .force("link", d3version5.forceLink(links).strength(0).id(d => d.id))
+    .force("charge", d3version5.forceCollide(RADIUS))
 
-  function y_repartitions(nodes, height){
+  function y_repartitions(nodes, height) {
     let groups = {};
 
-    nodes.forEach((n)=>{
-      if (Object.keys(groups).reduce((tot,y) => {return tot || y === n.group;}, false)){
+    nodes.forEach((n) => {
+      if (Object.keys(groups).reduce((tot, y) => { return tot || y === n.group; }, false)) {
         groups[n.group] = groups[n.group] + 1;
       } else {
         groups[n.group] = 0;
       }
     });
 
-    Object.keys(groups).map(k =>{
-      groups[k] ={
-        "scale" : d3.scaleLinear().domain([0, groups[k]]).range([0, height]),
-        "count" : 0
-        };
+    Object.keys(groups).map(k => {
+      groups[k] = {
+        "scale": d3version5.scaleLinear().domain([0, groups[k]]).range([0, height]),
+        "count": 0
+      };
     });
 
-    nodes.forEach((n)=>{
+    nodes.forEach((n) => {
       range = groups[n.group];
       n.y = range['scale'](range['count']);
-      groups[n.group]['count'] = groups[n.group]['count']  + 1;
+      groups[n.group]['count'] = groups[n.group]['count'] + 1;
     })
   }
 
-  var svg = d3.select("#undirected_graph");
+  var svg = d3version5.select("#undirected_graph");
 
 
-  simulation.nodes().forEach(d =>{
+  simulation.nodes().forEach(d => {
     d.fx = x_force(d);
   });
 
   y_repartitions(simulation.nodes(), 700);
-/*
-.force("charge", d3.forceManyBody())
-.force("x", d3.forceX())
-.force("y", d3.forceY());
-*/
+  /*
+  .force("charge", d3.forceManyBody())
+  .force("x", d3.forceX())
+  .force("y", d3.forceY());
+  */
 
 
 
@@ -145,7 +145,7 @@ function generate_graph(data) {
       .attr("x2", d => d.target.x)
       .attr("y2", d => d.target.y);
     node
-     .attr("cx", d => d.x)
-     .attr("cy", d => d.y);
-    });
+      .attr("cx", d => d.x)
+      .attr("cy", d => d.y);
+  });
 }

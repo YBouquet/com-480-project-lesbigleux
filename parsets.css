@@ -38,6 +38,12 @@
   overflow: hidden;
   border: none;
   background-color: none;
+  height: 50px;
+}
+
+.parallelSet{
+  margin-top: 10px;
+  min-height: 610px
 }
 
 /* Style the buttons inside the tab */

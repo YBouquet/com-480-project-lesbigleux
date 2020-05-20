@@ -8,12 +8,12 @@ function whenDocumentLoaded(action) {
 }
 whenDocumentLoaded(() => {
     console.log('DOM loaded');
-    d3.csv("./data/stacked_movies.csv").then(function (text) {
+    d3version5.csv("./data/stacked_movies.csv").then(function (text) {
         preprocessCountrySelection(text)
         stackedArea(text)
 
     });
-    d3.csv("./data/stacked_movies_awards.csv").then(function (text) {
+    d3version5.csv("./data/stacked_movies_awards.csv").then(function (text) {
         console.log("next")
         stackedAreaAwards(text)
     })
@@ -21,7 +21,7 @@ whenDocumentLoaded(() => {
 });
 
 function preprocessCountrySelection(data) {
-    groupCountry = d3.group(data, d => d.country);
+    groupCountry = d3version5.group(data, d => d.country);
     var countries = Array.from(groupCountry.keys());
     countries = countries.sort()
     selector = document.getElementById('country_selection')
@@ -56,24 +56,24 @@ var country = "";
 
 function stackedAreabyCountry(country) {
     this.country = country
-    d3.csv("./data/stacked_movies.csv").then(function (text) {
+    d3version5.csv("./data/stacked_movies.csv").then(function (text) {
 
         //filter the country here
         if (this.country != "") {
             text = text.filter(d => d.country == this.country)
         }
         //clear svg
-        d3.select("#stackedArea > *").remove()
+        d3version5.select("#stackedArea > *").remove()
         stackedArea(text)
 
     });
-    d3.csv("./data/stacked_movies_awards.csv").then(function (text) {
+    d3version5.csv("./data/stacked_movies_awards.csv").then(function (text) {
         //filter the country here
         if (this.country != "") {
             text = text.filter(d => d.country == this.country)
         }
         //clear svg
-        d3.select("#stackedAreaAwards > *").remove()
+        d3version5.select("#stackedAreaAwards > *").remove()
         stackedAreaAwards(text)
     });
 }
@@ -81,11 +81,11 @@ function stackedAreabyCountry(country) {
 function stackedArea(data) {
     console.log("Stacked Area");
     // List of genre
-    groupGenre = d3.group(data, d => d.genre);
+    groupGenre = d3version5.group(data, d => d.genre);
     var keys = Array.from(groupGenre.keys()).sort();
 
     //Data by year then genre with values
-    groupbyYearthenGenre = d3.rollup(data, v => v.length, d => d.year, d => d.genre);
+    groupbyYearthenGenre = d3version5.rollup(data, v => v.length, d => d.year, d => d.genre);
 
     result = mapToArray(groupbyYearthenGenre);
     function mapToArray(map) {
@@ -108,11 +108,11 @@ function stackedArea(data) {
     //stack the data
     if (byPercent) {
         console.log("stacked by percent");
-        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetExpand)(result);
+        var stackedData = d3version5.stack().keys(keys).offset(d3version5.stackOffsetExpand)(result);
     }
     else {
         console.log("stacked by count");
-        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetDiverging)(result);
+        var stackedData = d3version5.stack().keys(keys).offset(d3version5.stackOffsetDiverging)(result);
     }
 
 
@@ -122,7 +122,7 @@ function stackedArea(data) {
         height = 400 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select("#stackedArea")
+    var svg = d3version5.select("#stackedArea")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -131,13 +131,13 @@ function stackedArea(data) {
             "translate(" + margin.left + "," + margin.top + ")");
 
     // Add X axis
-    var x = d3.scaleLinear()
-        .domain(d3.extent(data, function (d) { return d.year; }))
+    var x = d3version5.scaleLinear()
+        .domain(d3version5.extent(data, function (d) { return d.year; }))
         .range([0, width]);
     var xAxis = svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .attr("class", 'axis')
-        .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+        .call(d3version5.axisBottom(x).tickFormat(d3version5.format("d")));
 
     svg.append("text")
         .attr("text-anchor", "end")
@@ -148,12 +148,12 @@ function stackedArea(data) {
         .text("Time (year)");
 
     // Add Y axis + get the max value of the map
-    var y = d3.scaleLinear()
-        .domain([0, parseInt(d3.max(stackedData, d => d3.max(d, d => d[1])))]).nice()
+    var y = d3version5.scaleLinear()
+        .domain([0, parseInt(d3version5.max(stackedData, d => d3version5.max(d, d => d[1])))]).nice()
         .range([height, 0]);
     var yAxis = svg.append("g")
         .attr("class", 'axis')
-        .call(d3.axisLeft(y));
+        .call(d3version5.axisLeft(y));
     svg.append("text")
         .attr("text-anchor", "start")
         .attr("x", 0)
@@ -163,23 +163,23 @@ function stackedArea(data) {
         .text("Number of duo films-genre produced");
 
     // color palette
-    var color = d3.scaleOrdinal()
+    var color = d3version5.scaleOrdinal()
         .domain(keys)
-        .range(d3.schemePaired);
+        .range(d3version5.schemePaired);
 
 
     //Highlit a group (reduce all opacity except of the group you want)
     var highlight = function (d) {
         console.log(d)
-        d3.select("#stackedArea").selectAll(".myArea")
+        d3version5.select("#stackedArea").selectAll(".myArea")
             .style("opacity", .1)
-        d3.select("#stackedArea").select("." + d)
+        d3version5.select("#stackedArea").select("." + d)
             .style("opacity", 1)
     }
 
     // And when it is not hovered anymore
     var noHighlight = function (d) {
-        d3.select("#stackedArea").selectAll(".myArea").style("opacity", 1)
+        d3version5.select("#stackedArea").selectAll(".myArea").style("opacity", 1)
     }
 
     //Add a legend + color plot associated
@@ -216,7 +216,7 @@ function stackedArea(data) {
 
 
     // Show the areas
-    var area = d3.area()
+    var area = d3version5.area()
         .x(function (d, i) { return x(d.data.year); })
         .y0(function (d) { return y(d[0]) })
         .y1(function (d) { return y(d[1]) })
@@ -243,7 +243,7 @@ function stackedArea(data) {
         .attr("x", 0)
         .attr("y", 0)
 
-    var brush = d3.brushX()
+    var brush = d3version5.brushX()
         .extent([[0, 0], [width, height]])
         .on("end", updateChart)
 
@@ -257,12 +257,12 @@ function stackedArea(data) {
     }
 
     function updateChart() {
-        extent = d3.event.selection
+        extent = d3version5.event.selection
         // If no selection, back to initial coordinate. Otherwise, update X axis domain
         if (!extent) {
             if (!idleTimeout) return idleTimeout = setTimeout(idled, 3000);
             console.log('no extend')
-            x.domain(d3.extent(data, function (d) { return d.year; }))
+            x.domain(d3version5.extent(data, function (d) { return d.year; }))
         } else {
             console.log('extend')
             x.domain([x.invert(extent[0]), x.invert(extent[1])])
@@ -271,7 +271,7 @@ function stackedArea(data) {
         }
 
         // Update axis and area position
-        xAxis.transition().duration(1000).call(d3.axisBottom(x).tickFormat(d3.format("d")))
+        xAxis.transition().duration(1000).call(d3version5.axisBottom(x).tickFormat(d3version5.format("d")))
         areaChart
             .selectAll("path")
             .transition().duration(1000)
@@ -286,7 +286,7 @@ function stackedAreaAwards(data) {
     var keys = ['Primary', 'Secondary', 'No_award'];
 
     //Data by year then genre with values
-    groupbyYear = d3.group(data, d => d.year);
+    groupbyYear = d3version5.group(data, d => d.year);
 
     result = mapToArray(groupbyYear);
     function mapToArray(map) {
@@ -316,10 +316,10 @@ function stackedAreaAwards(data) {
     //stack the data
     console.log(byPercent)
     if (byPercent) {
-        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetExpand)(result);
+        var stackedData = d3version5.stack().keys(keys).offset(d3version5.stackOffsetExpand)(result);
     }
     else {
-        var stackedData = d3.stack().keys(keys).offset(d3.stackOffsetDiverging)(result);
+        var stackedData = d3version5.stack().keys(keys).offset(d3version5.stackOffsetDiverging)(result);
     }
 
     // set the dimensions and margins of the graph
@@ -328,7 +328,7 @@ function stackedAreaAwards(data) {
         height = 400 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select("#stackedAreaAwards")
+    var svg = d3version5.select("#stackedAreaAwards")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -338,13 +338,13 @@ function stackedAreaAwards(data) {
 
 
     // Add X axis
-    var x = d3.scaleLinear()
-        .domain(d3.extent(data, function (d) { return d.year; }))
+    var x = d3version5.scaleLinear()
+        .domain(d3version5.extent(data, function (d) { return d.year; }))
         .range([0, width]);
     var xAxis = svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .attr("class", 'axis')
-        .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+        .call(d3version5.axisBottom(x).tickFormat(d3version5.format("d")));
 
     svg.append("text")
         .attr("text-anchor", "end")
@@ -356,12 +356,12 @@ function stackedAreaAwards(data) {
 
 
     // Add Y axis + get the max value of the map
-    var y = d3.scaleLinear()
-        .domain([0, d3.max(stackedData, d => d3.max(d, d => d[1]))]).nice()
+    var y = d3version5.scaleLinear()
+        .domain([0, d3version5.max(stackedData, d => d3version5.max(d, d => d[1]))]).nice()
         .range([height, 0]);
     var yAxis = svg.append("g")
         .attr("class", 'axis')
-        .call(d3.axisLeft(y));
+        .call(d3version5.axisLeft(y));
     svg.append("text")
         .attr("text-anchor", "start")
         .attr("x", 0)
@@ -371,23 +371,23 @@ function stackedAreaAwards(data) {
         .text("Number of awards received by film produced");
 
     // color palette
-    var color = d3.scaleOrdinal()
+    var color = d3version5.scaleOrdinal()
         .domain(keys)
-        .range(d3.schemePaired);
+        .range(d3version5.schemePaired);
 
 
     //Highlit a group (reduce all opacity except of the group you want)
     var highlight = function (d) {
         console.log(d)
-        d3.select("#stackedAreaAwards").selectAll(".myArea")
+        d3version5.select("#stackedAreaAwards").selectAll(".myArea")
             .style("opacity", .1)
-        d3.select("#stackedAreaAwards").select("." + d)
+        d3version5.select("#stackedAreaAwards").select("." + d)
             .style("opacity", 1)
     }
 
     // And when it is not hovered anymore
     var noHighlight = function (d) {
-        d3.select("#stackedAreaAwards").selectAll(".myArea").style("opacity", 1)
+        d3version5.select("#stackedAreaAwards").selectAll(".myArea").style("opacity", 1)
     }
 
     //Add a legend + color plot associated
@@ -425,7 +425,7 @@ function stackedAreaAwards(data) {
 
     // Show the areas
 
-    var area = d3.area()
+    var area = d3version5.area()
         .x(function (d, i) { return x(d.data.year); })
         .y0(function (d) { return y(d[0]) })
         .y1(function (d) { return y(d[1]) })
@@ -453,7 +453,7 @@ function stackedAreaAwards(data) {
         .attr("x", 0)
         .attr("y", 0)
 
-    var brush = d3.brushX()
+    var brush = d3version5.brushX()
         .extent([[0, 0], [width, height]])
         .on("end", updateChart)
 
@@ -467,11 +467,11 @@ function stackedAreaAwards(data) {
     }
 
     function updateChart() {
-        extent = d3.event.selection
+        extent = d3version5.event.selection
         // If no selection, back to initial coordinate. Otherwise, update X axis domain
         if (!extent) {
             if (!idleTimeout) return idleTimeout = setTimeout(idled, 3000);
-            x.domain(d3.extent(data, function (d) { return d.year; }))
+            x.domain(d3version5.extent(data, function (d) { return d.year; }))
         } else {
             x.domain([x.invert(extent[0]), x.invert(extent[1])])
             areaChart.select(".brush").call(brush.move, null)
@@ -479,7 +479,7 @@ function stackedAreaAwards(data) {
         }
 
         // Update axis and area position
-        xAxis.transition().duration(1000).call(d3.axisBottom(x).ticks(5))
+        xAxis.transition().duration(1000).call(d3version5.axisBottom(x).ticks(5))
         areaChart
             .selectAll("path")
             .transition().duration(1000)
@@ -487,7 +487,7 @@ function stackedAreaAwards(data) {
     }
 
     //Transition and choice Bypercent / Bycount
-    d3.select(".need-validation").selectAll("input").on("change", handleFormClick);
+    d3version5.select(".need-validation").selectAll("input").on("change", handleFormClick);
     function handleFormClick() {
         byPercent = (this.value === "bypercent")
         stackedAreabyCountry(country);

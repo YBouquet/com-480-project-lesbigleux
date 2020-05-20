@@ -50,10 +50,10 @@
 					<div class="container">
 						<h4>Introduction</h4>
 						<p>When the Oscar ceremony become questionnable, what can we learn from Cinema?
-						This work is an attempt to illustrate and ask multiple question about cinema,
-						culture, tendance in general.
-						From a serie of datasets, we manage to ask collected data about tacit rules
-						that are often kept deeply into our mind.</p>
+							This work is an attempt to illustrate and ask multiple question about cinema,
+							culture, tendance in general.
+							From a serie of datasets, we manage to ask collected data about tacit rules
+							that are often kept deeply into our mind.</p>
 						<h4>What are the core visualization presented here</h4>
 						<h5>The Network</h5>
 						<p>
@@ -222,22 +222,19 @@
 				<div class="visu">
 					<div id="tab" class="tab">
 						<button class="rangeSets" onclick="change_range(1920)"> 1920-1930 </option>
-						<button class="rangeSets" onclick="change_range(1930)"> 1930-1940 </button>
-						<button class="rangeSets" onclick="change_range(1940)"> 1940-1950 </button>
-						<button class="rangeSets" onclick="change_range(1950)"> 1950-1960 </button>
-						<button class="rangeSets" onclick="change_range(1960)"> 1960-1970 </button>
-						<button class="rangeSets active" onclick="change_range(1970)"> 1970-1980 </button>
-						<button class="rangeSets" onclick="change_range(1980)"> 1980-1990 </button>
-						<button class="rangeSets" onclick="change_range(1990)"> 1990-2000 </button>
-						<button class="rangeSets" onclick="change_range(2000)"> 2000-2010 </button>
-						<button class="rangeSets" onclick="change_range(2010)"> 2010-2020 </button>
+							<button class="rangeSets" onclick="change_range(1930)"> 1930-1940 </button>
+							<button class="rangeSets" onclick="change_range(1940)"> 1940-1950 </button>
+							<button class="rangeSets" onclick="change_range(1950)"> 1950-1960 </button>
+							<button class="rangeSets" onclick="change_range(1960)"> 1960-1970 </button>
+							<button class="rangeSets active" onclick="change_range(1970)"> 1970-1980 </button>
+							<button class="rangeSets" onclick="change_range(1980)"> 1980-1990 </button>
+							<button class="rangeSets" onclick="change_range(1990)"> 1990-2000 </button>
+							<button class="rangeSets" onclick="change_range(2000)"> 2000-2010 </button>
+							<button class="rangeSets" onclick="change_range(2010)"> 2010-2020 </button>
 					</div>
 
-					<div id="vis"></div>
-					<script src="parsets.js"></script>
-					<script src="https://mbostock.github.com/d3/d3.js?2.5.0"></script>
-					<script src="https://www.jasondavies.com/parallel-sets/d3.parsets.js"></script>
-					<script src="https://www.jasondavies.com/parallel-sets/highlight.min.js"></script>
+					<div class="parallelSet" id="vis"></div>
+
 
 				</div>
 
@@ -256,14 +253,29 @@
 	<!--<script src="map_visu.js"></script>-->
 	<script type="text/javascript" src="easyScrollDots.min.js"></script>
 	<script src="https://d3js.org/d3.v5.js"></script>
+	<script>
+		d3version5 = d3
+	</script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://d3js.org/d3-array.v2.min.js"></script>
 	<script src="undirected_graph.js"></script>
 	<script src="seq_sunburst.js"></script>
 	<script src="stackedArea.js"></script>
+	<script src="parsets.js"></script>
+
+	<script src="https://mbostock.github.com/d3/d3.js?2.5.0"></script>
+	<script>
+		d3version2 = d3
+		//window.d3 = null
+		console.log('v2', d3version2.version)
+		console.log('v5', d3version5.version)
+	</script>
+
+	<script src="https://www.jasondavies.com/parallel-sets/d3.parsets.js"></script>
+	<script src="https://www.jasondavies.com/parallel-sets/highlight.min.js"></script>
 	<!--Easy Scroll Dots js-->
-	<script>function dotsThrottle(a, b, c) { var d, e, f, g = null, h = 0; c || (c = {}); var i = function () { h = !1 === c.leading ? 0 : Date.now(), g = null, f = a.apply(d, e), g || (d = e = null) }; return function () { var j = Date.now(); h || !1 !== c.leading || (h = j); var k = b - (j - h); return d = this, e = arguments, 0 >= k || k > b ? (g && (clearTimeout(g), g = null), h = j, f = a.apply(d, e), !g && (d = e = null)) : !g && !1 !== c.trailing && (g = setTimeout(i, k)), f } } let dotFixedNavPresent = !1, dotFixedNavId = "", dotFixedNavUp = !1; function easyScrollDots(a) { let b = document.querySelectorAll(".scroll-indicator"); if (!0 === a.fixedNav ? dotFixedNavPresent = !0 : dotFixedNavPresent, dotFixedNavId = "" !== a.fixedNavId && a.fixedNavId, !0 === a.fixedNavUpward ? dotFixedNavUp = !0 : dotFixedNavUp, b.length) { document.querySelector("body").lastElementChild.insertAdjacentHTML("afterend", "<div class=\"scroll-indicator-controller\"><span></span></div>"); const a = document.querySelector(".scroll-indicator-controller"); ("undefined" != typeof window.orientation || -1 !== navigator.userAgent.indexOf("IEMobile")) && a.classList.add("indi-mobile"); const d = Array.prototype.slice.call(b); d.forEach(function (b, c) { const d = b.getAttribute("id"), e = b.getAttribute("data-scroll-indicator-title"); let f = ""; 0 == c && (f = "active"), a.lastElementChild.insertAdjacentHTML("afterend", "<div class=\"" + f + "\" data-indi-controller-id=\"" + d + "\" onclick=\"scrollIndiClicked('" + d + "');\"><span>" + e + "</span><div></div></div>") }); const f = a.querySelectorAll("[data-indi-controller-id]"); var c = dotsThrottle(function () { let b = {}; d.forEach(function (a) { const c = a.getAttribute("id"), d = a.getBoundingClientRect().top; b[c] = d }); const c = Object.keys(b).map(function (a) { return b[a] }), g = function () { const a = c.filter(function (a) { return -150 < a }); return Math.min.apply(null, a) }; Object.keys(b).forEach(function (c) { b[c] == g() && (Array.prototype.forEach.call(f, function (a) { a.classList.contains("active") && a.classList.remove("active") }), a.querySelector("[data-indi-controller-id=\"" + c + "\"]").classList.add("active")) }) }, 300); window.onscroll = function () { c() } } } function scrollIndiClicked(a) { if (window.jQuery) { if (!0 == dotFixedNavPresent && dotFixedNavId.length) { const b = document.getElementById(dotFixedNavId), c = b.clientHeight, d = $("html, body"), e = $("#" + a); if (!0 === dotFixedNavUp) { d.animate({ scrollTop: e.offset().top }, 700); const a = document.body.getBoundingClientRect().top; setTimeout(function () { document.body.getBoundingClientRect().top > a && d.animate({ scrollTop: e.offset().top - c }, 400) }, 400) } else d.animate({ scrollTop: e.offset().top - c }, 700) } else $("html, body").animate({ scrollTop: $("#" + a).offset().top }, 700); } else if (!0 == dotFixedNavPresent && dotFixedNavId.length) { const b = document.getElementById(dotFixedNavId), c = b.clientHeight, d = document.getElementById(a); if (!0 === dotFixedNavUp) { window.scrollTo({ top: d.offsetTop, left: 0, behavior: "smooth" }); const a = document.body.getBoundingClientRect().top; setTimeout(function () { document.body.getBoundingClientRect().top > a && window.scrollTo({ top: d.offsetTop - c, left: 0, behavior: "smooth" }) }, 400) } else window.scrollTo({ top: d.offsetTop - c, left: 0, behavior: "smooth" }) } else window.scrollTo({ top: document.getElementById(a).offsetTop, left: 0, behavior: "smooth" }) }</script>
+	<script>function dotsThrottle(a, b, c) { var d, e, f, g = null, h = 0; c || (c = {}); var i = function () { h = !1 === c.leading ? 0 : Date.now(), g = null, f = a.apply(d, e), g || (d = e = null) }; return function () { var j = Date.now(); h || !1 !== c.leading || (h = j); var k = b - (j - h); return d = this, e = arguments, 0 >= k || k > b ? (g && (clearTimeout(g), g = null), h = j, f = a.apply(d, e), !g && (d = e = null)) : !g && !1 !== c.trailing && (g = setTimeout(i, k)), f } } let dotFixedNavPresent = !1, dotFixedNavId = "", dotFixedNavUp = !1; function easyScrollDots(a) { let b = document.querySelectorAll(".scroll-indicator"); if (!0 === a.fixedNav ? dotFixedNavPresent = !0 : dotFixedNavPresent, dotFixedNavId = "" !== a.fixedNavId && a.fixedNavId, !0 === a.fixedNavUpward ? dotFixedNavUp = !0 : dotFixedNavUp, b.length) { document.querySelector("body").lastElementChild.insertAdjacentHTML("afterend", "<div class=\"scroll-indicator-controller\"><span></span></div>"); const a = document.querySelector(".scroll-indicator-controller"); ("undefined" != typeof window.orientation || -1 !== navigator.userAgent.indexOf("IEMobile")) && a.classList.add("indi-mobile"); const d = Array.prototype.slice.call(b); d.forEach(function (b, c) { const d = b.getAttribute("id"), e = b.getAttribute("data-scroll-indicator-title"); let f = ""; 0 == c && (f = "active"), a.lastElementChild.insertAdjacentHTML("afterend", "<div class=\"" + f + "\" data-indi-controller-id=\"" + d + "\" onclick=\"scrollIndiClicked('" + d + "');\"><span>" + e + "</span><div></div></div>") }); const f = a.querySelectorAll("[data - indi - controller - id]"); var c = dotsThrottle(function () { let b = {}; d.forEach(function (a) { const c = a.getAttribute("id"), d = a.getBoundingClientRect().top; b[c] = d }); const c = Object.keys(b).map(function (a) { return b[a] }), g = function () { const a = c.filter(function (a) { return -150 < a }); return Math.min.apply(null, a) }; Object.keys(b).forEach(function (c) { b[c] == g() && (Array.prototype.forEach.call(f, function (a) { a.classList.contains("active") && a.classList.remove("active") }), a.querySelector("[data - indi - controller - id=\"" + c + "\"]").classList.add("active")) }) }, 300); window.onscroll = function () { c() } } } function scrollIndiClicked(a) { if (window.jQuery) { if (!0 == dotFixedNavPresent && dotFixedNavId.length) { const b = document.getElementById(dotFixedNavId), c = b.clientHeight, d = $("html, body"), e = $("#" + a); if (!0 === dotFixedNavUp) { d.animate({ scrollTop: e.offset().top }, 700); const a = document.body.getBoundingClientRect().top; setTimeout(function () { document.body.getBoundingClientRect().top > a && d.animate({ scrollTop: e.offset().top - c }, 400) }, 400) } else d.animate({ scrollTop: e.offset().top - c }, 700) } else $("html, body").animate({ scrollTop: $("#" + a).offset().top }, 700); } else if (!0 == dotFixedNavPresent && dotFixedNavId.length) { const b = document.getElementById(dotFixedNavId), c = b.clientHeight, d = document.getElementById(a); if (!0 === dotFixedNavUp) { window.scrollTo({ top: d.offsetTop, left: 0, behavior: "smooth" }); const a = document.body.getBoundingClientRect().top; setTimeout(function () { document.body.getBoundingClientRect().top > a && window.scrollTo({ top: d.offsetTop - c, left: 0, behavior: "smooth" }) }, 400) } else window.scrollTo({ top: d.offsetTop - c, left: 0, behavior: "smooth" }) } else window.scrollTo({ top: document.getElementById(a).offsetTop, left: 0, behavior: "smooth" }) }</script>
 	<!--Easy Scroll Dots init-->
 	<script>
 		easyScrollDots({

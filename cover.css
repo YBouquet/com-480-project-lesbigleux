@@ -85,6 +85,13 @@ h5,h6 {
 
 .visu{
   background-color: #F3EFE2;
+  max-width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.parallelSet{
+  align-self: center;
 }
 
 .visu1{
@@ -329,5 +336,5 @@ h5,h6 {
   border: none;
   margin-bottom: 20px;
   border-bottom: 1px solid rgb(71, 99, 255);
-  color: white;
+  color: black;
   }
