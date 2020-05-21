@@ -13,9 +13,9 @@ To be able to implement the visualizations, we used the following datasets of IM
 
 
 ## Team members
-| Yann Yanis Bouquet | 273827 |
-| Emma Lanctuit | 274894 |
-| Gonxhe Idrizi | 275001 |
+* Yann Yanis Bouquet, 273827 
+* Emma Lanctuit, 274894
+* Gonxhe Idrizi, 275001
 
 ## Link to Milestones
 [Milestone 1](#milestone-1-friday-3rd-april-5pm) • [Milestone 2](#milestone-2-friday-1st-may-5pm) • [Milestone 3](#milestone-3-thursday-28th-may-5pm)
