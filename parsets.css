@@ -68,7 +68,7 @@
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tab button:focus {
   background-color: #FFEFCC;
 }
 

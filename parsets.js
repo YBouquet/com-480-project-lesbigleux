@@ -9,6 +9,7 @@ function whenDocumentLoaded(action) {
 
 var range_val = 1970;
 
+// Given a text function and width function, truncates the text if necessary to
 // fit within the given width.
 function truncateText(text, width) {
   return function (d, i) {
@@ -62,28 +63,14 @@ function call_data(range_val) {
   });
 }
 
+//Change range time by clicking on range
 function change_range(val) {
   range_val = val;
   // Add active class to the current button (highlight it)
-  var header = document.getElementById("tab");
-  var btns = header.getElementsByClassName("rangeSets");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-      var current = document.getElementsByClassName("active");
-      current[0] = current[0].classList.remove("active");
-      this.className += " active";
-    });
-  }
   call_data(range_val);
 }
 
 whenDocumentLoaded(() => {
   console.log('Parallel Sets loaded');
   change_range(range_val);
-
-  //Change range time by clicking on range
-
-  // Add active class to the current button (highlight it)
-
-  // Given a text function and width function, truncates the text if necessary to
 });
