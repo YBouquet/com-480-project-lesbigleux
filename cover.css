@@ -59,7 +59,7 @@ h5,h6 {
  width: 100%;
   overflow: hidden;
   margin: 0 auto 0 auto;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 60px 20px;
 }
 .site-wrapper-inner {
   text-align: left;
@@ -199,7 +199,6 @@ h5,h6 {
 
 .mastfoot {
   color: #F3EFE2; /* IE8 proofing */
-  color: #6E0D25;
   text-align: end;
 }
 
@@ -231,6 +230,9 @@ h5,h6 {
   }
   .mastfoot {
     position: fixed;
+    background-color: #6E0D25;
+    width: 100%;
+    height: 50px;
     bottom: 0;
   }
   /* Start the vertical centering */
