@@ -80,7 +80,6 @@ function change_range(val) {
 whenDocumentLoaded(() => {
   console.log('Parallel Sets loaded');
   change_range(range_val);
-  call_data(range_val);
 
   //Change range time by clicking on range
 
