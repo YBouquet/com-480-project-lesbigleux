@@ -1,3 +1,6 @@
+/* Parallel Sets by Jason Davies, http://www.jasondavies.com/
+   Functionality based on https://github.com/jasondavies/d3-parsets
+*/
 .dimension { cursor: ns-resize; }
 .category { cursor: ew-resize; }
 .dimension tspan.name { font-size: 1.2em; fill: #333; font-weight: bold; }
