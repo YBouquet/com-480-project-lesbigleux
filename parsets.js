@@ -46,7 +46,7 @@ function call_data(range_val) {
     .children(function (d) { return d.children ? d3.values(d.children) : null; })
     .value(function (d) { return d.numMovies; });
 
-  return d3.csv("all_parallel_sets.csv", function (csv) {
+  return d3.csv("./data/all_parallel_sets.csv", function (csv) {
     csv = csv.filter(function (row) {
       return row['range'] == range_val;
     })

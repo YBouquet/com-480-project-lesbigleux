@@ -232,6 +232,10 @@ h5,h6 {
   border-bottom-width: 1px;
 }
 
+#presentation{
+  padding-top: 20px;
+}
+
 
 /*
  * Affix and center
