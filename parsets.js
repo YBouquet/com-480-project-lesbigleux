@@ -1,3 +1,6 @@
+/* Parallel Sets by Jason Davies, http://www.jasondavies.com/
+   Functionality based on https://github.com/jasondavies/d3-parsets
+*/
 function whenDocumentLoaded(action) {
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", action);
