@@ -43,8 +43,10 @@ export function generate_sunburst(lists, event, year, x0)
 {
   const data = buildHierarchy(lists.filter(d => d[2] === event && d[3] == year).map(d=> [d[0], d[1]]));
   const award_names = data.children.map(d => d.name)
+
+  const awards_color = chroma.scale(['#6E0D25', '#c9ae22', '#1c5c1d', '#2822a8']).classes(award_names.length);
   const color = [
-    d3version5.scaleOrdinal(d3version5.quantize(d3version5.interpolateRainbow, data.children.length + 10)),
+    d3version5.scaleOrdinal(d3version5.quantize(awards_color, data.children.length)),
     d3version5.scaleOrdinal()
       .domain(["Nominees", "Winners", "Films", "People", "Price"])
       .range(["#815ecc", "#db841a", "#d61818", "#0c9136", "#bfad2c"])
@@ -60,7 +62,12 @@ export function generate_sunburst(lists, event, year, x0)
 
   d3version5.select('#context_container').append('g')
     .attr("transform", "translate(" + x0 + ","+ breadcrumbHeight + ")")
-    .attr("id", "sunburst_container");
+    .attr("id", "sunburst_container")
+    .append('text')
+    .attr('y', '-30')
+    .attr('font-weight', 'normal')
+    .attr('font-size', '25px')
+    .text('What does ' + event + ' consist of in ' + year + '?');
 
   initializeBreadcrumbTrail(x0);
 
@@ -136,7 +143,7 @@ export function generate_sunburst(lists, event, year, x0)
     .append("path")
     .attr("fill", d => {
       var m_color;
-      if (award_names.includes(d.data.name)){
+      if (award_names.includes(d.data.name) && d.parent && d.parent.data.name == 'root'){
         m_color = color[0](d.data.name);
       }else{
         m_color = color[1](root_domain.includes(d.data.name)? d.data.name : "Price")
@@ -277,7 +284,7 @@ function initializeBreadcrumbTrail(x0) {
       .attr('x', x0)
       .attr("width", width_trail)
       .attr("height", 50)
-      .attr("viewBox", `0 0 ${breadcrumbWidth * 13} ${breadcrumbHeight}`)
+      .attr("viewBox", `0 0 ${breadcrumbWidth * 10} ${breadcrumbHeight}`)
       .attr('id', 'trail_container')
       .append('g')
       .attr("id", "trail");
@@ -321,12 +328,14 @@ function updateBreadcrumbs(sunburst, award_names, color) {
 
         return m_c(m_c.domain().includes(d.data.name)? d.data.name: "Price");
         })
+      .attr("fill-opacity", .70)
       .attr("stroke", "white");
 
       g.append("text")
       .attr("x", (d,i) => (breadcrumbWidth * (Math.floor(d.data.name.length / string_threshold) + 1 )  + 10) / 2)
       .attr("y", 15)
       .attr("dy", "0.35em")
+      .attr("font-weight", 'bold')
       .attr("text-anchor", "middle")
       .attr("class", "sequence_text")
       .text(d => d.data.name)
@@ -343,9 +352,9 @@ function updateBreadcrumbs(sunburst, award_names, color) {
           return (multiplier + 0.5) * breadcrumbWidth;
         })
         .attr("y", breadcrumbHeight / 2)
-        .attr("dy", "0.35em")
+        .attr("dy", "0.55em")
         .attr("text-anchor", "middle")
-        .style('fill', '#fff');
+        .style('fill', 'black');
 
 
       // Make the breadcrumb trail visible, if it's hidden.
@@ -357,7 +366,7 @@ function drawLegend(color, x0) {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 80, h: 30, s: 3, r: 3
+    w: 100, h: 30, s: 3, r: 3
   };
 
   d3version5.select("#legend").remove()

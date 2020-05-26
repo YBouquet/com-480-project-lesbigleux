@@ -18,7 +18,7 @@ const height = 500;
 whenDocumentLoaded(() => {
   console.log('DOM loaded');
   const graph_promise = d3version5.json("data/network_data.json")
-  var year_selector = document.getElementById('year');
+  var year_selector = document.getElementById('network_year');
   year_selector.addEventListener('change', function(){
     clear_sunburst()
     graph_promise.then(d=>generate_graph(d, year_selector.value));
@@ -26,7 +26,8 @@ whenDocumentLoaded(() => {
 
   d3version5.select('#visu_container').append('svg')
     .attr('width', '100%')
-    .attr('height', 530)
+    .attr('height', 'auto')
+    .attr('viewBox', '0,-50,1630,580')
     .attr('id', 'context_container')
   graph_promise.then(d=>generate_graph(d, year_selector.value));
 });
@@ -35,10 +36,9 @@ whenDocumentLoaded(() => {
 
 function generate_graph(data, year) {
 
-
   const X_1 = 350
   const X_2 = 450
-  const RADIUS = 5
+  const RADIUS = 7
 
 
   const bipartition = () => {
@@ -54,7 +54,7 @@ function generate_graph(data, year) {
       d.fx = d.x;
       d.fy = d.y;
       link
-        .attr('stroke', l => l.target == d || l.source == d ? "#ffcc66":"#999")
+        .attr('stroke', l => l.target == d || l.source == d ? "#6E0D25":"#999")
         .attr('stroke-width', l => l.target == d || l.source == d ? Math.sqrt(5) : Math.sqrt(2));
     }
 
@@ -158,7 +158,9 @@ function generate_graph(data, year) {
     .attr('x', blocks_width / 2)
     .attr('y', 15)
     .attr('text-anchor', 'middle')
-    .attr('font-size', '10px')
+    .attr('fill', '#F3EFE2')
+    .attr('font-weight', 'bold')
+    .attr('font-size', '15px')
     .text(d=>d.text);
 
   var link = svg.append("g")
@@ -191,6 +193,8 @@ function generate_graph(data, year) {
 
 
   node.append('text')
+    .attr('font-size', '13px')
+    .attr('font-weight', 'bold')
     .attr('class', 'node_text')
     .text(function(d){
       return d.name;
@@ -209,14 +213,14 @@ function generate_graph(data, year) {
       .attr("x", d=> {
         var result;
         if (d.group == 'event'){
-            result = d.x - 8;
+            result = d.x - 10;
             if (d.x >= X_2){
-            result = d.x + 8;
+            result = d.x + 10;
           }
         } else{
-          result = d.x + 8;
+          result = d.x + 10;
           if (d.x <= X_1){
-            result = d.x - 8;
+            result = d.x - 10;
           }
         }
         return result;
