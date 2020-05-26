@@ -104,27 +104,21 @@
 						</p>
 					</div>
 				</div>
-				<div class="visu">
-					<div id="graph-div">
-						<svg id=" undirected_graph" viewBox='0 -10 900 920'></svg>
-					</div>
-
-					<div id="sunburst" , style="display:inline-block;">
-						<div id="sequence"></div>
-						<div id="chart">
-							<div id="explanation" style="visibility: hidden;">
-								<span id="percentage"></span><br />
-								of visits begin with this sequence of pages
-							</div>
-						</div>
-					</div>
-					<div id="sidebar">
-						<input type="checkbox" id="togglelegend"> Legend<br />
-						<div id="legend" style="visibility: hidden;"></div>
-					</div>
-
-
-				</div>
+				<select id="year" name="year" class ='year_selector'>
+				  <script>
+					  var myDate = new Date();
+					  var year = myDate.getFullYear();
+					  for(var i = 1929; i < year+1; i++){
+							var option = '<option value="'+i+'"'
+							if(i == 2019){
+								var option = option + ' selected = "selected"';
+							}
+							option = option+ '>'+i+'</option>';
+						  document.write(option);//'<option value="'+i+'">'+i+'</option>');
+					  }
+				  </script>
+				</select>
+				<div class = 'visu' id = 'visu_container'></div>
 
 
 				<!--Anchor point (scroll indicator-->
@@ -256,14 +250,14 @@
 	<!--<script src="map_visu.js"></script>-->
 	<script type="text/javascript" src="easyScrollDots.min.js"></script>
 	<script src="https://d3js.org/d3.v5.js"></script>
+	<script type = 'module' src="undirected_graph.js"></script>
 	<script>
 		d3version5 = d3
 	</script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://d3js.org/d3-array.v2.min.js"></script>
-	<script src="undirected_graph.js"></script>
-	<script src="seq_sunburst.js"></script>
+
 	<script src="stackedArea.js"></script>
 	<script src="parsets.js"></script>
 
