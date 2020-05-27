@@ -5,7 +5,7 @@ Cinema is one of the many fascinating environments which is constantly evolving.
 
 By the late 19th century, the movie camera was born and allowed the creation of the many moving films that can be seen on screen. It has been evolving through many genres, allowing many movie lovers to feel many emotions by having different experiences.
 
-As this environment has evolved through a whole century, many countries have been having their own movie trends. It has also allowed to the country to benefit from it in an economical way by participating in many movie ceremonies and receiveing famous awards.
+As this environment has evolved through a whole century, many countries have been having their own movie trends. It has also allowed to the country to benefit from it in an economical way by participating in many movie ceremonies and receiving famous awards.
 
 Therefore, our project and different implemented visualizations try to answer to the following question: *How has a country’s film trends evolved over time through the prism of ceremonies and rewards?*
 
@@ -15,7 +15,7 @@ To be able to implement the visualizations, we used the following datasets of IM
 * [IMDB Movies](https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset)
 
 ## Team members
-* Yann Yanis Bouquet, 273827 
+* Yann Yanis Bouquet, 273827
 * Emma Lanctuit, 274894
 * Gonxhe Idrizi, 275001
 
@@ -53,18 +53,15 @@ This Milestone contains:
 
 **80% of the final grade**
 ### Process Book
-[Link to Process Book (TO ADD)](./Milestones/Milestone2.pdf)
+[Link to Process Book](./ProcessBook.pdf)
 
 This document contains:
 * A description of the path we took to obtain the final result
-* an explaination of the challenges that we faced and design decisions that we took
-* the peer assessment, including a breakdown of the parts of the project completed by each team member.
+* an explanation of the challenges that we faced and design decisions that we took
+* the peer assessment, including a breakdown of the parts of the project completed by each team member
 
 ### Screencast
 
 (ADD VIDEO)
 
 This video shows what one is able to do with your implemented visualizations.
-
-
-
