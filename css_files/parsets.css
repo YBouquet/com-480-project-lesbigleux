@@ -55,13 +55,13 @@
 .tab button {
   background-color: #F8C480;
   float: left;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #000000;
   outline: none;
   cursor: pointer;
   border-radius: 7px;
   padding: 14px 13.1px;
   transition: 0.3s;
-  font-size: 0.8vw;
+  font-size: 0.6vw;
   font-weight: bold;
   font-family: cursive;
 }
