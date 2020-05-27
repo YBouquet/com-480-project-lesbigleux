@@ -54,6 +54,10 @@ h5,h6 {
   margin-bottom: 0.2em;
 }
 
+p {
+  text-align: justify;
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
  width: 100%;
