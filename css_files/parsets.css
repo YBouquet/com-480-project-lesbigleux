@@ -42,12 +42,13 @@
   display: inline-block;
   border: none;
   background-color: none;
-  height: 50px;
+  height: 60px;
 }
 
 .parallelSet{
   margin-top: 10px;
-  min-height: 610px
+  min-height: 610px;
+  padding-left: 200px;
 }
 
 /* Style the buttons inside the tab */
@@ -60,7 +61,7 @@
   border-radius: 7px;
   padding: 14px 13.1px;
   transition: 0.3s;
-  font-size: 13px;
+  font-size: 0.8vw;
   font-weight: bold;
   font-family: cursive;
 }

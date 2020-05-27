@@ -36,12 +36,13 @@ function call_data(range_val) {
   var chart = d3.parsets()
     .dimensions(["Country", "Genre", "Winner or Nominee"])
     .tension(0.5)
-    .width(1000);
+    .width(800)
+    .height(500);
 
   d3.select("#vis > *").remove()
   var vis = d3.select("#vis").append("svg")
-    .attr("width", chart.width())
-    .attr("height", chart.height());
+    .attr("width", 1000)
+    .attr("height", 550);
 
   var partition = d3.layout.partition()
     .sort(null)
