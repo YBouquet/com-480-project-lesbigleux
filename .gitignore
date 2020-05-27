@@ -1,0 +1,4 @@
+data/IMDb*.csv
+data/awards.csv
+data/countries_genre.csv
+.ipynb_checkpoints/
