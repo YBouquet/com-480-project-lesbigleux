@@ -59,7 +59,7 @@ function generate_graph(data, year) {
       d.fx = d.x;
       d.fy = d.y;
       link
-        .attr('stroke', l => l.target == d || l.source == d ? "#6E0D25" : "#999")
+        .attr('stroke', l => l.target == d || l.source == d ? chroma.mix('#2899b0', '#6E0D25', 0.75) : "#999")
         .attr('stroke-width', l => l.target == d || l.source == d ? Math.sqrt(5) : Math.sqrt(2));
     }
 
@@ -85,7 +85,7 @@ function generate_graph(data, year) {
   }
 
   const color = () => {
-    const scale = d3version5.scaleOrdinal(d3version5.schemeCategory10);
+    const scale = d3version5.scaleOrdinal(['#2899b0', '#6E0D25']);
     return d => scale(d.group)
   }
 
@@ -142,8 +142,8 @@ function generate_graph(data, year) {
   y_repartitions(simulation.nodes(), height);
 
   var block_colors = [
-    { 'x': 10, 'y': 10, 'color': "#f0af5b", 'stroke': "#ffcc66", 'text': 'Drag A Country HERE' },
-    { 'x': X_2 + 180, 'y': 10, 'color': "#79ceed", 'stroke': "#46dcf0", 'text': 'Drag An Event HERE' }];
+    { 'x': 10, 'y': 10, 'color': chroma("#6E0D25").brighten(), 'stroke': chroma("#6E0D25").brighten(2), 'text': 'Drag A Country HERE' },
+    { 'x': X_2 + 180, 'y': 10, 'color': chroma("#2899b0").darken(1), 'stroke': chroma("#2899b0").brighten(), 'text': 'Drag An Event HERE' }];
   const blocks_width = X_1 - 200
   var blocks = svg.selectAll("g")
     .data(block_colors)
