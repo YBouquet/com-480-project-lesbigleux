@@ -29,7 +29,7 @@ whenDocumentLoaded(() => {
 
   });
 
-  d3version5.select('#visu_container').append('svg')
+  d3version5.select('#context_global_container').append('svg')
     .attr('width', '100%')
     .attr('height', 'auto')
     .attr('viewBox', '0,-50,1730,580')
