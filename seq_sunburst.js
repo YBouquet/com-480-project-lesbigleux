@@ -1,4 +1,4 @@
-
+/*
 function whenDocumentLoaded(action) {
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", action);
@@ -10,30 +10,68 @@ function whenDocumentLoaded(action) {
 
 whenDocumentLoaded(() => {
   console.log('DOM loaded');
-  d3version5.text("test.csv").then(function (text) {
-    generate_sunburst(buildHierarchy((d3version5.csvParseRows(text))));
+  d3version5.text("test.csv").then(function(text){
+    generate_sunburst(d3version5.csvParseRows(text), 'Academy Awards', 2019);
   });
 });
+*/
+const width_trail = 750;
+const width_sunburst = 600;
+const height = 400;
+const radius = Math.min(width_sunburst, height) / 2;
 
-const width = 750;
-const height = 600;
-const radius = Math.min(width, height) / 2;
+
+
+const breadcrumbWidth = 75
+const breadcrumbHeight = 30
+const string_threshold = 15
 
 const b = {
   w: 75, h: 30, s: 3, t: 10
 };
 
-const root_domain = ["Oscar", "Nominees", "Winners", "Films", "People"];
+const root_domain = ["Nominees", "Winners", "Films", "People"];
 
-const color = d3version5
-  .scaleOrdinal()
-  .domain(["Oscar", "Nominees", "Winners", "Films", "People", "Price"])
-  .range(["#5d85cf", "#7c6561", "#da7847", "#6fb971", "#9e70cf", "#bfad2c"])
 
-function generate_sunburst(data) {
+export function clear_sunburst(){
+  d3version5.select("#chart > *").remove();
+  d3version5.select("#sidebar").style("visibility", 'hidden');
+}
 
-  initializeBreadcrumbTrail();
-  drawLegend();
+
+export function generate_sunburst(lists, event, year, x0)
+{
+  const data = buildHierarchy(lists.filter(d => d[2] === event && d[3] == year).map(d=> [d[0], d[1]]));
+  const award_names = data.children.map(d => d.name)
+
+  const awards_color = chroma.scale(['#6E0D25', '#c9ae22', '#1c5c1d', '#2822a8']).classes(award_names.length);
+  const color = [
+    d3version5.scaleOrdinal(d3version5.quantize(awards_color, data.children.length)),
+    d3version5.scaleOrdinal()
+      .domain(["Nominees", "Winners", "Films", "People", "Price"])
+      .range(["#815ecc", "#db841a", "#d61818", "#0c9136", "#bfad2c"])
+  ]
+
+  /*
+  const color = d3version5
+    .scaleOrdinal()
+    .domain(["Oscar", "Nominees", "Winners", "Films", "People", "Price"])
+    .range(["#7c6561", "#815ecc", "#db841a", "#d61818","#0c9136", "#bfad2c"])
+    */
+  d3version5.select('#sunburst_container').remove();
+
+  d3version5.select('#context_container').append('g')
+    .attr("transform", "translate(" + x0 + ","+ breadcrumbHeight + ")")
+    .attr("id", "sunburst_container")
+    .append('text')
+    .attr('y', '-30')
+    .attr('font-weight', 'normal')
+    .attr('font-size', '25px')
+    .text('What does ' + event + ' consist of in ' + year + '?');
+
+  initializeBreadcrumbTrail(x0);
+
+  drawLegend(color[1], x0);
   d3version5.select("#togglelegend").on("click", toggleLegend);
 
   const root = d3version5.partition().size([2 * Math.PI, radius * radius])(
@@ -41,15 +79,14 @@ function generate_sunburst(data) {
       .hierarchy(data)
       .sum(d => d.value)
       .sort((a, b) => b.value - a.value)
-  );
+    );
 
-
-  const viz = d3version5.select("#chart").append("svg")
-    .attr("width", width)
+  const viz = d3version5.select("#sunburst_container").append("g")
+    .attr("width", width_sunburst )
     .attr("height", height)
     .append("g")
     .attr("id", "container")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    .attr("transform", "translate(" + width_sunburst / 2 + "," + (50 + height / 2)  + ")");
 
   //const svg = d3version5.select("#sunburst");
 
@@ -80,18 +117,18 @@ function generate_sunburst(data) {
     .text("of visits begin with this sequence");
 
   viz
-    .attr("viewBox", `${-radius} ${-radius} ${width} ${width}`)
-    .style("max-width", `${width}px`)
+    .attr("viewBox", `${-radius} ${-radius} ${width_sunburst} ${width_sunburst}`)
+    .style("max-width", `${width_sunburst}px`)
     .style("font", "12px sans-serif");
 
-  let arc = d3version5
-    .arc()
-    .startAngle(d => d.x0)
-    .endAngle(d => d.x1)
-    .padAngle(1 / radius)
-    .padRadius(radius)
-    .innerRadius(d => Math.sqrt(d.y0))
-    .outerRadius(d => Math.sqrt(d.y1) - 1)
+  let  arc = d3version5
+          .arc()
+          .startAngle(d => d.x0)
+          .endAngle(d => d.x1)
+          .padAngle(1 / radius)
+          .padRadius(radius)
+          .innerRadius(d => Math.sqrt(d.y0))
+          .outerRadius(d => Math.sqrt(d.y1) - 1)
 
   const path = viz
     .append("g")
@@ -104,16 +141,24 @@ function generate_sunburst(data) {
     )
     .enter()
     .append("path")
-    .attr("fill", d => color(root_domain.includes(d.data.name) ? d.data.name : "Price"))
+    .attr("fill", d => {
+      var m_color;
+      if (award_names.includes(d.data.name) && d.parent && d.parent.data.name == 'root'){
+        m_color = color[0](d.data.name);
+      }else{
+        m_color = color[1](root_domain.includes(d.data.name)? d.data.name : "Price")
+      }
+      return m_color;
+    })
     .attr("d", arc);
 
 
   const mousearc = d3version5
-    .arc()
-    .startAngle(d => d.x0)
-    .endAngle(d => d.x1)
-    .innerRadius(d => Math.sqrt(d.y0))
-    .outerRadius(radius);
+            .arc()
+            .startAngle(d => d.x0)
+            .endAngle(d => d.x1)
+            .innerRadius(d => Math.sqrt(d.y0))
+            .outerRadius(radius);
 
   viz
     .append("g")
@@ -121,13 +166,13 @@ function generate_sunburst(data) {
     .attr("pointer-events", "all")
     .on("mouseleave", () => {
       d3version5.select("#trail")
-        .style("visibility", "hidden");
+       .style("visibility", "hidden");
 
       path.attr("fill-opacity", 1);
       label.style("visibility", "hidden");
       // Update the value of this view
       element.value = { sequence: [], percentage: 0.0 };
-      updateBreadcrumbs(element.value);
+      updateBreadcrumbs(element.value, award_names, color);
 
       // Update the value of this view
       /*
@@ -164,7 +209,7 @@ function generate_sunburst(data) {
       // Update the value of this view with the currently hovered sequence and percentage
       element.value = { sequence, percentage };
       // Update the value of this view with the currently hovered sequence and percentage
-      updateBreadcrumbs(element.value);
+      updateBreadcrumbs(element.value, award_names, color);
     });
 
 
@@ -204,7 +249,7 @@ function buildHierarchy(csv) {
         }
         currentNode = childNode;
       } else {
-        // Reached the end of the sequence; create a leaf node.
+          // Reached the end of the sequence; create a leaf node.
         childNode = { name: nodeName, value: size };
         children.push(childNode);
       }
@@ -213,18 +258,15 @@ function buildHierarchy(csv) {
   return root;
 }
 
-breadcrumbWidth = 75
-breadcrumbHeight = 30
-string_threshold = 15
-
 function breadcrumbPoints(d, i) {
   const tipWidth = 10;
   const points = [];
-  const final_width = d.data.name.length > string_threshold ? breadcrumbWidth * 5 : breadcrumbWidth;
-  points.push("0,0");
-  points.push(`${final_width},0`);
-  points.push(`${final_width + tipWidth},${breadcrumbHeight / 2}`);
-  points.push(`${final_width},${breadcrumbHeight}`);
+
+  const finalWidth = (Math.floor(d.data.name.length / string_threshold) + 1 )* breadcrumbWidth;
+  points.push(`0,0`);
+  points.push(`${finalWidth},0`);
+  points.push(`${finalWidth + tipWidth},${breadcrumbHeight / 2}`);
+  points.push(`${finalWidth},${breadcrumbHeight}`);
   points.push(`0,${breadcrumbHeight}`);
   if (i > 0) {
     // Leftmost breadcrumb; don't include 6th vertex.
@@ -235,101 +277,128 @@ function breadcrumbPoints(d, i) {
 }
 
 
-function initializeBreadcrumbTrail() {
+function initializeBreadcrumbTrail(x0) {
   // Add the svg area.
-  var trail = d3version5.select("#sequence").append("svg")
-    .attr("width", width)
-    .attr("height", 50)
-    .attr("id", "trail");
+  d3version5.select("#trail_container").remove()
+  var trail = d3version5.select("#context_container").append("svg")
+      .attr('x', x0)
+      .attr("width", width_trail)
+      .attr("height", 50)
+      .attr("viewBox", `0 0 ${breadcrumbWidth * 10} ${breadcrumbHeight}`)
+      .attr('id', 'trail_container')
+      .append('g')
+      .attr("id", "trail");
   // Add the label at the end, for the percentage.
 }
 
 
 
-function updateBreadcrumbs(sunburst) {
+function updateBreadcrumbs(sunburst, award_names, color) {
   // Data join; key function combines name and depth (= position in sequence).
-  d3version5.select('#trail').selectAll('*').remove();
+      d3version5.select('#trail').selectAll('*').remove();
 
-  const svg = d3version5.select('#trail')
-    .append("svg")
-    .attr("viewBox", `0 0 ${breadcrumbWidth * 10} ${breadcrumbHeight}`)
-    .style("font", "12px sans-serif")
-    .style("margin", "5px");
+      const svg = d3version5.select('#trail')
+      .append("g")
+      .style("font", "10px sans-serif")
+      .style("margin", "5px");
 
-  const g = svg
-    .selectAll("g")
-    .data(sunburst.sequence)
-    .enter()
-    .append("g")
-    .attr("transform", (d, i) => `translate(${i * breadcrumbWidth}, 0)`);
-
-
-  g.append("polygon")
-    .attr("points", breadcrumbPoints)
-    .attr("fill", d => color(root_domain.includes(d.data.name) ? d.data.name : "Price"))
-    .attr("stroke", "white");
-
-  g.append("text")
-    .attr("x", (d, i) => (breadcrumbWidth * (d.data.name.length > string_threshold ? 5 : 1) + 10) / 2)
-    .attr("y", 15)
-    .attr("dy", "0.35em")
-    .attr("text-anchor", "middle")
-    .attr("fill", "white")
-    .text(d => d.data.name)
+      const g = svg
+      .selectAll("g")
+      .data(sunburst.sequence)
+      .enter()
+      .append("g")
+        .attr("transform", (d, i) => {
+          var incrementer = 0;
+          var mObj = d;
+          while(mObj.parent && mObj.parent.data.name != "root"){
+            incrementer += Math.floor(mObj.parent.data.name.length / string_threshold) + 1;
+            mObj = mObj.parent
+          }
+          return `translate(${incrementer * breadcrumbWidth}, 0)`;
+        });
 
 
-  svg
-    .append("text")
-    .text(sunburst.percentage > 0 ? sunburst.percentage + "%" : "")
-    .attr("x", () => {
-      var multiplier = 0
-      sunburst.sequence.forEach(d => {
-        multiplier = multiplier + (d.data.name.length > string_threshold ? 5 : 1)
-      })
-      return (multiplier + 0.5) * breadcrumbWidth;
-    })
-    .attr("y", breadcrumbHeight / 2)
-    .attr("dy", "0.35em")
-    .attr("text-anchor", "middle")
-    .style('fill', '#fff');
+      g.append("polygon")
+      .attr("points", breadcrumbPoints)
+      .attr("fill", d => {
+        var m_c = color[1]
+        if (award_names.includes(d.data.name)){
+          m_c = color[0]
+        }
+
+        return m_c(m_c.domain().includes(d.data.name)? d.data.name: "Price");
+        })
+      .attr("fill-opacity", .70)
+      .attr("stroke", "white");
+
+      g.append("text")
+      .attr("x", (d,i) => (breadcrumbWidth * (Math.floor(d.data.name.length / string_threshold) + 1 )  + 10) / 2)
+      .attr("y", 15)
+      .attr("dy", "0.35em")
+      .attr("font-weight", 'bold')
+      .attr("text-anchor", "middle")
+      .attr("class", "sequence_text")
+      .text(d => d.data.name)
 
 
-  // Make the breadcrumb trail visible, if it's hidden.
-  d3version5.select("#trail")
-    .style("visibility", "");
+      svg
+        .append("text")
+        .text(sunburst.percentage > 0 ? sunburst.percentage + "%" : "")
+        .attr("x", ()=>{
+          var multiplier = 0
+          sunburst.sequence.forEach(d =>{
+            multiplier = multiplier + (Math.floor(d.data.name.length / string_threshold) + 1 )
+          })
+          return (multiplier + 0.5) * breadcrumbWidth;
+        })
+        .attr("y", breadcrumbHeight / 2)
+        .attr("dy", "0.55em")
+        .attr("text-anchor", "middle")
+        .style('fill', 'black');
+
+
+      // Make the breadcrumb trail visible, if it's hidden.
+      d3version5.select("#trail")
+      .style("visibility", "");
 }
 
-function drawLegend() {
+function drawLegend(color, x0) {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 80, h: 30, s: 3, r: 3
+    w: 100, h: 30, s: 3, r: 3
   };
 
+  d3version5.select("#legend").remove()
+  d3version5.select("#context_container").append('g')
+    .attr('transform', "translate(" + (x0 + width_sunburst) + ","+ breadcrumbHeight*2 + ")")
+    .style("visibility", '')
+    .attr('id', 'legend');
+
   var legend = d3version5.select("#legend").append("svg")
-    .attr("width", li.w)
-    .attr("height", d3version5.keys(color.domain()).length * (li.h + li.s));
+      .attr("width", li.w)
+      .attr("height", d3version5.keys(color.domain()).length * (li.h + li.s));
 
   var g = legend.selectAll("g")
-    .data(color.domain().map((d, i) => { return { 'domain': d, 'range': color.range()[i] } }))
-    .enter().append("g")
-    .attr("transform", function (d, i) {
-      return "translate(0," + i * (li.h + li.s) + ")";
-    });
+      .data(color.domain().map((d,i)=> {return {'domain':d, 'range':color.range()[i]}}))
+      .enter().append("g")
+      .attr("transform", function(d, i) {
+              return "translate(0," + i * (li.h + li.s) + ")";
+           });
 
   g.append("rect")
-    .attr("rx", li.r)
-    .attr("ry", li.r)
-    .attr("width", li.w)
-    .attr("height", li.h)
-    .style("fill", function (d) { return d.range; });
+      .attr("rx", li.r)
+      .attr("ry", li.r)
+      .attr("width", li.w)
+      .attr("height", li.h)
+      .style("fill", function(d) { return d.range; });
 
   g.append("svg:text")
-    .attr("x", li.w / 2)
-    .attr("y", li.h / 2)
-    .attr("dy", "0.35em")
-    .attr("text-anchor", "middle")
-    .text(function (d) { return d.domain; });
+      .attr("x", li.w / 2)
+      .attr("y", li.h / 2)
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "middle")
+      .text(function(d) { return d.domain; });
 }
 
 function toggleLegend() {
