@@ -15,7 +15,7 @@ whenDocumentLoaded(() => {
   });
 });
 */
-const width_trail = 750;
+const width_trail = 950;
 const width_sunburst = 600;
 const height = 400;
 const radius = Math.min(width_sunburst, height) / 2;
@@ -63,6 +63,7 @@ export function generate_sunburst(lists, event, year, x0)
   d3version5.select('#context_container').append('g')
     .attr("transform", "translate(" + x0 + ","+ breadcrumbHeight + ")")
     .attr("id", "sunburst_container")
+    .attr('visibility','')
     .append('text')
     .attr('y', '-30')
     .attr('font-weight', 'normal')
@@ -284,7 +285,7 @@ function initializeBreadcrumbTrail(x0) {
       .attr('x', x0)
       .attr("width", width_trail)
       .attr("height", 50)
-      .attr("viewBox", `0 0 ${breadcrumbWidth * 10} ${breadcrumbHeight}`)
+      .attr("viewBox", `0 0 ${breadcrumbWidth * 11} ${breadcrumbHeight}`)
       .attr('id', 'trail_container')
       .append('g')
       .attr("id", "trail");

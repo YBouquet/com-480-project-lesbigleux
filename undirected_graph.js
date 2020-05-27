@@ -21,13 +21,18 @@ whenDocumentLoaded(() => {
   var year_selector = document.getElementById('network_year');
   year_selector.addEventListener('change', function(){
     clear_sunburst()
-    graph_promise.then(d=>generate_graph(d, year_selector.value));
+    graph_promise.then(d=>{
+      generate_graph(d, year_selector.value);
+      d3version5.select('#sunburst_container').remove();
+      d3version5.select("#legend").remove();
+    });
+
   });
 
   d3version5.select('#visu_container').append('svg')
     .attr('width', '100%')
     .attr('height', 'auto')
-    .attr('viewBox', '0,-50,1630,580')
+    .attr('viewBox', '0,-50,1730,580')
     .attr('id', 'context_container')
   graph_promise.then(d=>generate_graph(d, year_selector.value));
 });
