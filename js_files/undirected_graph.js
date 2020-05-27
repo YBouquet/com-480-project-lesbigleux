@@ -59,8 +59,8 @@ function generate_graph(data, year) {
       d.fx = d.x;
       d.fy = d.y;
       link
-        .attr('stroke', l => l.target == d || l.source == d ? chroma.mix('#2899b0', '#6E0D25', 0.75) : "#999")
-        .attr('stroke-width', l => l.target == d || l.source == d ? Math.sqrt(5) : Math.sqrt(2));
+        .attr('stroke', l => l.target == d || l.source == d ? "#c97900" : "#999")
+        .attr('stroke-width', l => l.target == d || l.source == d ? Math.sqrt(8) : Math.sqrt(2));
     }
 
     function dragged(d) {
@@ -85,7 +85,7 @@ function generate_graph(data, year) {
   }
 
   const color = () => {
-    const scale = d3version5.scaleOrdinal(['#2899b0', '#6E0D25']);
+    const scale = d3version5.scaleOrdinal(['#2899b0', chroma("#6E0D25").brighten(2)]);
     return d => scale(d.group)
   }
 
@@ -142,7 +142,7 @@ function generate_graph(data, year) {
   y_repartitions(simulation.nodes(), height);
 
   var block_colors = [
-    { 'x': 10, 'y': 10, 'color': chroma("#6E0D25").brighten(), 'stroke': chroma("#6E0D25").brighten(2), 'text': 'Drag A Country HERE' },
+    { 'x': 10, 'y': 10, 'color': "#6E0D25", 'stroke': chroma("#6E0D25").brighten(2), 'text': 'Drag A Country HERE' },
     { 'x': X_2 + 180, 'y': 10, 'color': chroma("#2899b0").darken(1), 'stroke': chroma("#2899b0").brighten(), 'text': 'Drag An Event HERE' }];
   const blocks_width = X_1 - 200
   var blocks = svg.selectAll("g")
@@ -155,7 +155,7 @@ function generate_graph(data, year) {
     .attr("width", blocks_width)
     .attr("height", height)
     .attr("fill", d => d.color)
-    .attr("fill-opacity", .70)
+    .attr("fill-opacity", .85)
     .attr("stroke", d => d.stroke)
     .attr("stroke_width", 1.5);
 
