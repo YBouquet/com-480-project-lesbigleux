@@ -31,16 +31,11 @@ export function generate_sunburst(lists, event, year, x0)
   const color = [
     d3version5.scaleOrdinal(d3version5.quantize(awards_color, data.children.length)),
     d3version5.scaleOrdinal()
-      .domain(["Nominees", "Winners", "Films", "People", "Price"])
+      .domain(["Nominees", "Winners", "Films", "People", "Category"])
       .range(["#815ecc", "#db841a", "#d61818", "#0c9136", "#bfad2c"])
   ]
 
-  /*
-  const color = d3version5
-    .scaleOrdinal()
-    .domain(["Oscar", "Nominees", "Winners", "Films", "People", "Price"])
-    .range(["#7c6561", "#815ecc", "#db841a", "#d61818","#0c9136", "#bfad2c"])
-    */
+
   d3version5.select('#sunburst_container').remove();
 
   d3version5.select('#context_container').append('g')
@@ -130,7 +125,7 @@ export function generate_sunburst(lists, event, year, x0)
       if (award_names.includes(d.data.name) && d.parent && d.parent.data.name == 'root'){
         m_color = color[0](d.data.name);
       }else{
-        m_color = color[1](root_domain.includes(d.data.name)? d.data.name : "Price")
+        m_color = color[1](root_domain.includes(d.data.name)? d.data.name : "Category")
       }
       return m_color;
     })
@@ -312,7 +307,7 @@ function updateBreadcrumbs(sunburst, award_names, color) {
           m_c = color[0]
         }
 
-        return m_c(m_c.domain().includes(d.data.name)? d.data.name: "Price");
+        return m_c(m_c.domain().includes(d.data.name)? d.data.name: "Category");
         })
       .attr("fill-opacity", .70)
       .attr("stroke", "white");
