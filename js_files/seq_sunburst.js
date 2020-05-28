@@ -250,9 +250,11 @@ function buildHierarchy(csv) {
         }
         currentNode = childNode;
       } else {
-          // Reached the end of the sequence; create a leaf node.
+        // Reached the end of the sequence; create a leaf node.
         childNode = { name: nodeName, value: size };
-        children.push(childNode);
+        if (typeof children != 'undefined'){
+          children.push(childNode);
+        }
       }
     }
   }
