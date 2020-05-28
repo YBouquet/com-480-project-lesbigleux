@@ -29,6 +29,7 @@ To be able to implement the visualizations, we used the following datasets of IM
 # List of submitted milestones
 ## Milestone 1 (Friday 3rd April, 5pm)
 **10% of the final grade**
+
 [Link to Milestone 1](./Milestones/Milestone1.pdf)
 
 This Milestone contains:
@@ -39,7 +40,6 @@ This Milestone contains:
 * some sources that inspired us
 
 ## Milestone 2 (Friday 1st May, 5pm)
-
 **10% of the final grade**
 
 [Link to Milestone 2](./Milestones/Milestone2.pdf)
@@ -50,8 +50,8 @@ This Milestone contains:
 * the core visualization that we expect to implement
 
 ## Milestone 3 (Thursday 28th May, 5pm)
-
 **80% of the final grade**
+
 ### Process Book
 [Link to Process Book](./ProcessBook.pdf)
 
