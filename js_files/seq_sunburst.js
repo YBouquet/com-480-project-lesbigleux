@@ -32,7 +32,7 @@ export function generate_sunburst(lists, event, year, x0)
     d3version5.scaleOrdinal(d3version5.quantize(awards_color, data.children.length)),
     d3version5.scaleOrdinal()
       .domain(["Nominees", "Winners", "Films", "People", "Category"])
-      .range(["#815ecc", "#db841a", "#d61818", "#0c9136", "#bfad2c"])
+      .range(["#815ecc", "#db841a", "#d61818", "#0c9136", "#b5b5b5"])
   ]
 
 
