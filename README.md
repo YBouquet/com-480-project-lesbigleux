@@ -62,6 +62,6 @@ This document contains:
 
 ### Screencast
 
-[Link to Screencast video](https://youtu.be/2QpbJKiwqhw)
+[Link to Screencast video](https://youtu.be/_5sqtc7S1XU)
 
 This video shows what one is able to do with your implemented visualizations.
