@@ -14,7 +14,6 @@ whenDocumentLoaded(() => {
 
     });
     d3version5.csv("./data/stacked_movies_awards.csv").then(function (text) {
-        console.log("next")
         stackedAreaAwards(text)
     })
 
@@ -79,7 +78,6 @@ function stackedAreabyCountry(country) {
 }
 
 function stackedArea(data) {
-    console.log("Stacked Area");
     // List of genre
     groupGenre = d3version5.group(data, d => d.genre);
     var keys = Array.from(groupGenre.keys()).sort();
@@ -107,11 +105,9 @@ function stackedArea(data) {
     }
     //stack the data
     if (byPercent) {
-        console.log("stacked by percent");
         var stackedData = d3version5.stack().keys(keys).offset(d3version5.stackOffsetExpand)(result);
     }
     else {
-        console.log("stacked by count");
         var stackedData = d3version5.stack().keys(keys).offset(d3version5.stackOffsetDiverging)(result);
     }
 
@@ -170,7 +166,6 @@ function stackedArea(data) {
 
     //Highlit a group (reduce all opacity except of the group you want)
     var highlight = function (d) {
-        console.log(d)
         d3version5.select("#stackedArea").selectAll(".myArea")
             .style("opacity", .1)
         d3version5.select("#stackedArea").select("." + d)
@@ -261,10 +256,8 @@ function stackedArea(data) {
         // If no selection, back to initial coordinate. Otherwise, update X axis domain
         if (!extent) {
             if (!idleTimeout) return idleTimeout = setTimeout(idled, 3000);
-            console.log('no extend')
             x.domain(d3version5.extent(data, function (d) { return d.year; }))
         } else {
-            console.log('extend')
             x.domain([x.invert(extent[0]), x.invert(extent[1])])
             areaChart.select(".brush").call(brush.move, null)
 
@@ -281,7 +274,7 @@ function stackedArea(data) {
 }
 
 function stackedAreaAwards(data) {
-    console.log("Area")
+
     // List of award (Winner is either Primary or Secondary)
     var keys = ['Primary', 'Secondary', 'No_award'];
 
@@ -314,7 +307,6 @@ function stackedAreaAwards(data) {
         return result.sort((a, b) => a.year - b.year)
     }
     //stack the data
-    console.log(byPercent)
     if (byPercent) {
         var stackedData = d3version5.stack().keys(keys).offset(d3version5.stackOffsetExpand)(result);
     }
@@ -378,7 +370,6 @@ function stackedAreaAwards(data) {
 
     //Highlit a group (reduce all opacity except of the group you want)
     var highlight = function (d) {
-        console.log(d)
         d3version5.select("#stackedAreaAwards").selectAll(".myArea")
             .style("opacity", .1)
         d3version5.select("#stackedAreaAwards").select("." + d)
