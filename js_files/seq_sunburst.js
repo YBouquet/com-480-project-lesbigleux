@@ -1,20 +1,3 @@
-/*
-function whenDocumentLoaded(action) {
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", action);
-  } else {
-    // `DOMContentLoaded` already fired
-    action();
-  }
-}
-
-whenDocumentLoaded(() => {
-  console.log('DOM loaded');
-  d3version5.text("test.csv").then(function(text){
-    generate_sunburst(d3version5.csvParseRows(text), 'Academy Awards', 2019);
-  });
-});
-*/
 const width_trail = 950;
 const width_sunburst = 600;
 const height = 400;

@@ -16,7 +16,6 @@ const width = 800;
 const height = 500;
 
 whenDocumentLoaded(() => {
-  console.log('DOM loaded');
   const graph_promise = d3version5.json("data/network_data.json")
   var year_selector = document.getElementById('network_year');
   year_selector.addEventListener('change', function () {
